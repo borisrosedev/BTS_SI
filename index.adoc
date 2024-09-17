@@ -70,6 +70,7 @@ Comprendre les modèles en couches, avec une étude particulière du modèle OSI
 * Modèle TCP/IP : Comparaison avec le modèle OSI, explication des 4 couches.
 
 
+
 * link:./modele-tcp-ip.adoc[version adoc]
 * link:./modele-tcp-ip.html[version html]
 
@@ -108,17 +109,20 @@ Maîtriser les concepts de l'adressage IP et la notion de sous-réseaux.
 * link:./protocole-ip.adoc[version adoc]
 * link:./protocole-ip.html[version html]
 
+=== ...
+
 * Notions de masque de sous-réseau et CIDR (Classless Inter-Domain Routing).
 
-
+=== ...
 
 * IPv6 : Introduction à l’IPv6, comparaison avec IPv4.
 
 * link:./ipv6-ipv4.adoc[version adoc]
 * link:./ipv6-ipv4.html[version html]
 
-* Calcul des sous-réseaux : découpage d’un réseau en sous-réseaux.
+=== ...
 
+* Calcul des sous-réseaux : découpage d’un réseau en sous-réseaux.
 
 == Composants réseau et équipements actifs
 
@@ -133,6 +137,7 @@ Présentation des principaux équipements réseau et leurs fonctions.
 * link:./switch.adoc[version adoc]
 * link:./switch.html[version html]
 
+=== ...
 
 * Routeurs : Rôle des routeurs, routage et tables de routage.
 
@@ -195,7 +200,11 @@ vous sensibiliser aux concepts de base de la sécurité des réseaux.
 
 * Principales menaces et attaques : phishing, attaques par déni de service (DDoS), intrusions.
 
+=== ...
+
 * Techniques de sécurisation :
+
+=== ...
 
 Pare-feu (firewall) : Types et rôles.
 
@@ -216,6 +225,8 @@ Chiffrement des données (HTTPS, SSL/TLS).
 
 * link:./https-ssl.adoc[version adoc]
 * link:./https-ssl.html[version html]
+
+=== ...
 
 Introduction à l'authentification et aux politiques de sécurité.
 
@@ -239,11 +250,14 @@ Apprendre les différentes topologies et les types de câblage utilisés dans le
 * link:./encapsulation.adoc[version adoc]
 * link:./encapsulation.html[version html]
 
+=== ...
+
 * Le rôle des connecteurs (RJ45, SFP) et des équipements passifs.
 
 * link:./encapsulation.adoc[version adoc]
 * link:./encapsulation.html[version html]
 
+=== ...
 
 * Introduction aux technologies sans fil : Wi-Fi, Bluetooth, NFC.
 
@@ -273,11 +287,16 @@ ping, tracert, nslookup, netstat.
 * link:./commandes-reseau.adoc[version adoc]
 * link:./commandes-reseau.html[version html]
 
+=== ...
+
+
 * Analyse des protocoles avec des outils comme Wireshark.
 
+=== ...
 
 * Suivi des paquets réseau et diagnostic des pannes.
 
+=== ...
 
 * Utilisation de logiciels de simulation de réseaux (Packet Tracer, GNS3).
 
