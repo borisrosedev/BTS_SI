@@ -17,7 +17,7 @@ Leur rôle principal est de commuter (ou rediriger) les paquets de données vers
 
 == Fonctionnement d'un switch :
 
-Un switch opère au niveau 2 du modèle OSI, c'est-à-dire au niveau de la couche de liaison de données (Data Link Layer). 
+Un switch opère au niveau 2 du modèle OSI, c'est-à-dire au niveau de la couche de liaison de données (Data * link Layer). 
 
 
 === ...

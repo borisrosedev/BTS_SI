@@ -56,7 +56,7 @@ Les routeurs professionnels sont souvent dotés de fonctionnalités de redondanc
 
 === ...
 
-Ils peuvent également avoir des options pour agréger plusieurs connexions (link aggregation), ce qui améliore à la fois la bande passante et la tolérance aux pannes.
+Ils peuvent également avoir des options pour agréger plusieurs connexions (* link aggregation), ce qui améliore à la fois la bande passante et la tolérance aux pannes.
 
 === Support multi-sites et gestion centralisée :
 

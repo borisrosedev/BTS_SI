@@ -6,7 +6,11 @@
 
 == Introduction
 
-Un réseau local (Local Area Network ou LAN) est un réseau qui interconnecte un ensemble d'appareils (ordinateurs, imprimantes, serveurs, etc.) dans un espace géographique restreint, comme un bâtiment, un bureau ou une maison. 
+Un réseau local (Local Area Network ou LAN) est un réseau qui interconnecte un ensemble d'appareils (ordinateurs, imprimantes, serveurs, etc.) ...
+
+=== ...
+
+dans un espace géographique restreint, comme un bâtiment, un bureau ou une maison. 
 
 === ...
 
@@ -56,7 +60,11 @@ En créant des VLANs, vous pouvez isoler des groupes d'appareils (par exemple, l
 === Flexibilité : 
 
 
-Les VLANs offrent une grande flexibilité, car ils permettent de réorganiser les utilisateurs et les appareils dans différents sous-réseaux sans changer le câblage physique. Un appareil peut être déplacé dans un autre VLAN par simple configuration du switch.
+Les VLANs offrent une grande flexibilité, car ils permettent de réorganiser les utilisateurs et les appareils dans différents sous-réseaux sans changer le câblage physique. 
+
+=== ...
+
+Un appareil peut être déplacé dans un autre VLAN par simple configuration du switch.
 
 === Amélioration des performances : 
 
@@ -69,7 +77,11 @@ Un VLAN fonctionne en associant chaque port d'un switch à un réseau virtuel sp
 
 === ...
 
-Ainsi, les appareils connectés à un port d'un VLAN particulier ne peuvent communiquer qu'avec d'autres appareils du même VLAN, même s'ils sont physiquement connectés au même switch.
+Ainsi, les appareils connectés à un port d'un VLAN particulier ne peuvent communiquer qu'avec d'autres appareils du même VLAN, 
+
+=== ...
+
+même s'ils sont physiquement connectés au même switch.
 
 == Les concepts clés à comprendre concernant les VLANs :
 
@@ -122,6 +134,8 @@ Supposons que vous ayez trois départements dans votre entreprise : Vente, Resso
 
 Vous voulez isoler chaque département dans son propre VLAN pour améliorer la sécurité et les performances.
 
+=== ...
+
 VLAN 10 : Département des ventes
 VLAN 20 : Département des ressources humaines
 VLAN 30 : Département informatique
@@ -145,7 +159,11 @@ Les ordinateurs et serveurs du service informatique sont connectés à des ports
 
 === ...
 
-Même si tous les ordinateurs sont physiquement connectés au même switch, les utilisateurs des ventes ne pourront pas communiquer directement avec ceux des ressources humaines ou du service informatique, car ils appartiennent à des VLANs différents.
+Même si tous les ordinateurs sont physiquement connectés au même switch, les utilisateurs des ventes ne pourront pas communiquer directement ...
+
+=== ...
+
+avec ceux des ressources humaines ou du service informatique, car ils appartiennent à des VLANs différents.
 
 == Communication entre VLANs
 
@@ -169,7 +187,12 @@ Les VLANs permettent de segmenter le réseau de manière logique, isolant ainsi 
 
 === Gestion simplifiée : 
 
-Ils facilitent l'administration du réseau, car il est plus facile d'ajouter, de déplacer ou de supprimer des appareils sans changer la structure physique du réseau.
+Ils facilitent l'administration du réseau, car il est plus facile d'ajouter, ...
+
+
+=== ...
+
+de déplacer ou de supprimer des appareils sans changer la structure physique du réseau.
 
 === Réduction du domaine de diffusion : 
 

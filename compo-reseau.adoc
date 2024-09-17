@@ -174,6 +174,11 @@ Passerelle Internet, passerelle IoT.
 convertir et acheminer le trafic entre différents protocoles et réseaux.
 
 
+===  En savoir plus
+
+* link:./zoom-passerelle.adoc[version adoc]
+* link:./zoom-passerelle.html[version html]
+
 == Carte réseau (NIC - Network Interface Card)
 
 Une carte réseau est un composant matériel qui permet à un ordinateur ou à tout autre appareil de se connecter à un réseau, que ce soit via une connexion filaire ou sans fil.

@@ -19,7 +19,11 @@ Lorsqu'un appareil (client) se connecte à un réseau, il envoie une requête de
 
 === Offre (DHCP Offer) : 
 
-Le serveur DHCP (souvent intégré au routeur ou à la box internet, comme celle de SFR la mienne ah ah) répond avec une offre qui contient une adresse IP disponible et des informations complémentaires, comme la passerelle et les serveurs DNS.
+Le serveur DHCP (souvent intégré au routeur ou à la box internet, comme celle de SFR la mienne ah ah) 
+
+=== ...
+
+répond avec une offre qui contient une adresse IP disponible et des informations complémentaires, comme la passerelle et les serveurs DNS.
 
 
 === Demande (DHCP Request) : 
@@ -32,9 +36,14 @@ Le serveur DHCP envoie une confirmation, indiquant que l'adresse IP est maintena
 
 == Informations transmises par le DHCP :
 
-=== Adresse IP : L'adresse unique attribuée à l'appareil sur le réseau local.
+=== Adresse IP : 
 
-=== Masque de sous-réseau : Indique quelle partie de l'adresse IP représente le réseau et quelle partie représente l'hôte (par exemple, 255.255.255.0).
+L'adresse unique attribuée à l'appareil sur le réseau local.
+
+=== Masque de sous-réseau : 
+
+
+Indique quelle partie de l'adresse IP représente le réseau et quelle partie représente l'hôte (par exemple, 255.255.255.0).
 
 === Passerelle par défaut : 
 
@@ -52,7 +61,12 @@ L'attribution manuelle des adresses IP à chaque appareil sur un réseau peut ê
 
 === Gestion dynamique des adresses IP : 
 
-Les adresses IP sont attribuées temporairement, sous forme de bail, ce qui permet de réutiliser les adresses lorsqu'elles ne sont plus en usage. Cela est particulièrement utile sur des réseaux avec des utilisateurs mobiles (ordinateurs portables, téléphones, etc.).
+Les adresses IP sont attribuées temporairement, sous forme de bail, ce qui permet de réutiliser les adresses lorsqu'elles ne sont plus en usage. 
+
+
+=== ...
+
+Cela est particulièrement utile sur des réseaux avec des utilisateurs mobiles (ordinateurs portables, téléphones, etc.).
 
 
 === Facilité d'ajout d'appareils : 
@@ -79,6 +93,9 @@ Assigner des adresses IP spécifiques à des périphériques définis (par exemp
 === Surveiller et dépanner les connexions réseau : 
 
 Résoudre les problèmes liés à la non-attribution d'adresses IP par le DHCP.
+
+=== ...
+
 Le DHCP est donc un protocole essentiel pour la gestion des réseaux locaux, aussi bien dans les environnements domestiques que professionnels.
 
 
