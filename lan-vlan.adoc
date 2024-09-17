@@ -1,0 +1,186 @@
+= Réseau local (LAN)
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Un réseau local (Local Area Network ou LAN) est un réseau qui interconnecte un ensemble d'appareils (ordinateurs, imprimantes, serveurs, etc.) dans un espace géographique restreint, comme un bâtiment, un bureau ou une maison. 
+
+=== ...
+
+Il permet aux utilisateurs de partager des ressources telles que des fichiers, des applications, des imprimantes et des connexions Internet.
+
+
+== Caractéristiques clés d'un LAN :
+
+=== Portée géographique limitée : 
+
+Les LAN couvrent généralement une petite zone, comme une salle, un étage ou un bâtiment.
+
+=== Débit élevé : 
+
+Comme les LANs couvrent de courtes distances, ils offrent des débits élevés (100 Mbps, 1 Gbps ou plus) par rapport à d'autres types de réseaux (comme les réseaux étendus WAN).
+
+=== Technologies courantes : 
+
+
+Les réseaux LAN utilisent souvent des technologies telles que Ethernet pour les connexions câblées et Wi-Fi pour les connexions sans fil.
+
+
+=== Contrôle centralisé : 
+
+Les LANs sont généralement administrés de manière centralisée par un serveur ou un groupe de serveurs.
+
+=== VLANs (Réseaux Locaux Virtuels)
+
+Un VLAN (Virtual Local Area Network) est une technologie qui permet de segmenter un réseau physique en plusieurs réseaux logiques virtuels. 
+
+=== ...
+
+Cela signifie que des appareils qui partagent le même réseau physique peuvent être répartis dans différents sous-réseaux virtuels même s'ils sont physiquement connectés au même switch.
+
+== Pourquoi utiliser des VLANs ?
+
+Les VLANs offrent plusieurs avantages pour la gestion des réseaux :
+
+=== Segmentation du réseau : 
+
+Les VLANs permettent de diviser un réseau physique en plusieurs sous-réseaux virtuels, ce qui réduit la congestion du réseau et isole les différents flux de données.
+
+=== Sécurité : 
+
+En créant des VLANs, vous pouvez isoler des groupes d'appareils (par exemple, le service financier et le service informatique) afin d'améliorer la sécurité du réseau.
+
+=== Flexibilité : 
+
+
+Les VLANs offrent une grande flexibilité, car ils permettent de réorganiser les utilisateurs et les appareils dans différents sous-réseaux sans changer le câblage physique. Un appareil peut être déplacé dans un autre VLAN par simple configuration du switch.
+
+=== Amélioration des performances : 
+
+
+En réduisant la taille des domaines de diffusion (broadcast domain), les VLANs limitent la propagation des paquets de broadcast et réduisent la charge globale du réseau.
+
+=== Fonctionnement des VLANs
+
+Un VLAN fonctionne en associant chaque port d'un switch à un réseau virtuel spécifique. 
+
+=== ...
+
+Ainsi, les appareils connectés à un port d'un VLAN particulier ne peuvent communiquer qu'avec d'autres appareils du même VLAN, même s'ils sont physiquement connectés au même switch.
+
+== Les concepts clés à comprendre concernant les VLANs :
+
+=== Trunking (liaison de tronçon) :
+
+Lorsqu'il s'agit de faire transiter plusieurs VLANs entre des switches ou entre un switch et un routeur, le protocole de trunking est utilisé. 
+
+=== ...
+
+Le trunk est un lien qui transporte le trafic de plusieurs VLANs sur un seul lien physique.
+
+=== ...
+
+Le protocole 802.1Q est couramment utilisé pour le marquage (tagging) des trames VLAN sur les liens trunk. 
+
+=== ...
+
+Chaque trame Ethernet est étiquetée avec un identifiant VLAN (VLAN ID), permettant au switch de savoir à quel VLAN elle appartient.
+
+=== Access ports et trunk ports :
+
+Un access port est un port sur un switch qui appartient à un seul VLAN. 
+
+=== ...
+
+Un appareil connecté à un access port ne peut communiquer qu'avec d'autres appareils sur le même VLAN.
+
+=== ...
+
+Un trunk port est un port configuré pour transporter le trafic de plusieurs VLANs, généralement entre deux switches ou entre un switch et un routeur.
+
+=== VLAN natif :
+
+Un VLAN natif est utilisé pour transporter le trafic non étiqueté sur un lien trunk. 
+
+=== ...
+
+Il permet aux paquets qui ne portent pas d'étiquette VLAN de traverser les switches sur une interface trunk. 
+
+=== ...
+
+Par défaut, le VLAN natif est souvent le VLAN 1, mais il est recommandé de changer cette valeur pour des raisons de sécurité.
+
+
+== Exemple de configuration de VLAN
+
+Supposons que vous ayez trois départements dans votre entreprise : Vente, Ressources humaines et Informatique. 
+
+=== ...
+
+Vous voulez isoler chaque département dans son propre VLAN pour améliorer la sécurité et les performances.
+
+VLAN 10 : Département des ventes
+VLAN 20 : Département des ressources humaines
+VLAN 30 : Département informatique
+
+=== ...
+
+
+Sur le switch, vous configurez différents ports pour appartenir à ces VLANs :
+
+=== ...
+
+Les ordinateurs des ventes sont connectés à des ports configurés pour VLAN 10.
+
+=== ...
+
+Les ordinateurs des ressources humaines sont connectés à des ports configurés pour VLAN 20.
+
+=== ...
+
+Les ordinateurs et serveurs du service informatique sont connectés à des ports configurés pour VLAN 30.
+
+=== ...
+
+Même si tous les ordinateurs sont physiquement connectés au même switch, les utilisateurs des ventes ne pourront pas communiquer directement avec ceux des ressources humaines ou du service informatique, car ils appartiennent à des VLANs différents.
+
+== Communication entre VLANs
+
+
+Les VLANs étant logiquement isolés les uns des autres, un appareil d'un VLAN ne peut pas communiquer directement avec un appareil d'un autre VLAN. 
+
+=== ...
+
+Pour permettre cette communication, il est nécessaire d'utiliser un routeur ou un switch de niveau 3 (c'est-à-dire un switch capable de routage entre VLANs).
+
+
+=== ...
+
+Ce processus est appelé routage inter-VLAN et il permet de faire transiter le trafic entre des VLANs via un routeur ou un équipement compatible.
+
+== Avantages des VLANs
+
+=== Isolation des utilisateurs : 
+
+Les VLANs permettent de segmenter le réseau de manière logique, isolant ainsi les différents groupes d'utilisateurs et améliorant la sécurité.
+
+=== Gestion simplifiée : 
+
+Ils facilitent l'administration du réseau, car il est plus facile d'ajouter, de déplacer ou de supprimer des appareils sans changer la structure physique du réseau.
+
+=== Réduction du domaine de diffusion : 
+
+Chaque VLAN possède son propre **domaine de diffusion**, ce qui réduit le nombre de paquets de diffusion sur l'ensemble du réseau et améliore les performances globales.
+
+=== Sécurité accrue : 
+
+En isolant les flux de données, les VLANs contribuent à empêcher l'accès non autorisé entre différents groupes d'utilisateurs.
+
+
+
+
+
+

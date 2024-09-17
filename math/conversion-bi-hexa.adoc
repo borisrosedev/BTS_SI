@@ -1,0 +1,137 @@
+= Conversion d'un nombre binaire en hexadécimal 
+
+== Introduction
+
+L'idée principale est de diviser le nombre binaire en groupes de 4 bits (chaque groupe de 4 bits correspond à un chiffre en hexadécimal). 
+
+=== ...
+
+Ensuite, chaque groupe est converti en son équivalent hexadécimal.
+
+== Étapes de conversion d'un binaire en hexadécimal
+
+=== ...
+
+Etape 1:  Diviser le nombre binaire en groupes de 4 bits
+
+L'hexadécimal est basé sur des groupes de 4 bits. 
+
+=== ...
+
+Si le nombre binaire n'est pas un multiple de 4, on ajoute des zéros à gauche pour compléter le dernier groupe.
+
+
+=== ...
+
+Etape 2: Convertir chaque groupe de 4 bits en hexadécimal
+
+Chaque groupe de 4 bits peut être directement converti en une valeur hexadécimale.
+
+=== ...
+
+Etape 3: Combiner les valeurs hexadécimales
+
+
+On rassemble ensuite les chiffres hexadécimaux obtenus pour former le résultat final.
+
+== Exemple : Conversion de 110101101 (binaire) en hexadécimal
+
+=== Étape 1 : 
+
+Ajouter des zéros à gauche pour que la longueur soit un multiple de 4
+
+=== ...
+
+Le nombre binaire 110101101 a 9 bits. 
+
+=== ...
+
+On ajoute un zéro à gauche pour obtenir 10 bits, puis on le divise en groupes de 4 bits :
+
+[source, txt]
+----
+0110 1011 01
+----
+
+Ajoutons encore deux zéros à droite du dernier groupe pour obtenir un groupe complet de 4 bits :
+
+[source, txt]
+----
+0110 1011 0100
+----
+
+=== Étape 2 : 
+
+Convertir chaque groupe de 4 bits en hexadécimal
+
+=== ...
+
+Chaque groupe de 4 bits peut être converti directement :
+
+0110 en binaire = 6 en hexadécimal.
+1011 en binaire = B en hexadécimal (car 1011 en binaire est 11 en décimal, et 11 en hexadécimal est B).
+0100 en binaire = 4 en hexadécimal.
+
+=== Étape 3 : Combiner les valeurs hexadécimales
+
+En regroupant les valeurs obtenues, on obtient 6B4.
+
+Donc, 110101101 (binaire) = 6B4 (hexadécimal).
+
+Autre exemple avec un octet complet : 11001101 (binaire)
+
+== Étape 1 : Diviser en groupes de 4 bits
+[source, txt]
+----
+1100 1101
+----
+
+== Étape 2 : Convertir chaque groupe en hexadécimal
+1100 en binaire = C en hexadécimal.
+1101 en binaire = D en hexadécimal.
+
+== Étape 3 : Combiner les valeurs
+Le résultat final est CD.
+
+
+Donc, 11001101 (binaire) = CD (hexadécimal).
+
+Tableau de conversion binaire-hexadécimal (pour chaque groupe de 4 bits) :
+
+=== ...
+
+[cols="2*"]
+|===
+| Binaire   | Hexadécimal
+| 0000      | 0
+| 0001      | 1
+| 0010      | 2
+| 0011      | 3
+| 0100      | 4
+|=== 
+
+=== ...
+
+[cols="2*"]
+|===
+| Binaire   | Hexadécimal
+| 0101      | 5
+| 0110      | 6
+| 0111      | 7
+| 1000      | 8
+| 1001      | 9
+|===
+
+=== ...
+
+[cols="2*"]
+|===
+| Binaire   | Hexadécimal
+| 1010      | A
+| 1011      | B
+| 1100      | C
+| 1101      | D
+| 1110      | E
+| 1111      | F
+|===
+

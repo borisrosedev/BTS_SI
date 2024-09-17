@@ -1,0 +1,83 @@
+= Les catégories de câbles Ethernet
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Les catégories de câbles Ethernet comme Cat 5e et Cat 6 sont des standards largement utilisés pour les réseaux informatiques, notamment pour les connexions LAN (Local Area Network). 
+
+=== ...
+
+Ces câbles appartiennent à la famille des câbles à paires torsadées (comme UTP, STP, et FTP) et se différencient principalement par leur capacité à supporter des vitesses et des fréquences de transmission de données spécifiques.
+
+== Catégorie 5e (Cat 5e) :
+
+=== Description : 
+
+Le câble Cat 5e (Catégorie 5 enhanced) est une version améliorée du câble Cat 5 original. 
+
+=== ...
+
+Il est conçu pour réduire les interférences et la diaphonie (crosstalk) entre les paires de fils, améliorant ainsi la qualité de transmission des données.
+
+=== Vitesse maximale : 
+
+Jusqu'à 1 Gbps (Gigabit Ethernet).
+
+=== Bande passante : 
+
+Jusqu'à 100 MHz.
+
+=== Distance maximale : 
+
+Peut atteindre jusqu'à 100 mètres pour des connexions réseau à haute vitesse.
+
+=== Utilisation courante : 
+
+Les câbles Cat 5e sont encore très courants et suffisants pour les réseaux résidentiels et professionnels qui nécessitent des connexions Gigabit (1 Gbps).
+
+== Exemples d’utilisation :
+
+Connexion des ordinateurs, imprimantes et autres périphériques dans un réseau local.
+Utilisé dans des infrastructures de petites et moyennes entreprises, ou à domicile.
+
+
+== Catégorie 6 (Cat 6) :
+
+=== Description : 
+
+Le câble Cat 6 est une version plus avancée que le Cat 5e. 
+
+=== ...
+
+Il offre une meilleure gestion des interférences et une bande passante plus élevée, permettant ainsi des vitesses plus rapides et une transmission plus stable sur de plus grandes distances.
+
+
+=== Vitesse maximale :
+
+Jusqu'à 10 Gbps sur de courtes distances (jusqu’à 55 mètres).
+
+=== ...
+
+Jusqu'à 1 Gbps pour des distances plus longues (jusqu'à 100 mètres).
+
+=== Bande passante : 
+
+Jusqu'à 250 MHz.
+
+=== Distance maximale : 
+
+Pour des vitesses de 10 Gbps, la distance maximale recommandée est de 55 mètres, mais pour des vitesses de 1 Gbps, il peut atteindre 100 mètres.
+
+=== Utilisation courante : 
+
+Très utilisé dans les réseaux d'entreprise, les centres de données, ou pour les installations futures où des vitesses plus élevées pourraient être nécessaires.
+
+=== Exemples d’utilisation :
+
+Réseaux locaux nécessitant des vitesses supérieures, notamment pour le streaming vidéo 4K, les transferts de données volumineuses, ou la virtualisation.
+
+=== ...
+
+Installations dans des centres de données ou environnements professionnels à haute densité de trafic.

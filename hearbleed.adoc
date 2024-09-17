@@ -1,0 +1,132 @@
+= Les attaques POODLE, BEAST et Heartbleed
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Les attaques POODLE, BEAST et Heartbleed sont des vulnérabilités critiques qui ont affecté les anciennes versions des protocoles SSL et TLS, compromettant la sécurité des communications en ligne. 
+
+
+
+
+== Attaque POODLE (Padding Oracle On Downgraded Legacy Encryption)
+
+=== Découverte : 
+
+2014
+
+=== Protocole affecté : 
+
+SSL 3.0 (principalement)
+
+=== Nature de l'attaque :
+
+POODLE exploite une faiblesse dans la méthode de remplissage (padding) utilisée par SSL 3.0 lors du chiffrement de blocs. 
+
+=== ...
+
+Cette attaque permet à un attaquant de déchiffrer certaines parties d'un message chiffré.
+
+=== /...
+
+L'attaque est dite "man-in-the-middle" (MITM) : 
+
+l'attaquant se positionne entre le client et le serveur et intercepte des messages chiffrés.
+
+=== ...
+
+SSL 3.0 étant obsolète et vulnérable, beaucoup de serveurs et de clients ont migré vers TLS. 
+
+=== ...
+
+Cependant, certains systèmes tentaient encore d'utiliser SSL 3.0 lorsque TLS échouait, ouvrant ainsi la porte à cette attaque.
+
+=== Impact : 
+
+Un attaquant pouvait déchiffrer des informations sensibles transmises par SSL 3.0, notamment les cookies de session.
+
+=== Solution : 
+
+Désactiver SSL 3.0 et n'autoriser que les versions TLS (1.2 ou plus récent).
+
+
+== Attaque BEAST (Browser Exploit Against SSL/TLS)
+
+=== Découverte : 
+
+2011
+
+=== Protocole affecté : 
+
+TLS 1.0 et SSL 3.0
+
+=== Nature de l'attaque :
+
+BEAST est une attaque sur le chiffrement en mode CBC (Cipher Block Chaining) utilisé dans SSL/TLS. 
+
+=== ...
+
+Elle exploite une faille dans le processus de chiffrement pour intercepter et déchiffrer des données sensibles.
+
+=== ...
+
+
+L'attaque utilise une technique où l'attaquant injecte du contenu malveillant dans le flux de données chiffré et analyse la réponse du serveur pour déduire le contenu du message.
+
+=== Impact : 
+
+Un attaquant qui réussit cette attaque peut déchiffrer des informations transmises lors d'une session chiffrée, comme des mots de passe ou des cookies de session.
+
+=== Solution :
+
+La mise à jour vers des versions plus récentes de TLS (comme TLS 1.2), qui introduisent de nouvelles méthodes de chiffrement, corrige ce problème.
+
+
+=== ...
+
+
+Des contre-mesures dans les navigateurs ont également été mises en place pour atténuer l'impact de BEAST.
+
+
+== Heartbleed
+
+=== Découverte : 
+
+2014
+
+=== Protocole affecté : 
+
+OpenSSL (implémentation de SSL/TLS)
+
+=== Nature de l'attaque :
+
+Heartbleed est une vulnérabilité dans l'implémentation OpenSSL, qui permettait aux attaquants de lire la mémoire du serveur ou du client via une faille dans la fonctionnalité Heartbeat d'OpenSSL.
+
+=== ...
+
+Le bug est lié à une mauvaise gestion de la mémoire lors de l'envoi d'une requête Heartbeat (une fonctionnalité de maintien des connexions actives). 
+
+=== ...
+
+Un attaquant pouvait exploiter cette faille pour récupérer jusqu'à 64 Ko de mémoire à chaque requête Heartbeat malveillante.
+
+=== ...
+
+Ce type d'attaque ne nécessitait pas d'interception de trafic, mais permettait à l'attaquant d'extraire des informations telles que des clés privées, des identifiants de session ou des données sensibles stockées dans la mémoire du serveur.
+
+
+
+=== Impact : 
+
+La vulnérabilité permettait aux attaquants de voler des informations critiques, comme des clés privées SSL/TLS, des identifiants d'utilisateurs et des mots de passe.
+
+=== Solution : 
+
+Les administrateurs de serveurs ont été contraints de mettre à jour OpenSSL immédiatement pour corriger cette vulnérabilité. 
+
+=== ...
+
+De plus, de nouveaux certificats SSL ont dû être générés dans certains cas, car les clés privées pouvaient avoir été compromises.
+

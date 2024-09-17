@@ -1,0 +1,98 @@
+= Les protocoles SMTP et POP3
+
+== Introduction
+
+Les protocoles SMTP et POP3 sont des protocoles couramment utilisés pour l'envoi et la réception d'e-mails. 
+
+=== ...
+
+Ils jouent des rôles différents dans la gestion du courrier électronique. 
+
+
+== Protocole SMTP (Simple Mail Transfer Protocol)
+
+Le protocole SMTP est utilisé pour envoyer des e-mails d'un client vers un serveur de messagerie ou d'un serveur à un autre serveur.
+
+== Caractéristiques du protocole SMTP :
+
+=== Fonction principale : 
+
+Il est utilisé pour l'envoi de messages électroniques depuis le client (comme Outlook, Gmail) vers le serveur de messagerie, et pour le transfert de courriels entre serveurs.
+
+=== Port utilisé : Par défaut, le SMTP utilise le port 25, mais il peut aussi fonctionner sur le port 587 (pour le SMTP sécurisé) ou le port 465 (pour SSL/TLS).
+
+
+=== Direction des messages : 
+
+SMTP ne gère que l'envoi de messages. Pour la réception, d'autres protocoles comme POP3 ou IMAP sont nécessaires.
+
+=== Sécurité : 
+
+SMTP peut être utilisé avec des extensions de sécurité comme STARTTLS ou SSL/TLS pour chiffrer la communication.
+
+
+=== Exemple de flux SMTP :
+
+L'utilisateur rédige un e-mail et l'envoie depuis son client de messagerie.
+Le client utilise le protocole SMTP pour transférer le message vers le serveur de messagerie de l'expéditeur.
+
+
+Le serveur SMTP de l'expéditeur envoie ensuite l'e-mail au serveur SMTP du destinataire.
+
+
+== Protocole POP3 (Post Office Protocol version 3)
+
+Le protocole POP3 est utilisé pour recevoir des e-mails depuis un serveur de messagerie vers un client de messagerie.
+
+== Caractéristiques du protocole POP3 :
+
+=== Fonction principale :
+
+Il permet de télécharger les e-mails depuis le serveur vers le client de messagerie local. 
+
+
+Une fois les e-mails téléchargés, ils sont généralement supprimés du serveur, bien qu'il soit possible de configurer le client pour qu'il conserve une copie sur le serveur.
+
+
+=== Port utilisé : 
+
+Par défaut, POP3 utilise le port 110. Pour les connexions sécurisées (SSL/TLS), il utilise le port 995.
+
+=== Stockage local : 
+
+Les e-mails sont stockés localement sur l'appareil de l'utilisateur après le téléchargement, ce qui permet de lire les messages hors ligne.
+
+=== Limitation : 
+
+POP3 ne synchronise pas les e-mails entre plusieurs appareils. Si vous téléchargez un e-mail sur un appareil, il ne sera pas disponible sur un autre, sauf si le client est configuré pour conserver une copie sur le serveur.
+
+
+== Exemple de flux POP3 :
+
+Le client de messagerie (comme Outlook ou Thunderbird) se connecte au serveur de messagerie en utilisant POP3.
+
+=== ...
+
+Les e-mails sont téléchargés depuis le serveur vers l'ordinateur ou l'appareil mobile de l'utilisateur.
+
+=== ...
+
+Une fois téléchargés, les e-mails sont généralement supprimés du serveur, sauf si le client est configuré pour garder une copie.
+
+
+== Différences principales entre SMTP et POP3 :
+
+SMTP est utilisé pour envoyer des e-mails, tandis que POP3 est utilisé pour recevoir des e-mails.
+
+=== ...
+
+SMTP gère la communication entre serveurs de messagerie pour acheminer les messages, alors que POP3 récupère les messages d'un serveur vers un client de messagerie.
+
+=== ...
+
+POP3 stocke les e-mails localement après les avoir téléchargés, contrairement à des protocoles comme IMAP, qui permet de synchroniser les messages sur plusieurs appareils.
+
+
+
+
+

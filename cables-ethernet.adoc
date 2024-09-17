@@ -1,0 +1,106 @@
+= UTP, STP, FTP
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Les termes UTP, STP, et FTP font référence à différents types de câbles utilisés dans les réseaux, spécifiquement pour les transmissions de données dans des réseaux Ethernet. 
+
+=== ...
+
+Ces types de câbles sont souvent utilisés dans les infrastructures de réseaux locaux (LAN), et ils varient principalement par leur blindage et leur capacité à éviter les interférences électromagnétiques.
+
+
+== UTP (Unshielded Twisted Pair) :
+
+=== Description : 
+
+Les câbles UTP sont des câbles à paires torsadées non blindées. 
+
+=== ...
+
+Chaque paire de fils est torsadée pour réduire les interférences électromagnétiques, mais il n'y a pas de blindage supplémentaire autour des fils ou du câble entier.
+
+=== Utilisation courante : 
+
+Ce type de câble est le plus couramment utilisé pour les réseaux Ethernet (Cat 5e, Cat 6) en raison de son faible coût et de sa facilité d'installation.
+
+
+=== Avantages : Moins coûteux, plus facile à installer et à manipuler.
+
+=== Inconvénients : 
+
+Plus sensible aux interférences électromagnétiques (EMI) et aux perturbations radio (RFI) par rapport aux câbles blindés.
+
+=== Exemple d'utilisation : 
+
+Réseaux internes dans des environnements à faible risque d’interférences, comme dans un bureau ou une maison.
+
+
+== STP (Shielded Twisted Pair) :
+
+=== Description : 
+
+Les câbles STP sont des câbles à paires torsadées avec un blindage individuel autour de chaque paire de fils et/ou un blindage supplémentaire autour de l'ensemble des paires. 
+
+Ce blindage protège contre les interférences électromagnétiques.
+
+=== Utilisation courante : 
+
+Les câbles STP sont utilisés dans les environnements où il y a beaucoup d'interférences électromagnétiques, comme les usines ou les centres de données.
+
+
+=== Avantages : 
+
+Offre une meilleure protection contre les interférences EMI et RFI grâce à son blindage.
+
+=== Inconvénients : 
+
+Plus coûteux que les câbles UTP et plus difficile à installer en raison de la rigidité supplémentaire due au blindage.
+
+
+=== Exemple d'utilisation : 
+
+Réseaux dans des environnements industriels où les équipements électriques peuvent générer des interférences importantes.
+
+
+== FTP (Foiled Twisted Pair) :
+
+=== Description : 
+
+Le câble FTP est un câble à paires torsadées avec un blindage global constitué d'une feuille d'aluminium entourant toutes les paires. 
+
+=== ...
+
+Contrairement au STP, où chaque paire peut être blindée individuellement, le FTP se contente d’un blindage global.
+
+
+=== Utilisation courante : 
+
+FTP est utilisé dans des environnements où il y a des interférences modérées, mais où un blindage individuel de chaque paire n'est pas nécessaire.
+
+=== Avantages : 
+
+Offre une protection contre les interférences électromagnétiques tout en étant moins coûteux et plus flexible que le STP.
+
+=== Inconvénients : 
+
+Moins performant que le STP dans des environnements avec des interférences électromagnétiques élevées.
+
+=== Exemple d'utilisation : 
+
+Bureaux ou petits environnements professionnels où il peut y avoir une certaine interférence, mais sans la sévérité d'un environnement industriel.
+
+=== Exemples d'applications :
+
+UTP est utilisé dans les environnements avec peu d’interférences électromagnétiques, comme dans les réseaux domestiques ou de bureau.
+
+=== ...
+
+STP est choisi dans les environnements industriels ou dans les centres de données où les interférences sont plus élevées.
+
+=== ...
+
+FTP se trouve dans les réseaux professionnels de taille moyenne, offrant une protection intermédiaire sans avoir besoin du niveau de blindage du STP.

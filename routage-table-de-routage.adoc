@@ -1,0 +1,166 @@
+= Le routage et tables de routage
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le routage est le processus par lequel les paquets de données sont acheminés d'une source à une destination à travers un réseau, généralement à travers plusieurs réseaux interconnectés comme Internet. 
+
+=== ...
+
+Pour ce faire, les routeurs jouent un rôle clé en déterminant le meilleur chemin pour les paquets, en s'appuyant sur des tables de routage.
+
+== Tables de routage :
+
+
+Une table de routage est une base de données dans un routeur ou un autre dispositif réseau qui contient des informations sur la façon d'atteindre différentes destinations réseau. 
+
+=== ...
+
+Chaque entrée de la table contient les éléments suivants :
+
+
+=== Destination : 
+
+Le réseau ou l'adresse IP cible.
+
+
+== Masque de sous-réseau : 
+
+Il indique quelle partie de l'adresse IP est utilisée pour identifier le réseau.
+
+=== Passerelle : 
+
+L'adresse du routeur ou de la passerelle à laquelle envoyer les paquets pour atteindre cette destination.
+
+=== Interface de sortie : 
+
+L'interface physique ou logique du routeur par laquelle le paquet doit sortir.
+
+=== Métrique : 
+
+Une valeur qui indique la "distance" ou le coût pour atteindre une destination, en fonction de divers critères (nombre de sauts, bande passante, latence, etc.).
+
+== Exemple d'une table de routage simplifiée :
+
+[source, txt]
+----
+Destination     Masque de sous-réseau    Passerelle        Interface      Métrique
+192.168.1.0     255.255.255.0            192.168.1.1       eth0           1
+10.0.0.0        255.255.0.0              10.0.0.1          eth1           5
+0.0.0.0         0.0.0.0                  192.168.1.254     eth0           10
+----
+
+=== Dans cet exemple :
+
+Le réseau 192.168.1.0/24 est directement accessible via l'interface eth0.
+
+
+=== ...
+
+Le réseau 10.0.0.0/16 est accessible via la passerelle 10.0.0.1 via l'interface eth1.
+
+=== ...
+
+0.0.0.0 représente la route par défaut (par exemple, tout ce qui ne correspond à aucune autre entrée), donc tous les paquets restants sont envoyés à la passerelle 192.168.1.254.
+
+
+
+== Fonctionnement du routage :
+
+
+Lorsque un routeur reçoit un paquet de données, il suit le processus suivant :
+
+=== Lecture de l'adresse de destination : 
+
+Le routeur lit l'adresse IP de destination contenue dans l'en-tête du paquet.
+
+=== Consultation de la table de routage : 
+
+Le routeur recherche dans sa table de routage une correspondance pour cette adresse de destination.
+
+=== ...
+
+Il vérifie d'abord les entrées spécifiques (par exemple, un réseau local ou des routes statiques).
+
+=== ...
+
+S'il ne trouve pas de correspondance précise, il utilise une route par défaut (souvent appelée "route de secours").
+
+
+
+=== Sélection du chemin : 
+
+Le routeur sélectionne le chemin le plus approprié en fonction de la métrique, ou des protocoles de routage (OSPF, BGP, RIP, etc.).
+
+=== Transmission du paquet : 
+
+
+Le paquet est envoyé via l'interface spécifiée ou à la passerelle indiquée.
+
+
+== Types de routage :
+
+=== Routage statique : 
+
+Les routes sont configurées manuellement par l'administrateur réseau. 
+
+=== ...
+
+C'est simple mais peu flexible, car tout changement dans la topologie du réseau nécessite une mise à jour manuelle des routes.
+
+=== Routage dynamique : 
+
+Les routes sont automatiquement apprises et mises à jour à l'aide de protocoles de routage tels que:
+[%step]
+* OSPF, 
+* RIP
+* GP. 
+
+=== ...
+
+Cela permet au réseau de s'adapter automatiquement aux changements (par exemple, si un lien est défaillant).
+
+
+== Protocoles de routage :
+
+Les protocoles de routage déterminent comment les routeurs échangent des informations sur le réseau afin de construire et maintenir leurs tables de routage.
+
+=== RIP (Routing Information Protocol) : 
+
+Un protocole simple basé sur le comptage du nombre de sauts (hops).
+
+=== OSPF (Open Shortest Path First) : 
+
+Utilise un algorithme de recherche de plus court chemin (Dijkstra) et permet un routage plus complexe et efficace dans des réseaux plus grands.
+
+
+=== BGP (Border Gateway Protocol) : 
+
+Utilisé principalement pour interconnecter des systèmes autonomes sur Internet, BGP se base sur des politiques de routage complexes.
+
+
+
+== Exemple concret de routage :
+
+Supposons que vous vouliez envoyer un email d'un ordinateur en France à un serveur de messagerie aux États-Unis :
+
+=== ...
+
+Votre ordinateur envoie le paquet vers votre routeur local.
+
+=== ...
+
+
+Le routeur local consulte sa table de routage et décide d'envoyer le paquet à un routeur de votre FAI (Fournisseur d'accès Internet).
+
+=== ...
+
+Le FAI transmet le paquet à travers plusieurs routeurs intermédiaires (sur Internet) jusqu'à atteindre le réseau du serveur de destination.
+
+=== ...
+
+Chaque routeur intermédiaire examine l'adresse de destination et décide du prochain saut jusqu'à atteindre la destination finale.
+

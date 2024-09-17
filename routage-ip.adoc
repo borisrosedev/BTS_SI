@@ -1,0 +1,217 @@
+= Le routage IP
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le routage IP est le processus par lequel les paquets de données sont transférés d'un réseau à un autre afin d'atteindre leur destination. 
+
+=== ...
+
+C’est un élément fondamental dans les réseaux informatiques et Internet. 
+
+
+Un routeur, qui est un dispositif spécialisé ou un logiciel, est chargé de ce processus. 
+
+== Fonctionnement général du routage IP
+
+Chaque périphérique sur un réseau a une adresse IP unique. 
+
+=== ...
+
+Lorsqu'un périphérique souhaite envoyer des données à un autre, il crée un paquet IP contenant l'adresse IP de destination. 
+
+
+=== ...
+
+Le rôle du routeur est de lire cette adresse de destination et de diriger le paquet vers le prochain routeur ou appareil qui se rapproche de cette destination.
+
+
+== Tables de routage
+
+Chaque routeur dispose d'une table de routage qui contient les informations nécessaires pour acheminer les paquets IP vers leur destination finale. 
+
+=== ...
+
+Une table de routage contient plusieurs types d'informations :
+
+=== Destination : 
+
+adresse IP du réseau de destination.
+
+=== Masque de sous-réseau : 
+
+qui définit la taille du réseau de destination.
+
+=== Passerelle (gateway) : 
+
+L'adresse du prochain routeur ou de l'interface à laquelle le paquet doit être envoyé.
+
+=== Interface de sortie : 
+
+L'interface du routeur par laquelle le paquet doit sortir pour atteindre la passerelle.
+
+== Exemple d'une table de routage simple :
+
+0.0.0.0/0 (ou simplement 0.0.0.0) est une route par défaut. 
+
+=== ...
+
+Cela signifie que si aucune route spécifique ne correspond à la destination du paquet, il sera envoyé via cette route (souvent vers un routeur de passerelle ou vers Internet).
+
+
+== Types de routage
+
+Il existe deux types principaux de routage : 
+[%step]
+* le routage statique
+* le routage dynamique.
+
+
+== Routage statique
+
+Dans le routage statique, les routes sont configurées manuellement par un administrateur réseau. 
+
+=== ...
+
+Cela convient aux petits réseaux ou dans les situations où les chemins ne changent pas souvent.
+
+=== Avantages :
+
+Facilité de configuration sur de petits réseaux.
+Pas de surcharge de calcul pour trouver des routes.
+
+=== Inconvénients :
+
+Nécessite une mise à jour manuelle si la topologie du réseau change.
+Ne s'adapte pas automatiquement aux défaillances du réseau.
+
+== Routage dynamique
+
+Dans le routage dynamique, les routeurs utilisent des **protocoles de routage** pour échanger des informations sur les routes disponibles. 
+
+=== ...
+
+Ces protocoles permettent aux routeurs de s’adapter aux changements de la topologie réseau, comme la défaillance d’un lien ou l’ajout d’un nouveau routeur.
+
+=== ...
+
+Les protocoles de routage dynamique les plus courants sont :
+
+=== RIP (Routing Information Protocol) : 
+
+un protocole simple qui utilise le nombre de sauts (hops) comme métrique pour choisir la meilleure route.
+
+=== OSPF (Open Shortest Path First) : 
+
+un protocole de routage basé sur l'état des liens qui calcule la meilleure route en fonction de plusieurs facteurs comme la bande passante et le délai.
+
+=== EIGRP (Enhanced Interior Gateway Routing Protocol) : 
+
+un protocole de Cisco qui est une amélioration du protocole RIP avec des calculs de route plus sophistiqués.
+
+=== BGP (Border Gateway Protocol) : 
+
+Le protocole principal utilisé pour le routage entre différents systèmes autonomes sur Internet. 
+
+=== ...
+
+Il est souvent utilisé par les grands FAI (fournisseurs d'accès à Internet).
+
+=== Avantages :
+
+Adaptation automatique aux changements dans le réseau.
+Meilleure gestion des grandes topologies de réseau.
+
+=== Inconvénients :
+
+Configuration et gestion plus complexes.
+
+=== ...
+
+Peut entraîner une surcharge de traitement pour maintenir à jour les tables de routage.
+
+
+
+
+
+
+
+== Processus de routage
+
+Lorsqu'un paquet IP arrive à un routeur, ce dernier suit un processus de routage en plusieurs étapes pour déterminer où envoyer ce paquet ensuite :
+
+=== Lecture de l'adresse IP de destination : 
+
+Le routeur extrait l'adresse IP de destination du paquet.
+
+=== Recherche dans la table de routage : 
+
+Le routeur consulte sa table de routage pour trouver la meilleure correspondance avec cette adresse.
+
+=== ...
+
+S'il trouve une route exacte, le paquet est envoyé vers la passerelle indiquée.
+
+=== ...
+
+Si aucune correspondance exacte n'est trouvée, il utilise la route par défaut (souvent l'interface qui mène à Internet).
+
+=== Réémission du paquet : 
+
+Le routeur envoie ensuite le paquet à la prochaine destination (soit un autre routeur, soit la machine cible finale).
+
+== Sous-réseaux et Masques de sous-réseau
+
+Le routage est étroitement lié au sous-réseautage. Les adresses IP sont divisées en deux parties :
+
+=== Partie réseau : 
+
+identifie le réseau spécifique.
+
+=== Partie hôte : 
+
+identifie une machine ou un dispositif sur ce réseau.
+
+=== ...
+
+Le masque de sous-réseau permet de définir quelle portion de l'adresse IP appartient au réseau et quelle portion appartient à l'hôte. 
+
+=== ...
+
+Par exemple, avec l'adresse 192.168.1.0/24, le masque /24 (ou 255.255.255.0) indique que les 24 premiers bits de l'adresse représentent le réseau.
+
+== Passerelle par défaut
+
+La passerelle par défaut est le routeur qui prend en charge le trafic sortant d'un réseau local vers d'autres réseaux, généralement Internet. 
+
+=== ...
+
+Si un dispositif essaie d'envoyer un paquet à une adresse qui ne fait pas partie du réseau local, le paquet est envoyé à la passerelle par défaut, qui se charge de l'acheminer vers l'extérieur.
+
+
+== Exemple d'un processus de routage simple
+
+Supposons qu'un ordinateur avec l'adresse IP 192.168.1.10 veut envoyer un paquet à l'adresse 10.0.0.15.
+
+=== ...
+
+Le paquet est envoyé au routeur local, qui regarde dans sa table de routage.
+
+=== ...
+
+Il trouve une entrée pour 10.0.0.0/8 avec une passerelle 10.0.0.1.
+
+=== ...
+
+Le routeur transfère le paquet via l'interface associée.
+
+=== ...
+
+Si aucun chemin direct n'est trouvé, le routeur peut utiliser la route par défaut (souvent vers Internet).
+
+
+
+
+

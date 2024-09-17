@@ -1,0 +1,192 @@
+= Le Network Address Translation (NAT), 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Network Address Translation (NAT) ou traduction d'adresses réseau, est une technique utilisée dans les réseaux pour modifier les adresses IP dans les paquets de données en cours de transit à travers un routeur ou un pare-feu. 
+
+=== ...
+
+Le NAT permet de faire la correspondance entre les adresses IP privées d'un réseau interne et une ou plusieurs adresses IP publiques, facilitant ainsi la communication avec l'extérieur tout en préservant les adresses internes.
+
+== Pourquoi le NAT est-il utilisé ?
+
+Le NAT est principalement utilisé pour gérer la rareté des adresses IP publiques et permettre à plusieurs appareils sur un réseau privé (avec des adresses IP internes privées) d'accéder à Internet en utilisant une seule adresse IP publique. 
+
+=== ...
+
+Il contribue également à la sécurité du réseau, en masquant les adresses IP privées derrière une adresse publique.
+
+=== Types de NAT :
+
+Il existe plusieurs types de NAT, chacun utilisé dans des contextes spécifiques :
+
+=== NAT Dynamique
+
+Le NAT dynamique attribue une adresse IP publique temporaire à chaque appareil qui essaie d'accéder à Internet. 
+
+=== ...
+
+L'adresse IP publique est choisie parmi un pool d'adresses disponibles. 
+
+=== ...
+
+La correspondance entre l'adresse IP privée et l'adresse IP publique change à chaque nouvelle session.
+
+=== Caractéristiques :
+
+Il n'y a pas d'association fixe entre une adresse IP privée et une adresse IP publique.
+
+=== ...
+
+Requiert un pool d'adresses IP publiques disponibles pour être utilisé.
+
+
+=== NAT Statique
+
+Le NAT statique crée une correspondance un-à-un entre une adresse IP privée et une adresse IP publique. 
+
+=== ...
+
+Chaque appareil sur le réseau interne se voit attribuer une adresse IP publique fixe. 
+
+=== ...
+
+Ce type de NAT est utilisé lorsque vous devez rendre un service ou un serveur accessible depuis l'extérieur du réseau, par exemple pour héberger un serveur Web.
+
+=== Caractéristiques :
+
+Chaque adresse IP privée a une adresse IP publique spécifique attribuée de manière permanente.
+
+=== ...
+
+Utilisé pour les services qui nécessitent des connexions externes constantes et prévisibles.
+
+
+== PAT (Port Address Translation) ou NAT Surcharge
+
+Le PAT, parfois appelé NAT Surcharge, est le type de NAT le plus couramment utilisé dans les réseaux domestiques et les petites entreprises. 
+
+=== ...
+
+Il permet à plusieurs appareils sur un réseau privé de partager une seule adresse IP publique en utilisant des numéros de port uniques pour différencier les sessions.
+
+=== Fonctionnement :
+
+Chaque appareil privé utilise une adresse IP privée, mais tous ces appareils partagent une seule adresse IP publique lorsqu'ils accèdent à Internet.
+
+=== ...
+
+Le PAT distingue les différents appareils et les connexions en modifiant les numéros de port dans les paquets réseau.
+
+=== Exemple : 
+
+Si plusieurs ordinateurs de votre maison accèdent à Internet via la même adresse IP publique, le routeur associe chaque connexion à un port différent pour suivre quelle réponse est destinée à quel appareil.
+
+== NAT Bidirectionnel (Two-Way NAT)
+
+Le NAT bidirectionnel permet une correspondance bidirectionnelle entre plusieurs adresses IP publiques et privées, permettant aux connexions d'être établies dans les deux sens, à la fois de l'intérieur vers l'extérieur et de l'extérieur vers l'intérieur.
+
+== Comment fonctionne le NAT ?
+
+Lorsque le NAT est activé sur un routeur ou un pare-feu, voici ce qui se passe généralement lorsqu'un appareil dans le réseau interne souhaite communiquer avec l'extérieur (par exemple, sur Internet) :
+
+== Envoi d'une requête vers l'extérieur :
+
+Un appareil sur le réseau interne (avec une adresse IP privée, comme 192.168.1.10) envoie une requête vers une destination extérieure, par exemple un serveur Web sur Internet.
+
+=== ...
+
+Le paquet contient l'adresse IP privée de l'appareil dans le champ "source".
+
+
+== Traduction de l'adresse :
+
+Le routeur NAT modifie l'adresse source du paquet, remplaçant l'adresse IP privée par une adresse IP publique (comme 203.0.113.1), pour rendre le paquet accessible sur Internet. 
+
+
+=== ...
+
+Si c'est un PAT, il change également le numéro de port.
+
+=== ...
+
+Le routeur conserve une table de correspondance pour se souvenir de quel appareil privé correspond à quelle adresse IP publique et quel numéro de port.
+
+=== Transmission des données :
+
+Le paquet est ensuite envoyé à la destination extérieure, qui voit l'adresse IP publique et le numéro de port comme origine.
+
+=== Réception de la réponse :
+
+Lorsque la réponse est envoyée par le serveur Web, elle est adressée à l'adresse IP publique (et éventuellement au port associé).
+
+=== ...
+
+Le routeur NAT reçoit cette réponse et consulte sa table de correspondance pour savoir à quel appareil privé et à quel port le paquet doit être redirigé.
+
+
+=== Retour au réseau interne :
+
+Le routeur NAT remplace l'adresse IP publique par l'adresse IP privée de l'appareil d'origine et lui envoie la réponse. 
+
+=== ...
+
+L'appareil interne reçoit la réponse comme s'il avait communiqué directement avec la destination extérieure.
+
+=== Exemple simple de NAT avec PAT :
+
+Un PC sur le réseau interne (192.168.1.2) envoie une requête HTTP vers un serveur Web (198.51.100.1).
+
+=== ...
+
+Le routeur NAT modifie l'adresse source en 203.0.113.1:45000 (adresse IP publique et port), enregistre cette traduction dans une table, et envoie le paquet.
+Le serveur Web répond à 203.0.113.1:45000.
+
+
+=== ...
+
+Le routeur NAT se réfère à sa table, voit que le port 45000 correspond à l'adresse privée 192.168.1.2, modifie l'adresse de destination et renvoie le paquet au PC interne.
+
+
+== Avantages du NAT :
+
+=== Économie d'adresses IP publiques : 
+
+Le NAT, en particulier avec le PAT, permet à plusieurs appareils de partager une seule adresse IP publique, ce qui réduit le nombre d'adresses IP publiques nécessaires.
+
+=== Sécurité accrue : 
+
+Le NAT masque les adresses IP internes du réseau privé, ce qui peut offrir une certaine protection contre les attaques extérieures, car les adresses internes ne sont pas directement accessibles depuis l'extérieur.
+
+=== Facilité de configuration : 
+
+Il permet de connecter de nombreux appareils à Internet sans avoir à configurer manuellement chaque appareil avec une adresse IP publique.
+
+== Limites du NAT :
+
+=== Problèmes avec certaines applications : 
+
+Certaines applications nécessitant des connexions entrantes directes (comme:
+[%step]
+* les jeux en ligne, 
+* le partage de fichiers P2P,
+* les serveurs web locaux) 
+
+=== ...
+
+peuvent rencontrer des difficultés avec le NAT, car l'adresse IP privée est masquée derrière l'adresse publique. 
+
+=== ...
+
+Cela peut parfois nécessiter des configurations spéciales comme le port forwarding.
+
+=== Complexité pour certaines communications : 
+
+Le NAT peut compliquer la gestion de protocoles réseau dépendant d'adresses IP fixes et spécifiques comme:
+[%step]
+* SIP (utilisé pour la VoIP)
+* IPsec (utilisé pour les VPNs) .

@@ -1,0 +1,168 @@
+= Le routage statique et le routage dynamique
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le routage statique et le routage dynamique sont deux approches distinctes pour la gestion du trafic dans un réseau IP. 
+
+=== ...
+
+
+Chacune a ses avantages et inconvénients, et leur choix dépend du type et de la taille du réseau ainsi que des besoins de gestion.
+
+
+== Routage Statique
+
+Le routage statique est une méthode dans laquelle les routes sont configurées manuellement par un administrateur réseau. 
+
+=== ...
+
+Les routes statiques ne changent pas automatiquement, et les routeurs utilisent uniquement les routes prédéfinies pour acheminer les paquets.
+
+
+== Comment fonctionne le routage statique ?
+
+L'administrateur réseau définit manuellement les chemins vers différents réseaux ou sous-réseaux dans la table de routage d'un routeur. 
+
+=== ...
+
+Ces chemins restent fixes tant qu'ils ne sont pas modifiés manuellement.
+
+=== ...
+
+Exemple de commande pour ajouter une route statique sur un routeur (sous un système Linux ou Cisco) :
+
+[source, bash]
+----
+route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.1
+----
+
+
+=== ...
+
+Cela signifie que tous les paquets destinés au réseau 192.168.2.0/24 seront envoyés via la passerelle 192.168.1.1.
+
+
+== Avantages du routage statique :
+
+=== Simplicité : 
+
+Facile à configurer dans de petits réseaux ou dans des environnements où la topologie ne change pas souvent.
+
+=== Contrôle total : 
+
+L'administrateur a un contrôle précis sur les chemins empruntés par les paquets.
+
+=== Pas de surcharge : 
+
+Il n'y a pas de calculs de routage ou d'échanges d'informations entre routeurs, ce qui réduit la charge sur les routeurs.
+
+
+== Inconvénients du routage statique :
+
+=== Pas d'adaptation automatique : 
+
+
+Si un lien devient indisponible ou si un changement dans le réseau se produit, les routes doivent être mises à jour manuellement.
+
+
+=== Gestion difficile dans les grands réseaux : 
+
+Dans les réseaux de grande taille ou à topologie complexe, la gestion manuelle des routes peut devenir fastidieuse et sujette à des erreurs.
+
+
+=== Moins résilient : 
+
+Si une route devient invalide, le routeur ne peut pas automatiquement trouver un chemin alternatif, ce qui peut provoquer des interruptions de service.
+
+== Routage Dynamique
+
+Le routage dynamique repose sur des **protocoles de routage** qui permettent aux routeurs de communiquer entre eux pour échanger des informations sur les routes disponibles. 
+
+=== ...
+
+Ces protocoles mettent à jour les tables de routage en fonction des changements dans la topologie réseau, de manière automatique et en temps réel.
+
+
+== Comment fonctionne le routage dynamique ?
+
+Les routeurs exécutant des protocoles de routage dynamique échangent régulièrement des informations avec leurs voisins pour connaître les nouvelles routes ou les changements dans le réseau. 
+
+=== ...
+
+Chaque routeur calcule alors automatiquement la meilleure route pour atteindre 
+un réseau donné.
+
+
+=== ...
+
+Il existe plusieurs protocoles de routage dynamique, chacun avec ses propres caractéristiques :
+
+=== RIP (Routing Information Protocol) : 
+
+Utilise le nombre de sauts comme métrique pour déterminer la meilleure route. Il est simple, mais limité par le nombre de sauts (15 au maximum) et la lenteur de sa convergence.
+
+
+=== OSPF (Open Shortest Path First) : 
+
+
+Un protocole basé sur l'état des liens qui trouve la meilleure route en fonction de la distance, de la bande passante et d'autres facteurs. 
+
+=== ...
+
+Il est plus complexe, mais offre une convergence rapide et une meilleure gestion des grandes topologies.
+
+
+=== EIGRP (Enhanced Interior Gateway Routing Protocol) : 
+
+Un protocole propriétaire de Cisco qui combine les meilleures caractéristiques du routage vectoriel de distance (comme RIP) et du routage basé sur l'état des liens (comme OSPF).
+
+
+=== BGP (Border Gateway Protocol) : 
+
+Utilisé pour le routage entre systèmes autonomes sur Internet, principalement par les fournisseurs d'accès à Internet (FAI). 
+
+=== ...
+
+Il est extrêmement scalable, mais plus complexe à configurer.
+
+== Avantages du routage dynamique :
+
+=== Adaptation automatique : 
+
+Les routeurs s'adaptent automatiquement aux modifications du réseau, telles que les défaillances de liens ou les nouvelles routes.
+
+=== Gestion des grands réseaux : 
+
+
+Les protocoles de routage dynamique permettent une gestion efficace des grandes topologies de réseau, où les changements fréquents de routes seraient impossibles à gérer manuellement.
+
+=== Redondance et résilience : 
+
+Si un chemin devient indisponible, les routeurs peuvent calculer automatiquement un autre chemin pour éviter les interruptions de service.
+
+
+== Inconvénients du routage dynamique :
+
+
+=== Complexité : 
+
+La configuration et la gestion des protocoles de routage dynamique peuvent être complexes, nécessitant une compréhension approfondie des protocoles et des principes sous-jacents.
+
+
+=== Surcharge de traitement : 
+
+Les protocoles de routage dynamique génèrent une charge supplémentaire pour les routeurs en raison des calculs constants de routes et des échanges d'informations. 
+
+
+=== ...
+
+Cela peut affecter les performances, notamment dans les grands réseaux avec beaucoup de trafic.
+
+=== Latence de convergence : 
+
+Dans certains protocoles comme RIP, la convergence (lorsque tous les routeurs ont une vision cohérente du réseau) peut prendre du temps, ce qui peut entraîner des interruptions temporaires.
+
+

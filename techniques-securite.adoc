@@ -1,0 +1,160 @@
+= Techniques de sécurisation de base
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Dans le cadre de la sécurisation des réseaux, plusieurs techniques de base sont employées pour protéger les données et prévenir les attaques. 
+
+=== ...
+
+Ces méthodes permettent de contrôler l'accès, de filtrer le trafic et de renforcer la confidentialité des communications. 
+
+
+
+== Les principales techniques de sécurisation de base, 
+
+
+à savoir:
+[%step]
+* les firewalls, 
+* le filtrage des paquets, 
+* les VLAN,
+* les VPN.
+
+
+== Firewalls (Pare-feu)
+
+Les firewalls sont des dispositifs de sécurité réseau (matériel ou logiciel) qui surveillent et contrôlent le trafic réseau entrant et sortant en fonction de règles de sécurité préétablies. 
+
+=== ...
+
+Ils sont conçus pour créer une barrière entre un réseau interne sécurisé et un réseau externe non sécurisé, comme l'internet.
+
+=== Fonctionnement : 
+
+
+Le firewall analyse les paquets de données et décide, en fonction des règles définies, s'ils doivent être autorisés ou bloqués. Les règles peuvent être basées sur l'adresse IP, le port, le protocole, ou d'autres caractéristiques du trafic.
+
+== Types de pare-feu :
+
+=== Pare-feu de filtrage de paquets : 
+
+Examine les en-têtes des paquets pour décider s'ils doivent passer ou non.
+
+=== Pare-feu à inspection d'état (Stateful Firewall) : 
+
+Suit l'état des connexions réseau et permet uniquement les paquets qui font partie d'une connexion légitime.
+
+=== Pare-feu de prochaine génération (NGFW) : 
+
+Combine les fonctionnalités des pare-feu traditionnels avec des capacités supplémentaires comme la détection d'intrusions (IDS/IPS), l'analyse des applications, et la protection contre les menaces avancées.
+
+=== Exemple d'utilisation : 
+
+Un firewall peut bloquer tout le trafic réseau entrant provenant de certaines adresses IP suspectes ou restreindre l'accès à certains services comme le FTP ou le HTTP.
+
+== Filtrage des paquets (Packet Filtering)
+
+Le filtrage des paquets est une technique qui permet de contrôler le flux de données en fonction de critères définis. 
+
+=== ...
+
+Chaque paquet de données est examiné indépendamment en fonction de plusieurs paramètres : adresses IP source et destination, numéros de port, type de protocole (TCP, UDP), etc.
+
+=== Fonctionnement : 
+
+Chaque routeur ou dispositif de sécurité peut implémenter des règles pour autoriser ou bloquer certains types de paquets. 
+
+=== ...
+
+Ce type de contrôle s’effectue généralement au niveau des couches basses du modèle OSI (couche 3 – Réseau, couche 4 – Transport).
+
+=== Avantages : 
+
+C'est une méthode simple et rapide à implémenter pour filtrer les données à travers un réseau.
+
+=== Limites : 
+
+Le filtrage des paquets ne prend pas en compte l'état des connexions, ce qui le rend vulnérable à certaines attaques comme l'usurpation d'adresse IP (IP spoofing).
+
+=== Exemple d'utilisation : 
+
+Autoriser uniquement les paquets provenant d'une adresse IP spécifique ou bloquer tout le trafic entrant vers un port critique, comme le port 22 (SSH), pour éviter les tentatives de connexion non autorisées.
+
+
+== VLAN (Virtual Local Area Network)
+
+Un VLAN est un sous-réseau logique au sein d'un réseau physique qui permet de segmenter un réseau en plusieurs parties indépendantes. 
+
+=== ...
+
+Les VLAN sont utilisés pour séparer le trafic, augmenter la sécurité et optimiser l'utilisation des ressources réseau.
+
+=== Fonctionnement : 
+
+Grâce à des commutateurs réseau compatibles avec les VLAN, les administrateurs peuvent segmenter le trafic sur différents VLANs. 
+
+=== ...
+
+Les utilisateurs appartenant à des VLANs différents ne peuvent pas communiquer directement entre eux, sauf si un routeur ou un commutateur de niveau 3 est configuré pour permettre cette communication.
+
+== Avantages :
+
+=== Sécurité : 
+
+En isolant des groupes d'utilisateurs (par exemple, les départements d'une entreprise), les VLAN empêchent que des attaques ou des erreurs ne se propagent à l'ensemble du réseau.
+
+=== Performance : 
+
+Les VLAN permettent de réduire le trafic inutile et d'optimiser l'utilisation de la bande passante.
+
+=== Exemple d'utilisation : 
+
+
+Dans une entreprise, un VLAN peut être utilisé pour séparer le trafic du département IT du reste de l'organisation afin de protéger les serveurs critiques et les systèmes de gestion du réseau.
+
+
+== VPN (Virtual Private Network)
+
+
+Un VPN est une technologie qui permet d'établir une connexion sécurisée et chiffrée entre deux réseaux ou entre un utilisateur et un réseau. 
+
+=== ...
+
+Les VPN sont utilisés pour garantir la confidentialité et la sécurité des communications, notamment sur des réseaux non sécurisés, comme l'internet public.
+
+=== Fonctionnement : 
+
+Le VPN crée un "tunnel" sécurisé entre les deux points de communication, encapsulant les paquets de données et les chiffrant. 
+
+=== ...
+
+Cela garantit que les données restent confidentielles et ne peuvent être lues par des tiers non autorisés.
+
+== Types de VPN :
+
+=== VPN site-à-site : 
+
+Connecte deux réseaux (par exemple, deux succursales d'une entreprise) via une connexion sécurisée sur l'internet.
+
+== VPN à accès distant (Remote Access VPN) : 
+
+Permet à un utilisateur de se connecter à distance à un réseau sécurisé, comme le réseau d'entreprise, via une connexion cryptée.
+
+=== Avantages :
+
+=== Confidentialité : 
+
+Le trafic est chiffré, ce qui empêche les attaquants d'intercepter et de lire les données.
+
+=== Accès sécurisé : 
+
+Permet aux utilisateurs de se connecter en toute sécurité à des réseaux privés depuis l'extérieur.
+
+=== Exemple d'utilisation : 
+
+Un employé travaillant à distance utilise un VPN pour accéder en toute sécurité aux ressources internes de l'entreprise (comme des fichiers ou des applications) via une connexion internet publique.
+

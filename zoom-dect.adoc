@@ -1,0 +1,121 @@
+= Le support DECT (Digital Enhanced Cordless Telecommunications) 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le support DECT (Digital Enhanced Cordless Telecommunications) est une fonctionnalité présente dans certaines box Internet et appareils réseau. 
+
+=== ...
+
+DECT est une norme de télécommunications sans fil qui permet de connecter des téléphones sans fil à une base fixe, comme une box Internet, sans utiliser de câble téléphonique traditionnel. 
+
+== Qu'est-ce que le support DECT ?
+
+Le support DECT permet à une box Internet d'agir comme une base DECT intégrée. 
+
+=== ...
+
+Cela signifie que vous pouvez directement connecter des téléphones sans fil compatibles DECT à votre box sans avoir besoin d’une base séparée.
+
+=== Base DECT intégrée : 
+
+
+la box fait office de station de base pour les téléphones sans fil, permettant ainsi la communication entre les téléphones et l'Internet via la VoIP (Voix sur IP).
+
+
+=== Téléphones compatibles : 
+
+
+vous pouvez utiliser des combinés DECT (téléphones sans fil) avec cette fonctionnalité, sans avoir à acheter une station DECT supplémentaire.
+
+
+== Avantages du support DECT dans une box :
+
+=== Installation simplifiée : 
+
+plus besoin d’avoir une base DECT séparée pour vos téléphones sans fil. 
+
+=== ...
+
+Tout est centralisé dans la box, ce qui permet une installation plus propre et plus facile.
+
+=== Téléphonie sur IP (VoIP) : 
+
+Les appels passent via la connexion Internet de la box (VoIP), ce qui permet souvent des appels illimités vers des numéros fixes et mobiles, selon le forfait du fournisseur d'accès Internet.
+
+=== Fonctionnalités avancées : 
+
+Certaines box avec support DECT offrent des fonctionnalités avancées pour:
+[%step]
+* la gestion des appels, comme le répondeur intégré, 
+* le transfert d'appels, 
+* la mise en attente, 
+* et parfois des fonctions de multi-lignes (plusieurs combinés connectés à la même ligne).
+
+=== Portée sans fil améliorée : 
+
+La technologie DECT offre une bonne portée sans fil à l’intérieur d’un domicile ou d’un bureau (jusqu'à environ 50 mètres en intérieur et 300 mètres en extérieur, selon les conditions).
+
+=== Multiples combinés : 
+
+Avec la base DECT intégrée dans la box, vous pouvez connecter plusieurs combinés sans fil à la même ligne. 
+
+=== ...
+
+Cela permet d'utiliser plusieurs téléphones dans différentes pièces sans configuration complexe.
+
+=== Économie d'énergie : 
+
+Les appareils utilisant la technologie DECT consomment généralement peu d'énergie, ce qui les rend adaptés à un usage domestique ou professionnel.
+
+== Exemple d'utilisation :
+
+=== Box avec support DECT : 
+
+Vous possédez une box SFR, Orange, ou Free qui supporte DECT. 
+
+=== ...
+
+Vous achetez un téléphone sans fil compatible DECT. 
+
+=== ...
+
+
+Plutôt que de brancher une base de téléphone séparée à la box, vous connectez directement le téléphone sans fil à la box via la fonction DECT intégrée.
+
+=== Appels VoIP : 
+
+Vous pouvez ensuite passer des appels via la ligne téléphonique VoIP fournie par votre FAI, sans avoir à utiliser de câbles ou d'autres dispositifs.
+
+=== Box Internet supportant DECT :
+
+Beaucoup de box récentes incluent cette fonctionnalité. 
+
+== Par exemple :
+
+=== SFR Box : 
+
+certaines box SFR incluent une base DECT intégrée pour connecter des téléphones sans fil.
+
+=== Freebox Revolution et Delta : 
+
+supporte également la technologie DECT pour connecter des combinés sans fil.
+
+=== Livebox d'Orange : 
+
+certaines versions supportent DECT pour la téléphonie sans fil via la box.
+
+=== Conclusion :
+
+Le support DECT intégré dans une box Internet simplifie l'utilisation des téléphones sans fil, en éliminant la nécessité d'une station de base DECT externe. 
+
+=== ...
+
+Il permet de profiter des appels VoIP avec des combinés sans fil tout en réduisant le besoin de câbles et d'équipements supplémentaires. 
+
+=== ...
+
+C'est une solution pratique pour les domiciles ou les bureaux qui souhaitent une configuration téléphonique simple et efficace.
+

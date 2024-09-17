@@ -1,0 +1,150 @@
+= Les normes Ethernet comme 10BASE-T, 100BASE-T, et 1000BASE-T 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Les normes Ethernet comme 10BASE-T, 100BASE-T, et 1000BASE-T font référence à différentes technologies de transmission utilisées dans les réseaux locaux (LAN). 
+
+=== ...
+
+Ces normes spécifient les vitesses de transmission, les types de câbles utilisés et les méthodes de signalisation. 
+
+=== ...
+
+
+
+== 10BASE-T (Ethernet 10 Mbps) :
+
+=== Description : 
+
+La norme 10BASE-T est l'une des premières versions d'Ethernet sur câble à paires torsadées, supportant des débits de 10 Mbps (mégabits par seconde). 
+
+=== ...
+
+Elle utilise des câbles à paires torsadées non blindés (UTP) de catégorie 3 ou supérieure.
+
+=== Signification :
+
+== 10 : 
+
+Vitesse de 10 Mbps.
+
+=== BASE : 
+
+Transmission en bande de base (baseband), ce qui signifie que tout le canal est utilisé pour transmettre un seul signal (par opposition à la modulation en bande large).
+
+=== T : Transmission sur paires torsadées (Twisted pair).
+
+=== Câblage : 
+
+Utilise un câble à paires torsadées (UTP) de catégorie 3 ou supérieure avec une longueur maximale de 100 mètres entre l'appareil et le commutateur/routeur.
+
+=== Utilisation : 
+
+
+Cette norme est désormais obsolète, mais elle a été largement utilisée dans les premiers réseaux locaux (LAN) des années 90. Aujourd'hui, elle a été remplacée par des normes plus rapides.
+
+
+== 100BASE-T (Fast Ethernet 100 Mbps) :
+
+=== Description : 
+
+La norme 100BASE-T, également appelée Fast Ethernet, permet une vitesse de transmission de 100 Mbps, soit dix fois plus rapide que 10BASE-T. 
+
+=== ...
+
+Elle est rétrocompatible avec 10BASE-T, ce qui signifie que les appareils fonctionnant sur l'un ou l'autre des standards peuvent coexister sur le même réseau.
+
+=== Signification :
+
+=== 100 : 
+
+Vitesse de 100 Mbps.
+
+=== BASE : 
+
+Transmission en bande de base.
+
+=== T : 
+
+Transmission sur paires torsadées.
+
+=== Câblage : 
+
+Utilise un câble à paires torsadées de catégorie 5 (Cat 5) ou supérieure, avec une longueur maximale de 100 mètres.
+
+=== Utilisation : 
+
+Encore largement utilisée dans les réseaux d'entreprises et domestiques jusqu'à l'avènement du Gigabit Ethernet, cette norme offre des performances adéquates pour la plupart des applications de base telles que la navigation Internet et les transferts de fichiers.
+
+=== Variantes : 
+
+On trouve aussi la norme 100BASE-TX, qui spécifie l'utilisation de câbles à deux paires torsadées, et 100BASE-FX, qui utilise de la fibre optique pour les connexions sur de plus longues distances.
+
+
+== 1000BASE-T (Gigabit Ethernet 1000 Mbps ou 1 Gbps) :
+
+=== Description : 
+
+La norme 1000BASE-T, ou Gigabit Ethernet, prend en charge des vitesses de transmission allant jusqu’à 1 Gbps (1000 Mbps), ce qui est 10 fois plus rapide que le Fast Ethernet. 
+
+Cette norme est désormais couramment utilisée dans la plupart des réseaux locaux modernes.
+
+=== Signification :
+
+=== 1000 : 
+
+Vitesse de 1000 Mbps (1 Gbps).
+
+=== BASE : 
+
+Transmission en bande de base.
+
+=== T : 
+
+Transmission sur paires torsadées.
+
+=== Câblage : 
+
+Utilise des câbles à paires torsadées de catégorie 5e ou supérieure (Cat 6 recommandé pour des performances optimales), avec une longueur maximale de 100 mètres.
+
+=== Utilisation : 
+
+Largement répandue dans les réseaux d’entreprise et domestiques modernes, cette norme est idéale pour des applications nécessitant une bande passante plus élevée, telles que:
+[%step]
+* le streaming vidéo, 
+* les transferts de fichiers volumineux, 
+* les environnements avec une forte densité d’utilisateurs.
+
+=== Avantages : 
+
+Le 1000BASE-T permet d’atteindre des débits élevés tout en utilisant l’infrastructure de câblage existante (câbles Cat 5e ou Cat 6), ce qui réduit les coûts d’installation.
+
+
+== 10000BASE-T (10 Gigabit Ethernet 10 Gbps) :
+
+=== Description : 
+
+Pour aller plus loin, la norme 10000BASE-T permet des vitesses allant jusqu’à 10 Gbps, dix fois plus rapides que le Gigabit Ethernet. 
+
+=== ...
+
+Elle est de plus en plus courante dans les environnements professionnels ou les centres de données.
+
+=== Câblage : 
+
+Cette norme nécessite des câbles de catégorie 6a ou 7 pour atteindre des distances allant jusqu'à 100 mètres. 
+
+=== ...
+
+Le câblage Cat 6 peut être utilisé pour des distances plus courtes (55 mètres maximum).
+
+=== Utilisation : 
+
+10 Gigabit Ethernet est principalement utilisé dans les environnements où des volumes de données très importants doivent être transférés rapidement, tels que:
+[%step]
+* les centres de données, 
+* les réseaux de stockage (SAN)
+* les infrastructures cloud.

@@ -1,0 +1,88 @@
+= ping tracert nslookup netstat
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== ping :
+
+=== Utilité : 
+
+Vérifie la connectivité réseau entre deux hôtes.
+
+=== Fonctionnement : 
+
+Envoie des paquets ICMP Echo Request à une adresse IP cible et attend des réponses.
+
+=== Commande :
+
+[source, bash]
+----
+#ping [adresse IP ou nom de domaine]
+ping google.com
+----
+
+== tracert (ou traceroute sur Linux) :
+
+
+=== Utilité : 
+
+Trace le chemin parcouru par les paquets pour atteindre une destination.
+
+
+=== Fonctionnement :
+
+Utilise les paquets ICMP ou UDP et affiche chaque routeur traversé sur le chemin.
+
+=== Commande (sur Windows) :
+[source, powershell]
+----
+tracert [adresse IP ou nom de domaine]
+----
+
+=== Exemple :
+
+[source, powershell]
+----
+tracert google.com
+----
+
+== nslookup :
+
+=== Utilité : 
+
+Résout un nom de domaine en adresse IP et vice versa. Utilisé pour interroger les serveurs DNS.
+
+=== Fonctionnement : 
+
+Interroge un serveur DNS pour obtenir des informations sur un nom de domaine.
+
+=== Commande :
+
+
+[source, bash]
+----
+#nslookup [nom de domaine ou adresse IP]
+nslookup google.com
+----
+
+== netstat :
+
+=== Utilité : 
+
+Affiche les connexions réseau actives, les ports ouverts et autres statistiques réseau.
+
+=== Fonctionnement : 
+
+Montre les connexions TCP, UDP ainsi que des informations sur les interfaces réseau.
+
+=== Commande :
+[source, bash]
+----
+netstat -an
+----
+
+=== ...
+
+-a : Montre toutes les connexions et ports d'écoute.
+-n : Affiche les adresses et ports en format numérique.
+

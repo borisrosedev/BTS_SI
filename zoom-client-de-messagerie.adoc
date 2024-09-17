@@ -1,0 +1,145 @@
+= Le client de messagerie
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Un client de messagerie est une application ou un programme utilisé pour envoyer, recevoir, lire et organiser des e-mails. 
+
+=== ...
+
+Il sert d'interface entre l'utilisateur et le serveur de messagerie, facilitant ainsi la gestion des courriers électroniques. 
+
+=== ...
+
+Le client de messagerie peut être un logiciel installé sur un ordinateur, un téléphone ou un service basé sur le web (webmail).
+
+== Types de clients de messagerie :
+
+=== Clients de messagerie sur ordinateur (applications installées) :
+
+=== Exemples : 
+
+Microsoft Outlook, Mozilla Thunderbird, Apple Mail.
+
+=== Caractéristiques :
+
+Ils sont installés localement sur un appareil (ordinateur ou mobile).
+
+=== ...
+
+Ils récupèrent les e-mails depuis le serveur de messagerie en utilisant des protocoles comme POP3, IMAP, ou envoient des e-mails via SMTP.
+
+=== ...
+
+Les e-mails sont généralement stockés localement, mais ils peuvent aussi être synchronisés avec le serveur (surtout avec IMAP).
+
+=== Clients de messagerie web (webmail) :
+
+=== Exemples : 
+
+Gmail, Yahoo! Mail, Outlook.com.
+
+=== Caractéristiques :
+
+Ces clients de messagerie sont accessibles directement via un navigateur web.
+Ils ne nécessitent pas d'installation, car l'interface et les fonctionnalités sont hébergées sur le serveur distant.
+
+
+=== ...
+
+Les e-mails sont stockés et gérés en ligne, et l'utilisateur peut y accéder de n'importe quel appareil connecté à Internet.
+
+
+== Fonctionnalités clés d'un client de messagerie :
+
+=== Envoi et réception de messages : 
+
+Les clients de messagerie se connectent à des serveurs de messagerie pour envoyer et recevoir des e-mails via des protocoles comme SMTP, POP3, et IMAP.
+
+=== Organisation des e-mails : 
+
+Les utilisateurs peuvent trier leurs messages dans des dossiers, les marquer comme lus ou non lus, et les classer par priorité.
+
+
+=== Gestion des contacts : 
+
+
+Les clients de messagerie incluent souvent des carnets d'adresses ou des gestionnaires de contacts pour stocker les adresses e-mail des correspondants.
+
+
+=== Filtres et règles : 
+
+Ils permettent de définir des règles pour trier automatiquement les e-mails entrants (par exemple, déplacer certains e-mails dans des dossiers spécifiques).
+
+=== Sécurité : 
+
+Les clients de messagerie modernes offrent souvent des fonctionnalités de sécurité telles que le chiffrement, le filtrage des spams et des pièces jointes malveillantes.
+
+=== Calendrier et gestion des tâches : 
+
+Certains clients, comme Microsoft Outlook, intègrent également des fonctionnalités de gestion du calendrier et des tâches.
+
+=== Protocole utilisé par le client de messagerie :
+
+=== SMTP : 
+
+Pour envoyer des e-mails vers le serveur de messagerie.
+
+=== POP3 : 
+
+Pour télécharger les e-mails du serveur vers le client, généralement en les supprimant du serveur après téléchargement.
+
+=== IMAP : 
+
+Pour synchroniser les e-mails entre le serveur et plusieurs clients. Les e-mails restent sur le serveur, et l'utilisateur peut y accéder depuis plusieurs appareils.
+
+== Exemple de fonctionnement :
+
+=== Envoi d'un e-mail :
+
+L'utilisateur compose un e-mail dans son client de messagerie (comme Outlook).
+
+=== ...
+
+Le client utilise le protocole SMTP pour envoyer l'e-mail au serveur de messagerie de l'expéditeur, qui le transmet ensuite au serveur de messagerie du destinataire.
+
+=== Réception d'un e-mail :
+
+Le client de messagerie se connecte au serveur de messagerie du destinataire pour récupérer les e-mails.
+
+=== ...
+
+Si POP3 est utilisé, les e-mails sont téléchargés et généralement supprimés du serveur.
+
+=== ...
+
+Si IMAP est utilisé, les e-mails restent sur le serveur et sont synchronisés avec le client, permettant à l'utilisateur d'accéder aux mêmes messages depuis plusieurs appareils.
+
+
+== Exemple de clients de messagerie :
+
+=== Microsoft Outlook : 
+
+Un client de messagerie populaire utilisé dans les environnements professionnels avec des fonctionnalités supplémentaires comme la gestion de calendriers et de tâches.
+
+=== Gmail : 
+
+Un client de messagerie web largement utilisé qui propose aussi des applications pour smartphones.
+
+=== Mozilla Thunderbird : 
+
+Un client open-source avec de nombreuses extensions et fonctionnalités pour la gestion des e-mails.
+
+=== Apple Mail : 
+
+Le client de messagerie par défaut sur les appareils macOS et iOS.
+
+=== ...
+
+Un client de messagerie joue donc un rôle essentiel dans la gestion des communications par e-mail, facilitant à la fois l'envoi et la réception, tout en offrant des fonctionnalités pour organiser, sécuriser et accéder aux messages.
+
+
+
+

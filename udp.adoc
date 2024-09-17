@@ -1,0 +1,150 @@
+= Le UDP (User Datagram Protocol)
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le UDP (User Datagram Protocol) est un protocole de la couche transport, tout comme TCP, mais il est conçu pour des communications rapides et sans connexion.
+
+=== ...
+
+UDP est un protocole non fiable, c'est-à-dire qu'il ne garantit ni la livraison des paquets, ni leur ordre d'arrivée. 
+
+=== ...
+
+Il est idéal pour des applications où la rapidité prime sur la fiabilité, comme les jeux en ligne, la diffusion en direct (streaming), et les services DNS.
+
+== Caractéristiques principales de l'UDP
+
+
+=== Protocole non orienté connexion
+
+Contrairement à TCP, UDP ne nécessite pas d'établir une connexion avant de transmettre des données. 
+
+=== ...
+
+Les paquets sont envoyés directement, sans formalités de synchronisation ou de négociation préalable.
+
+=== ...
+
+Il n'y a pas de "handshake" ou de vérification que l'autre partie est prête à recevoir les données.
+
+=== Fiabilité non garantie
+
+UDP n'effectue pas de vérification pour s'assurer que les paquets arrivent à destination. Il n'y a pas d'accusé de réception (ACK) ni de retransmission en cas de perte de données.
+
+=== ...
+
+Les paquets peuvent arriver dans un ordre différent de celui dans lequel ils ont été envoyés, ou être complètement perdus sans que cela soit corrigé.
+Vitesse et faible latence
+
+=== ...
+
+UDP est rapide et léger, car il n'a pas la surcharge associée au contrôle de connexion, à la vérification de l'ordre, ou à la gestion des erreurs comme TCP.
+
+=== ...
+
+Cela en fait le protocole idéal pour les applications nécessitant des temps de réponse très courts, où la perte de quelques paquets n'est pas critique.
+
+== Transmission de paquets distincts
+
+Chaque message envoyé par UDP est encapsulé dans un datagramme, qui est traité indépendamment des autres.
+
+=== ...
+
+Les datagrammes sont envoyés sans aucune garantie que le destinataire les recevra tous ou dans l'ordre.
+
+
+=== Taille d'en-tête réduite
+
+L'en-tête UDP est très simple et plus petit que celui de TCP, ce qui réduit la surcharge du réseau.
+
+=== ...
+
+L'en-tête UDP est de 8 octets, comparé à un en-tête TCP d'au moins 20 octets.
+
+=== Fonctionnement d'UDP
+
+UDP fonctionne de manière simple et rapide.
+
+=== ...
+
+Un hôte source envoie un message, ou datagramme, directement à l'hôte de destination. Voici un résumé du processus :
+
+=== Envoi du datagramme : 
+
+L'application encapsule les données dans un datagramme UDP, y compris les informations sur les ports source et destination.
+
+
+=== Transmission : 
+
+Le datagramme est envoyé directement à l'hôte de destination, sans établir de connexion.
+
+=== Réception : 
+
+L'hôte destinataire reçoit le datagramme et le passe à l'application correspondante. 
+
+=== ...
+
+Aucune vérification de réception ou de perte de paquet n'est effectuée.
+
+=== En-tête UDP
+
+L'en-tête UDP est très minimaliste et contient seulement quatre champs principaux :
+
+=== Port source (16 bits) : 
+
+Identifie le port de l'application source (facultatif).
+
+=== Port destination (16 bits) : 
+
+Identifie le port de l'application destinataire.
+
+=== Longueur (16 bits) : 
+
+Indique la longueur totale du datagramme, y compris l'en-tête et les données.
+
+=== Checksum (16 bits) : 
+
+Utilisé pour vérifier l'intégrité des données du datagramme (facultatif dans 
+IPv4, obligatoire dans IPv6).
+
+== Cas d'utilisation de l'UDP
+
+UDP est particulièrement utile pour les applications où la rapidité est plus importante que la fiabilité. Voici quelques exemples courants :
+
+=== Diffusion en continu (Streaming)
+
+Dans les services de streaming audio ou vidéo en direct, comme YouTube Live ou Twitch, la rapidité de transmission est cruciale. 
+
+=== ...
+
+Une légère perte de paquets n'a pas d'impact significatif sur l'expérience utilisateur, mais un retard serait perceptible.
+
+=== Jeux en ligne
+
+Les jeux en ligne nécessitent des mises à jour rapides sur l'état du jeu. 
+
+
+=== ...
+
+Les paquets perdus peuvent être ignorés, car des mises à jour plus récentes seront envoyées immédiatement.
+
+== DNS (Domain Name System)
+
+Les requêtes DNS utilisent UDP pour une résolution rapide des noms de domaine en adresses IP. 
+
+=== ...
+
+Chaque requête est indépendante, et une perte de paquet entraîne simplement une nouvelle requête.
+
+
+=== VoIP (Voice over IP)
+
+Dans les communications vocales (comme Skype ou Zoom), UDP est utilisé pour transmettre la voix en temps réel. 
+
+=== ...
+
+Une perte de paquet peut entraîner une légère distorsion, mais attendre la retransmission d'un paquet causerait un délai plus gênant.

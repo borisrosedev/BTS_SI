@@ -1,0 +1,157 @@
+= Structures des adresses IP et sous-réseaux
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+:stem:
+
+== Introduction
+
+Les adresses IP v4 sont des identifiants uniques attribués aux appareils connectés à un réseau. 
+
+=== ...
+
+Elles sont structurées en quatre octets (32 bits), généralement représentées sous la forme de quatre nombres décimaux séparés par des points (par exemple, 192.168.1.1). 
+
+=== ...
+
+Il existe cinq classes d'adresses IP (A, B, C, D et E), mais les classes A, B et C sont les plus couramment utilisées pour l'adressage dans les réseaux publics et privés.
+
+=== ...
+
+Chaque adresse IP est composée de deux parties :
+
+=== Partie réseau : 
+
+identifie le réseau spécifique.
+
+=== Partie hôte : 
+
+identifie un appareil ou un hôte sur ce réseau.
+
+=== ...
+
+Les classes d'adresses IP déterminent combien de bits sont utilisés pour identifier le réseau et combien sont utilisés pour identifier l'hôte.
+
+== Classe A
+
+=== Plage d'adresses : 
+
+1.0.0.0 à 126.255.255.255.
+
+=== Bits de début : 
+
+Les adresses de classe A commencent toujours par un bit 0 (donc leur premier octet est compris entre 0 et 127 en décimal).
+
+
+=== Nombre de bits pour la partie réseau : 
+
+8 bits (le premier octet).
+
+=== Nombre de bits pour la partie hôte : 
+
+24 bits (les trois octets restants).
+
+=== Nombre de réseaux possibles : 
+
+128 réseaux (mais en réalité 126, car 0.0.0.0 est réservé pour le routage par défaut et 127.0.0.0 pour les tests de boucle locale).
+
+=== Nombre d’hôtes par réseau : 
+
+16 777 214 (stem:[2^(²⁴)] - 2 pour exclure l’adresse réseau et l’adresse de diffusion).
+
+=== Exemple : 
+
+10.0.0.1 est une adresse de classe A où 10 représente le réseau et 0.0.1 représente l'hôte.
+
+=== Classe B
+
+=== Plage d'adresses : 
+
+128.0.0.0 à 191.255.255.255.
+
+=== Bits de début : 
+
+Les adresses de classe B commencent par les bits 10 (donc leur premier octet est compris entre 128 et 191 en décimal).
+
+=== Nombre de bits pour la partie réseau : 
+
+16 bits (les deux premiers octets).
+
+=== Nombre de bits pour la partie hôte : 
+
+16 bits (les deux octets restants).
+
+=== Nombre de réseaux possibles : 
+
+16 384 réseaux (stem:[2^(¹⁴)], car les deux premiers bits sont réservés pour identifier la classe).
+
+=== Nombre d’hôtes par réseau : 
+
+65 534 (stem:[2^(¹⁶)] - 2 pour exclure l’adresse réseau et l’adresse de diffusion).
+
+=== Exemple : 
+
+172.16.0.1 est une adresse de classe B où 172.16 représente le réseau et 0.1 représente l'hôte.
+
+=== Classe C
+
+=== Plage d'adresses : 
+
+192.0.0.0 à 223.255.255.255.
+
+=== Bits de début : 
+
+Les adresses de classe C commencent par les bits 110 (donc leur premier octet est compris entre 192 et 223 en décimal).
+
+=== Nombre de bits pour la partie réseau : 
+
+24 bits (les trois premiers octets).
+
+=== Nombre de bits pour la partie hôte : 
+
+8 bits (le dernier octet).
+
+=== Nombre de réseaux possibles : 
+
+2 097 152 réseaux (stem:[2^(²¹)], car les trois premiers bits sont réservés pour identifier la classe).
+
+=== Nombre d’hôtes par réseau : 
+
+254 (stem:[2^⁸] - 2 pour exclure l’adresse réseau et l’adresse de diffusion).
+
+=== Exemple : 
+
+192.168.1.1 est une adresse de classe C où 192.168.1 représente le réseau et 1 représente l'hôte.
+
+
+== Classe D (Multicast) et Classe E (Expérimentale)
+
+=== Classe D : 
+
+utilisée pour le multicast (diffusion à un groupe d'adresses), plage : 224.0.0.0 à 239.255.255.255.
+
+=== Classe E : 
+
+réservée à des fins expérimentales, plage : 240.0.0.0 à 255.255.255.255.
+
+
+== Adresses IP privées
+
+Certaines plages d'adresses IP sont réservées pour un usage privé et ne peuvent pas être routées sur Internet. 
+
+=== Classe A : 
+
+10.0.0.0 à 10.255.255.255.
+
+=== Classe B : 
+
+172.16.0.0 à 172.31.255.255.
+
+=== Classe C : 
+
+192.168.0.0 à 192.168.255.255.
+
+=== ...
+
+Ces adresses sont utilisées à l'intérieur des réseaux locaux (LAN) et sont souvent converties en adresses IP publiques grâce à la traduction d'adresses réseau (NAT) lorsque les appareils communiquent sur Internet.
+

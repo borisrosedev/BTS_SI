@@ -1,0 +1,33 @@
+= La conversion du binaire en notation décimale 
+
+
+=== Introduction
+
+La conversion du binaire en notation décimale est un concept clé pour comprendre les adresses IP et les masques de sous-réseaux. 
+
+
+== Méthode simple pour effectuer cette conversion.
+
+=== Exemple
+
+Prenons un nombre binaire : 11000000.
+
+Étapes pour convertir en décimal :
+
+== 1. Écrire les puissances de 2 sous chaque chiffre binaire
+
+Le système binaire est basé sur des puissances de 2. Chaque chiffre binaire correspond à une puissance de 2, en commençant par stem:[2^7](pour un octet de 8 bits).
+
+== 2. Associer les puissances de 2 aux bits à 1
+
+Multipliez chaque bit par la puissance de 2 correspondante. Les bits à 0 ne contribuent pas à la somme.
+
+== 3. Additionner les résultats
+
+Ajoutez les valeurs obtenues pour les bits à 1 :
+
+stem:[128+64=192]
+
+Le nombre 11000000 en binaire est donc égal à 192 en décimal.
+
+

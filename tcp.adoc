@@ -1,0 +1,211 @@
+= Le TCP (Transmission Control Protocol)
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le TCP (Transmission Control Protocol) est l'un des protocoles principaux de la couche transport du modèle OSI et de la pile TCP/IP. 
+
+=== ...
+
+Il est utilisé pour garantir une transmission fiable des données sur un réseau, en particulier dans les communications sur Internet. 
+
+=== ...
+
+TCP est largement utilisé pour des applications où la précision et l'ordre des données sont essentiels, comme:
+[%step]
+* le web (HTTP/HTTPS), 
+* les courriels (SMTP),
+* les transferts de fichiers (FTP).
+
+
+== Caractéristiques principales de TCP
+
+
+== Connexion orientée
+
+TCP est un protocole orienté connexion. 
+
+=== ...
+
+Avant d'échanger des données, une connexion doit être établie entre les deux hôtes via un processus appelé handshake en trois étapes (voir plus bas).
+
+=== ...
+
+Cela permet aux deux parties de s'assurer qu'elles sont prêtes à communiquer et de négocier les paramètres de transmission.
+
+
+== Fiabilité
+
+TCP garantit que toutes les données envoyées arrivent à destination, sans pertes, duplications, ou erreurs.
+
+=== ...
+
+
+Il utilise des numéros de séquence pour suivre les segments de données, assurant qu'ils sont reçus dans l'ordre, même si certains segments sont envoyés en dehors de l'ordre.
+
+=== ...
+
+Si des données manquent ou sont corrompues, TCP demande une retransmission.
+
+
+== Contrôle de flux (Flow control)
+
+TCP met en œuvre un mécanisme de contrôle de flux qui permet à un récepteur de signaler à l'émetteur combien de données il peut gérer à un moment donné. 
+
+=== ...
+
+Cela évite la surcharge du récepteur.
+
+== Contrôle de congestion
+
+TCP régule la vitesse à laquelle il envoie des données pour éviter la congestion du réseau. Si des segments sont perdus ou si des délais sont détectés, TCP ralentit le débit de transmission pour s'adapter aux conditions du réseau.
+
+== Segmentation
+
+Les données sont fragmentées en segments, chaque segment contenant un en-tête TCP avec des informations cruciales comme les numéros de séquence, l'accusé de réception, et d'autres options.
+
+
+=== ...
+
+Ces segments sont réassemblés dans le bon ordre par le récepteur.
+
+== Transmission en full duplex
+
+TCP permet une transmission bidirectionnelle simultanée des données. Ainsi, deux hôtes peuvent envoyer et recevoir des données en même temps.
+
+
+== Fonctionnement de TCP
+
+
+=== Handshake en trois étapes
+
+Avant de commencer à transmettre des données, TCP établit une connexion entre les hôtes par un processus appelé handshake en trois étapes :
+
+=== SYN : 
+
+L'hôte initiateur (client) envoie un segment avec le bit SYN (synchronisation) activé pour demander une connexion.
+
+
+=== SYN-ACK : 
+
+Le destinataire (serveur) répond avec un segment SYN-ACK pour reconnaître la demande de connexion et indiquer qu'il est prêt à communiquer.
+
+=== ACK : 
+
+Le client envoie un segment ACK pour finaliser l'établissement de la connexion.
+
+=== ...
+
+Ce processus permet de synchroniser les numéros de séquence entre le client et le serveur et d'établir les paramètres de la session.
+
+
+=== Transmission des données
+
+Une fois la connexion établie, les données sont divisées en segments, qui sont envoyés via le réseau. 
+
+=== ...
+
+Chaque segment est numéroté avec un numéro de séquence, ce qui permet au destinataire de reconstituer les données dans le bon ordre.
+
+=== ...
+
+Le destinataire envoie un accusé de réception (ACK) pour confirmer la réception de chaque segment. 
+
+=== ...
+
+Si un segment manque ou est corrompu, il est retransmis.
+
+
+== Fermeture de la connexion
+
+La fermeture d'une connexion TCP se fait également via un échange en plusieurs étapes :
+
+=== ...
+
+Un hôte envoie un segment FIN pour signaler qu'il a terminé d'envoyer des données.
+
+=== ...
+
+Le destinataire répond par un ACK.
+
+=== ...
+
+L'autre hôte envoie ensuite un segment FIN pour indiquer qu'il a également terminé l'envoi des données.
+
+=== ...
+
+Un dernier ACK est envoyé pour confirmer la fermeture de la connexion.
+
+== En-tête TCP
+
+L'en-tête TCP contient plusieurs champs importants pour la gestion de la connexion et de la transmission des données :
+
+== Numéro de port source et de port destination : 
+
+Identifient l'application source et destination sur chaque hôte.
+
+=== Numéro de séquence : 
+
+
+Indique la position des données dans le flux de la transmission.
+
+
+== Numéro d’accusé de réception : 
+
+Confirme la réception des données envoyées précédemment.
+
+=== Taille de la fenêtre : 
+
+Utilisée pour le contrôle de flux, indiquant la quantité de données que le destinataire peut accepter.
+
+=== Flags de contrôle : 
+
+Comprend des bits comme SYN, ACK, FIN, RST, PSH, URG qui contrôlent l'état de la connexion et des segments.
+
+=== Checksum : 
+
+Utilisé pour vérifier l'intégrité des données dans chaque segment.
+
+== Comparaison entre TCP et UDP
+
+Le TCP est souvent comparé à l'UDP (User Datagram Protocol), un autre protocole de la couche transport.
+
+
+== Avantages et Inconvénients de TCP
+
+
+== Avantages :
+
+=== Fiabilité : 
+
+Garantit que toutes les données sont livrées correctement et dans le bon ordre.
+
+
+=== Gestion de la congestion et du flux : 
+
+TCP s'adapte automatiquement aux conditions du réseau.
+
+
+=== Transmission orientée connexion : 
+
+Assure que les hôtes sont synchronisés avant de commencer la transmission des données.
+
+== Inconvénients :
+
+=== Lenteur : 
+
+En raison des processus de vérification, de contrôle de flux, et de gestion de la congestion, TCP est plus lent que les protocoles comme UDP.
+
+=== Overhead : 
+
+L'en-tête TCP est plus volumineux, ajoutant une surcharge à chaque segment transmis.
+
+
+
+
+
+
+

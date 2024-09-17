@@ -1,0 +1,208 @@
+= Les box Internet
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Les box Internet actuelles fournissent une gamme de services avancés, intégrant plusieurs fonctionnalités pour répondre aux besoins de connectivité, de divertissement et de sécurité à la maison ou au bureau. 
+
+
+== Principaux services que les box modernes proposent :
+
+
+== Accès Internet
+
+La fonction principale d'une box est de fournir un accès Internet à haut débit, que ce soit via ADSL, VDSL, fibre optique ou 4G/5G, selon le type de connexion disponible.
+
+=== Types de connexion : 
+
+[%step]
+* ADSL, 
+* VDSL, 
+* fibre optique, 
+* 4G/5G (selon le modèle de la box et la couverture).
+
+
+== Réseau local (LAN)
+
+Les box assurent la gestion d’un réseau local (LAN) pour permettre la connexion et la communication entre plusieurs appareils au sein du domicile ou du bureau.
+
+=== Connectivité filaire : 
+
+via des ports Ethernet pour:
+[%step]
+* les ordinateurs, 
+* téléviseurs, 
+* consoles de jeux, 
+* etc.
+
+=== Connectivité sans fil (Wi-Fi) : 
+
+souvent compatible avec les dernières normes Wi-Fi (Wi-Fi 5 / Wi-Fi 6) pour une connectivité rapide et stable.
+
+
+== Wi-Fi avec gestion avancée
+
+Les box actuelles offrent des réseaux Wi-Fi avancés avec des fonctionnalités telles que :
+
+=== Wi-Fi Dual Band : 
+
+pour une connectivité sur deux fréquences (2,4 GHz et 5 GHz).
+
+=== Wi-Fi 6 (802.11ax) : 
+
+norme de nouvelle génération offrant des vitesses plus rapides et une meilleure gestion des connexions multiples.
+
+=== Wi-Fi Mesh : 
+
+certaines box supportent des systèmes Mesh, permettant de connecter des satellites pour étendre la couverture Wi-Fi dans toute la maison.
+
+=== Réseau Wi-Fi invité : 
+
+création d'un réseau séparé pour les visiteurs afin de limiter l'accès au réseau principal.
+
+
+=== Téléphonie sur IP (VoIP)
+
+De nombreuses box incluent un service de téléphonie VoIP (Voix sur IP), permettant de passer des appels téléphoniques via Internet.
+
+=== Fonctionnalités VoIP : 
+
+appels illimités vers les fixes et/ou mobiles, gestion de plusieurs lignes, répondeur vocal, renvoi d’appels, etc.
+
+=== Support DECT : 
+
+certaines box incluent une base DECT pour connecter directement des téléphones sans fil.
+
+== Télévision (IPTV) et Streaming
+
+Les box modernes offrent également des services de télévision via Internet (IPTV) avec un bouquet de chaînes télévisées, souvent inclus ou en option dans le forfait Internet.
+
+== Fonctionnalités TV :
+
+Accès à des chaînes de télévision en direct (souvent en HD ou 4K).
+
+=== ...
+
+Services de replay et de vidéo à la demande (VOD).
+
+=== ...
+
+Enregistreur numérique (DVR) intégré pour enregistrer des programmes.
+
+=== ...
+
+Applications de streaming (Netflix, YouTube, etc.) directement accessibles via l’interface TV.
+
+
+=== Services de stockage en réseau (NAS)
+
+Certaines box fournissent une fonction NAS (Network Attached Storage), permettant de connecter un disque dur externe via USB et de partager les fichiers avec tous les appareils connectés au réseau.
+
+=== Fonctionnalités de partage de fichiers : 
+
+accès centralisé aux photos, vidéos, documents sur tous les appareils via le réseau local.
+
+=== Sauvegarde automatique : 
+
+certains modèles permettent d'effectuer des sauvegardes automatiques des données.
+
+== Contrôle parental et gestion des accès
+
+
+Les box intègrent souvent des outils de contrôle parental, permettant de limiter l'accès à certains contenus en ligne ou de définir des plages horaires d'accès pour chaque appareil.
+
+=== Fonctionnalités :
+
+Blocage de sites inappropriés.
+
+=== ...
+
+Limitation des heures d'accès à Internet pour les enfants.
+
+=== ...
+
+Suivi du temps de connexion et de l’activité Internet.
+
+
+
+
+== Sécurité et Pare-feu
+
+Les box actuelles viennent avec des services de sécurité intégrés pour protéger le réseau local contre les menaces externes :
+
+=== Pare-feu intégré : 
+
+pour protéger le réseau contre les intrusions.
+
+=== Anti-virus intégré : 
+
+certaines box incluent des protections anti-virus et anti-malware, directement au niveau de la box.
+
+=== VPN (Virtual Private Network) : 
+
+certaines box permettent d’utiliser des services VPN pour sécuriser la navigation Internet.
+
+== IoT et Maison connectée
+
+Certaines box sont compatibles avec des dispositifs IoT (Internet of Things), comme les assistants vocaux, les caméras de sécurité, les thermostats connectés, etc.
+
+=== Fonctionnalités Smart Home :
+
+Support des protocoles domotiques (Zigbee, Z-Wave) pour connecter des appareils intelligents.
+
+=== ...
+
+Applications dédiées pour gérer les appareils connectés (volets, lumières, caméras).
+
+
+== Services Cloud
+
+De plus en plus de fournisseurs incluent des services cloud dans leurs offres box pour permettre le stockage en ligne et la synchronisation des fichiers.
+
+=== Fonctionnalités :
+
+
+Sauvegarde de données en ligne.
+=== ...
+
+Accès aux fichiers depuis n’importe où via Internet.
+
+=== ...
+
+
+== Gestion à distance
+
+Les box modernes offrent la possibilité de gérer à distance votre réseau via des applications mobiles fournies par le FAI.
+
+=== Fonctionnalités de gestion à distance :
+
+Surveillance du réseau en temps réel.
+
+=== ...
+
+Configuration du Wi-Fi et des accès invités.
+
+=== ...
+
+Redémarrage de la box et diagnostic des problèmes.
+
+
+== Qualité de Service (QoS)
+
+Certaines box incluent des fonctionnalités de Qualité de Service (QoS) pour prioriser certains types de trafic sur le réseau, comme le streaming vidéo, les jeux en ligne ou les conférences vidéo.
+
+=== Fonctionnalités QoS :
+
+Allocation de bande passante en fonction des besoins des appareils et des applications.
+
+=== ...
+
+Optimisation des performances réseau pour les services critiques.
+
+
+=== Compatibilité Fibre et Multi-gigabit
+
+Les box actuelles sont souvent compatibles avec des connexions fibre optique et prennent en charge des vitesses allant jusqu’à 1 Gbit/s ou plus, et certains modèles offrent même des ports multi-gigabit (10 Gbit/s) pour des performances réseau maximales.

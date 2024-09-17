@@ -1,0 +1,87 @@
+= Internet , Intranet et Extranet
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+L'introduction à Internet, Intranet et Extranet est une étape clé dans la compréhension des réseaux et de leur utilisation dans les organisations. 
+
+
+== Internet
+
+L'Internet est un réseau mondial qui connecte des millions d'ordinateurs et de dispositifs à travers le monde. 
+
+=== ...
+
+Il permet l'échange d'informations et de données grâce à des protocoles standardisés, comme TCP/IP. 
+
+=== ... 
+
+L'Internet est public et accessible à tous ceux qui disposent d'une connexion.
+
+=== Exemples : 
+[%step]
+* navigation web, 
+* services de messagerie, 
+* streaming vidéo.
+
+=== Avantages : 
+[%step]
+* accessibilité globale, 
+* partage d'informations instantané.
+
+=== Risques : 
+[%step]
+* vulnérabilité aux cyberattaques,
+* protection des données.
+
+== Intranet
+
+L'Intranet est un réseau privé interne à une organisation, utilisé pour partager des informations et des ressources au sein de celle-ci. 
+
+=== ...
+
+Il utilise les mêmes technologies qu'Internet (comme le protocole HTTP), mais est limité aux employés ou aux utilisateurs autorisés d'une entreprise.
+
+=== Exemples : 
+[%step]
+* plateformes internes d'entreprises, 
+* gestion de projets, 
+* bases de données internes.
+
+=== Avantages : 
+[%step]
+* sécurité renforcée, 
+* contrôle des accès, 
+* communication centralisée.
+
+=== Risques : 
+
+si mal protégé, il peut être vulnérable aux intrusions internes.
+
+== Extranet
+
+L'Extranet est une extension d'un Intranet qui permet à des partenaires externes (clients, fournisseurs, etc.) d'accéder à certaines parties du réseau interne d'une organisation. 
+
+=== ...
+
+Il est souvent utilisé pour faciliter la collaboration entre entreprises ou avec des clients.
+
+=== Exemples : 
+[%step]
+* portails de fournisseurs, 
+* accès clients à des bases de données de suivi de commandes.
+
+
+=== Avantages : 
+[%step]
+* collaboration simplifiée, 
+* accès contrôlé à distance.
+
+=== Risques : 
+[%step]
+* exposition partielle aux menaces extérieures, 
+* gestion des droits d'accès.
+

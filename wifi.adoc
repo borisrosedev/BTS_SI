@@ -1,0 +1,205 @@
+= Le protocole Wi-Fi
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le protocole Wi-Fi (Wireless Fidelity) est une technologie de communication sans fil utilisée pour connecter des dispositifs à un réseau local sans utiliser de câbles. 
+
+
+=== ...
+
+Il permet aux appareils tels que les ordinateurs, les smartphones, les tablettes, et même les objets connectés (IoT), de se connecter à un réseau, généralement à travers un point d'accès Wi-Fi ou un routeur sans fil. 
+
+
+=== ...
+
+Wi-Fi est basé sur la norme IEEE 802.11, qui spécifie les différents aspects de la transmission sans fil pour les réseaux locaux.
+
+== Caractéristiques du protocole Wi-Fi :
+
+=== Normes Wi-Fi (IEEE 802.11) : 
+
+Le Wi-Fi est régi par plusieurs normes, chacune correspondant à une génération de technologies avec des améliorations en termes de vitesse, portée, et sécurité.
+
+
+== Principales versions :
+
+=== 802.11a (1999) : 
+
+Fonctionne sur la bande de fréquence 5 GHz avec un débit théorique maximal de 54 Mbps.
+
+=== 802.11b (1999) : 
+
+Fonctionne sur la bande 2,4 GHz, avec un débit maximal de 11 Mbps. C'est l'une des premières normes largement utilisées.
+
+=== 802.11g (2003) : 
+
+Fonctionne sur la bande 2,4 GHz, avec un débit allant jusqu'à 54 Mbps, compatible avec les appareils 802.11b.
+
+=== 802.11n (2009) : 
+
+Fonctionne sur les bandes 2,4 GHz et 5 GHz, et introduit la technologie MIMO (Multiple Input, Multiple Output), qui permet des débits allant jusqu'à 600 Mbps.
+
+=== 802.11ac (2013) : 
+
+Fonctionne sur la bande 5 GHz et offre des vitesses pouvant aller jusqu'à 1,3 Gbps, avec l'introduction de la technologie MU-MIMO (Multi-User MIMO).
+
+=== 802.11ax (Wi-Fi 6) (2019) : 
+
+Fonctionne sur les bandes 2,4 GHz et 5 GHz (et bientôt 6 GHz pour Wi-Fi 6E) et permet des débits théoriques de 10 Gbps. 
+
+=== ...
+
+Il améliore également l'efficacité des connexions dans des environnements avec beaucoup d'appareils connectés.
+
+=== ...
+
+== Bande de fréquences : 
+
+Le Wi-Fi utilise deux bandes de fréquence principales :
+
+=== 2,4 GHz : 
+
+Offre une meilleure portée, mais des vitesses plus basses et une plus grande sensibilité aux interférences (notamment avec d'autres appareils comme les téléphones sans fil, les micro-ondes, etc.).
+
+=== 5 GHz : Offre des vitesses plus élevées et moins d'interférences, mais avec une portée plus courte par rapport à la bande 2,4 GHz.
+
+=== 6 GHz : 
+
+Introduit avec Wi-Fi 6E, cette bande est plus récente et offre des performances encore plus élevées, avec moins d'interférences et une plus grande capacité pour les réseaux denses.
+
+=== Vitesse de transmission : 
+
+La vitesse de transmission Wi-Fi dépend de la norme utilisée, de la bande de fréquence, de la distance entre le dispositif et le point d'accès, et des interférences environnantes. 
+
+
+== Par exemple :
+
+=== 802.11b : 
+
+Jusqu'à 11 Mbps.
+
+=== 802.11g : 
+
+Jusqu'à 54 Mbps.
+
+=== 802.11n : 
+
+Jusqu'à 600 Mbps.
+
+=== 802.11ac : 
+
+Jusqu'à 1,3 Gbps (ou plus avec MU-MIMO et plusieurs antennes).
+
+=== Wi-Fi 6 (802.11ax) : 
+
+Jusqu'à 10 Gbps théoriques.
+
+=== Sécurité Wi-Fi : 
+
+La sécurité Wi-Fi a évolué au fil du temps, avec plusieurs protocoles pour protéger les réseaux sans fil :
+
+=== WEP (Wired Equivalent Privacy) : 
+
+Introduit avec les premières versions de Wi-Fi, il est aujourd'hui obsolète en raison de ses vulnérabilités.
+
+=== WPA (Wi-Fi Protected Access) : 
+
+Introduit pour remplacer WEP, il offrait une sécurité améliorée.
+
+=== WPA2 : 
+
+Le standard de sécurité le plus couramment utilisé aujourd'hui, offrant un chiffrement AES robuste.
+
+=== WPA3 : 
+
+La nouvelle norme de sécurité introduite avec Wi-Fi 6, offrant des améliorations supplémentaires en termes de protection contre les attaques par force brute et en simplifiant la configuration pour les appareils IoT.
+
+== Modes de fonctionnement : 
+
+Le Wi-Fi peut fonctionner dans plusieurs modes :
+
+=== Mode infrastructure : 
+
+Le plus courant, où les dispositifs se connectent à un point d'accès central (comme un routeur Wi-Fi), qui les relie au réseau ou à Internet.
+
+=== Mode ad hoc : 
+
+Les dispositifs communiquent directement entre eux sans passer par un point d'accès, formant un réseau temporaire.
+
+=== Mode mesh : 
+
+Utilisé dans les réseaux Wi-Fi maillés, où plusieurs points d'accès communiquent entre eux pour offrir une couverture continue sur une grande zone.
+
+== Portée du Wi-Fi : 
+
+La portée du Wi-Fi dépend de plusieurs facteurs, notamment:
+[%step]
+* la norme utilisée, 
+* la bande de fréquence, 
+* les obstacles physiques (murs, meubles, etc.). 
+
+
+=== En général :
+
+En bande 2,4 GHz, la portée peut aller jusqu'à 50-100 mètres à l'intérieur.
+
+=== ...
+
+En bande 5 GHz, la portée est plus réduite (environ 30-50 mètres) en raison de la capacité limitée de cette fréquence à pénétrer les murs.
+
+== Topologie des réseaux Wi-Fi :
+
+Les réseaux Wi-Fi sont généralement configurés dans une topologie en étoile, où tous les dispositifs se connectent à un point d'accès central.
+
+=== ...
+
+Avec l'émergence des réseaux Wi-Fi maillés (mesh networks), la topologie devient plus flexible, où chaque point d'accès ou noeud peut communiquer avec les autres pour fournir une couverture plus vaste et homogène.
+
+
+== Avantages du Wi-Fi :
+
+=== Mobilité : 
+
+Les utilisateurs peuvent se déplacer librement tout en restant connectés à un réseau sans avoir besoin de câbles.
+
+=== Simplicité d'installation : 
+
+Pas besoin de tirer des câbles, ce qui simplifie l'installation dans les maisons ou les bureaux.
+
+=== Évolutivité : 
+
+Le Wi-Fi permet de connecter un grand nombre de dispositifs sans fil à un réseau, particulièrement important avec l'explosion des appareils IoT.
+
+=== Connectivité multiple : 
+
+Grâce aux technologies comme MU-MIMO (Multi-User Multiple Input Multiple Output), Wi-Fi peut gérer plusieurs flux de données simultanément, améliorant ainsi la performance dans les environnements denses.
+
+== Inconvénients du Wi-Fi :
+
+=== Bande passante partagée : 
+
+Tous les dispositifs sur un même réseau Wi-Fi partagent la bande passante, ce qui peut affecter la performance lorsque de nombreux appareils sont connectés.
+
+=== Interférences : 
+
+Le Wi-Fi peut être sensible aux interférences provenant d'autres appareils (micro-ondes, téléphones sans fil, etc.), en particulier sur la bande 2,4 GHz.
+
+=== Sécurité : 
+
+Bien que les protocoles de sécurité aient été améliorés, les réseaux Wi-Fi mal configurés ou mal sécurisés peuvent être vulnérables aux attaques, comme le piratage de réseau ou l'interception de données.
+
+
+=== Portée limitée : 
+
+La portée du Wi-Fi est limitée par rapport aux technologies filaires, et la performance diminue avec la distance.
+
+
+
+
+
+
+

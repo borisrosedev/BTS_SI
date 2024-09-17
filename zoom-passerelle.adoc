@@ -1,0 +1,163 @@
+= Une passerelle (ou gateway en anglais) 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Une passerelle
+
+Une passerelle (ou gateway en anglais)  est un dispositif ou un logiciel qui permet la communication entre deux réseaux ayant des protocoles ou des architectures différents. 
+
+
+=== ...
+
+Elle joue le rôle d'intermédiaire en traduisant les informations échangées entre ces réseaux pour garantir qu'ils puissent se comprendre et interagir correctement.
+
+== Rôle principal d'une passerelle :
+
+Une passerelle agit comme un traducteur qui permet aux différents systèmes de communiquer entre eux, même s'ils utilisent des protocoles ou des technologies différents. 
+
+=== ...
+
+Dans un réseau, cela permet d’interconnecter:
+[%step]
+* plusieurs types de réseaux (par exemple, un réseau local et Internet)
+* des sous-réseaux ayant des configurations différentes.
+
+== Fonctionnalités et rôles d'une passerelle :
+
+=== Traduction de protocole : 
+
+L'une des principales fonctions d'une passerelle est de convertir les données d'un protocole réseau à un autre. 
+
+=== ...
+
+Par exemple, une passerelle pourrait permettre à un réseau utilisant le protocole IPv4 de communiquer avec un autre réseau utilisant IPv6.
+
+=== Communication entre réseaux différents : 
+
+Si un réseau local (LAN) doit se connecter à un réseau externe comme Internet, la passerelle permet cette communication en agissant comme point de sortie et d’entrée pour le trafic réseau. 
+
+=== ...
+
+Elle transmet les paquets de données entre les réseaux tout en assurant leur conversion si nécessaire.
+
+
+=== Point de jonction entre les réseaux locaux et l'Internet : 
+
+
+Dans une configuration domestique ou professionnelle classique, un routeur avec des fonctionnalités de passerelle permet de connecter un réseau local (LAN) à Internet. 
+
+=== ...
+
+Le routeur traduit les adresses IP privées des machines locales en une adresse IP publique utilisable sur Internet (via NAT, Network Address Translation).
+
+
+
+=== Sécurité et filtrage : 
+
+Les passerelles peuvent également inclure des fonctions de sécurité, telles que:
+[%step]
+* des pare-feux pour filtrer et contrôler le trafic qui transite entre les réseaux. 
+
+=== ...
+
+Cela permet de protéger le réseau interne contre les attaques extérieures.
+
+=== Contrôle et gestion du trafic : 
+
+Les passerelles peuvent aussi gérer le trafic réseau:
+[%step]
+* en fonction de la priorité des données (QoS - Quality of Service)
+* en optimisant l'utilisation de la bande passante pour améliorer les performances réseau.
+
+== Types de passerelles :
+
+Il existe différents types de passerelles, chacun adapté à des besoins spécifiques :
+
+=== Passerelle par défaut (Default Gateway) :
+
+C'est l'adresse IP d'un routeur ou d'un dispositif dans un réseau qui permet d'envoyer des paquets de données vers l'extérieur du réseau local. 
+
+=== ...
+
+Lorsqu'un appareil souhaite communiquer avec un appareil situé sur un autre réseau (par exemple, sur Internet), il envoie d'abord les données à la passerelle par défaut, qui les transmet ensuite à la destination finale.
+
+=== Exemple : 
+
+Dans une maison, la passerelle par défaut est généralement le routeur fourni par l'opérateur, qui relie le réseau local à Internet.
+
+
+=== Passerelle de niveau applicatif :
+
+Ce type de passerelle est souvent utilisé pour traduire des protocoles d'application réseau différents. 
+
+=== ...
+
+Par exemple, une passerelle de messagerie pourrait permettre à un serveur de messagerie Microsoft Exchange de communiquer avec un serveur utilisant un autre protocole de messagerie.
+
+
+=== Exemple : 
+
+Une passerelle permettant à un système utilisant le protocole SMTP de communiquer avec un système utilisant le protocole POP3.
+
+
+=== Passerelle de téléphonie VoIP :
+
+Dans le contexte de la téléphonie sur IP, une passerelle VoIP convertit les signaux téléphoniques analogiques en données numériques et inversement, pour permettre la communication entre des réseaux téléphoniques classiques (PSTN) et des réseaux IP.
+
+
+=== Exemple : 
+
+Une entreprise qui utilise des téléphones analogiques classiques et souhaite les intégrer à un réseau VoIP (voix sur IP) utiliserait une passerelle VoIP pour convertir les signaux.
+
+== Passerelle de sécurité :
+
+Certaines passerelles se spécialisent dans la sécurité réseau, telles que:
+[%step]
+* les pare-feu
+* les passerelles VPN (Virtual Private Network). 
+
+=== ...
+
+Elles contrôlent et filtrent le trafic réseau, en appliquant des règles pour protéger les réseaux internes contre les menaces extérieures.
+
+
+=== Exemple : 
+
+Un pare-feu avec des capacités de passerelle pour sécuriser les connexions Internet dans une entreprise.
+
+=== Exemple concret de fonctionnement d'une passerelle :
+
+Supposons que vous avez un réseau local à la maison, avec plusieurs appareils (ordinateurs, smartphones, tablettes) connectés à un routeur. 
+
+=== ...
+
+Lorsque vous essayez d'accéder à un site Web sur Internet, les paquets de données générés par votre appareil sont envoyés au routeur, qui joue le rôle de passerelle. 
+
+=== ...
+
+Cette passerelle traduit l'adresse IP locale de votre appareil en une adresse IP publique et envoie les paquets au réseau Internet.
+
+=== ...
+
+Lorsqu'une réponse est reçue depuis Internet, la passerelle traduit de nouveau l'adresse publique en l'adresse IP locale de votre appareil, permettant ainsi à vos données de parvenir à destination.
+
+=== Différence entre passerelle et routeur :
+
+Bien qu’un routeur puisse agir comme une passerelle, les deux termes ne sont pas strictement synonymes :
+
+=== ...
+
+Un routeur se concentre sur l'acheminement des paquets de données entre plusieurs réseaux, en trouvant le meilleur chemin.
+
+=== ...
+
+Une passerelle effectue une traduction de protocole et permet la communication entre réseaux différents en termes de protocoles ou de formats de données.
+
+
+
+
+
+
+

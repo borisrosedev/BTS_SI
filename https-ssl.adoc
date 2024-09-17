@@ -1,0 +1,116 @@
+= HTTPS et SSL/TLS,
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le chiffrement des données, en particulier avec HTTPS et SSL/TLS, est essentiel pour garantir la confidentialité et l'intégrité des communications sur Internet. 
+
+
+== HTTPS (HyperText Transfer Protocol Secure)
+
+
+HTTPS est une version sécurisée du HTTP, qui utilise des protocoles de chiffrement pour protéger les données échangées entre un client (navigateur) et un serveur web. 
+
+=== ...
+Il repose sur SSL/TLS pour chiffrer les communications, assurant que les données transmises ne peuvent pas être lues ou modifiées par des attaquants.
+
+
+== SSL/TLS (Secure Sockets Layer / Transport Layer Security)
+
+SSL (aujourd'hui considéré obsolète) et TLS (la version moderne) sont des protocoles cryptographiques qui assurent des communications sécurisées. 
+
+=== ...
+
+TLS est souvent désigné par erreur sous le nom de SSL.
+
+== Fonctions principales de SSL/TLS :
+
+=== Chiffrement : 
+
+Assure la confidentialité des données transmises, en les rendant inaccessibles aux tiers.
+
+=== Authentification : 
+
+Vérifie l'identité du serveur (et parfois du client) via des certificats numériques.
+
+=== Intégrité : 
+
+Garantit que les données ne sont pas altérées en cours de transmission grâce à des mécanismes de vérification (comme les hash ou les MAC).
+
+
+== Processus d’établissement d’une connexion SSL/TLS (le handshake) :
+
+Lors de l'établissement d'une connexion HTTPS, un processus appelé handshake SSL/TLS est initié :
+
+=== Étape 1 : 
+
+Le client envoie une requête au serveur. Cette requête inclut une liste des algorithmes de chiffrement et des versions TLS/SSL qu'il supporte.
+
+=== Étape 2 : 
+
+Le serveur répond avec un certificat. Ce certificat contient une clé publique et des informations pour identifier le serveur.
+
+=== Étape 3 : 
+
+Le client vérifie le certificat (via une Autorité de Certification - CA) pour s'assurer que le serveur est légitime.
+
+=== Étape 4 : 
+
+Les clés sont échangées. Le client et le serveur utilisent le certificat pour créer une clé de session unique pour chiffrer les données échangées pendant la session.
+
+=== Étape 5 : 
+
+Le chiffrement des données commence. Les données sont maintenant chiffrées avec la clé de session.
+
+== Certificats numériques
+
+Les certificats utilisés dans SSL/TLS sont émis par des Autorités de Certification (CA) reconnues, qui vérifient l'identité des propriétaires des sites web. 
+
+=== ...
+
+Les certificats garantissent que les utilisateurs communiquent avec le bon serveur.
+
+
+== Chiffrement symétrique et asymétrique
+
+=== Chiffrement asymétrique : 
+
+Utilisé pour échanger les clés en toute sécurité. Le serveur utilise une clé publique pour crypter les informations, et seul le détenteur de la clé privée correspondante (le serveur) peut les décrypter.
+
+=== Chiffrement symétrique : 
+
+Une fois la clé de session échangée, elle est utilisée pour le chiffrement des données tout au long de la session.
+
+== Versions TLS
+
+Les versions TLS ont évolué pour corriger des faiblesses :
+
+=== TLS 1.0 et TLS 1.1 : 
+
+Obsolètes, considérés comme vulnérables.
+
+=== TLS 1.2 : 
+
+Standard jusqu'à récemment, encore largement utilisé.
+
+=== TLS 1.3 : 
+
+La version la plus récente, avec des améliorations de sécurité et de performance (réduction du nombre de tours pour l'établissement d'une connexion).
+
+
+
+== Menaces de sécurité (vulnérabilités et attaques courantes)
+
+=== Attaques Man-in-the-Middle (MITM) : 
+
+L'attaquant s'interpose entre le client et le serveur pour intercepter ou altérer les communications.
+
+=== Attaques POODLE, BEAST, Heartbleed : 
+
+Vulnérabilités des anciennes versions de SSL/TLS qui ont été corrigées dans les versions plus récentes.
+
+
+
+

@@ -1,0 +1,153 @@
+= Les lignes téléphoniques en cuivre
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Les lignes téléphoniques en cuivre, bien que moins performantes que les nouvelles technologies comme la fibre optique, ont encore plusieurs avantages et intérêts, notamment en termes d'infrastructure existante, de coûts et d'accessibilité. 
+
+== Infrastructure existante et déploiement étendu
+
+Les lignes téléphoniques en cuivre sont déjà déployées de manière très étendue, en particulier dans les zones rurales et les régions où la modernisation des infrastructures (comme la fibre optique) est lente à arriver. 
+
+=== ...
+
+Cette infrastructure historique est déjà présente dans presque tous les foyers, ce qui permet aux fournisseurs de services d'offrir des connexions Internet sans avoir à poser de nouveaux câbles.
+
+=== Avantage : 
+
+exploitation d'une infrastructure déjà présente sans besoin d'investir immédiatement dans de nouvelles installations coûteuses.
+
+
+=== Intérêt : 
+
+rapidité de déploiement et disponibilité immédiate.
+
+
+== Coût inférieur pour les utilisateurs
+
+Le cuivre est moins coûteux que des technologies comme la fibre optique pour les petites installations. 
+
+=== ...
+
+Même si la fibre offre de bien meilleures performances, l’installation et le déploiement de la fibre demandent des investissements initiaux beaucoup plus élevés. 
+
+=== ...
+
+Les lignes en cuivre permettent donc de maintenir des prix d’abonnement plus bas pour certains services.
+
+=== Avantage : 
+
+coût moindre pour les utilisateurs finaux dans certaines régions.
+
+=== Intérêt : 
+
+une alternative économique pour les foyers ou petites entreprises qui n'ont pas besoin de débits très élevés.
+
+
+== Compatibilité avec les anciens équipements
+
+Les lignes en cuivre sont entièrement compatibles avec les équipements téléphoniques traditionnels ainsi qu'avec les technologies comme l'ADSL et le VDSL.
+(voir le zoom sur ADSL et VDSL)
+
+=== ...
+
+Cela permet une transition fluide vers l'Internet à haut débit sans changer complètement les équipements des utilisateurs.
+
+=== Avantage : 
+
+compatibilité rétroactive avec les équipements existants.
+
+=== Intérêt : 
+
+moins de perturbations pour les utilisateurs qui ne veulent pas ou ne peuvent pas investir dans de nouveaux équipements.
+
+== Services téléphoniques classiques
+
+Les lignes en cuivre sont historiquement utilisées pour les services téléphoniques.
+
+=== ...
+
+En plus de supporter les technologies DSL pour l'Internet, elles permettent également d'avoir une ligne téléphonique classique, souvent utilisée pour les appels d'urgence ou les services professionnels qui nécessitent une connexion téléphonique stable.
+
+=== Avantage : 
+
+conservation des services téléphoniques traditionnels.
+
+=== Intérêt : 
+
+possibilité d'utiliser simultanément Internet et téléphone sur la même ligne sans interférence.
+
+
+== Facilité d'entretien et fiabilité
+
+Les lignes téléphoniques en cuivre sont faciles à entretenir, et leur technologie est bien connue des techniciens. Leur installation et leur réparation sont également relativement simples comparées à la fibre optique. 
+
+=== ...
+
+De plus, bien que le cuivre ne permette pas des débits aussi élevés que la fibre, les connexions basées sur le cuivre sont généralement stables et fiables, surtout sur des courtes distances.
+
+=== Avantage : 
+
+entretien facile et moins coûteux.
+
+=== Intérêt : 
+
+fiabilité dans des environnements où les besoins en débit ne sont pas très élevés.
+
+=== Solutions transitoires avant le déploiement de la fibre
+
+Dans les zones où la fibre optique n'est pas encore déployée, les lignes en cuivre permettent de fournir un accès Internet relativement rapide via l'ADSL ou le VDSL. 
+
+=== ...
+
+Elles servent de solution transitoire en attendant que des infrastructures plus modernes (comme la fibre) soient installées.
+
+=== Avantage : 
+
+solution temporaire efficace avant l'arrivée de la fibre.
+
+
+=== Intérêt : 
+
+maintenir une connectivité immédiate en attendant de meilleures alternatives.
+
+
+=== Support pour les petits débits et applications spécifiques
+
+Dans certaines applications où les débits ultra-rapides ne sont pas nécessaires, comme pour certains systèmes industriels, les lignes en cuivre suffisent largement. 
+
+
+=== ...
+
+De plus, les connexions à faible débit peuvent encore être utiles pour des équipements spécifiques, comme des terminaux de paiement ou des systèmes de sécurité qui ne nécessitent pas une bande passante élevée.
+
+=== Avantage : 
+
+adapté à des besoins limités en termes de débit.
+
+=== Intérêt : 
+
+connexion économique pour des applications simples.
+
+
+== Bonne performance sur de courtes distances (VDSL)
+
+Bien que l'ADSL soit limité en termes de débit, le VDSL, qui utilise également les lignes en cuivre, peut offrir des performances très intéressantes sur de courtes distances.
+
+=== ...
+
+Le VDSL permet de profiter de vitesses proches de celles de la fibre pour les utilisateurs proches des centraux téléphoniques, ce qui en fait une solution viable dans les zones urbaines où la fibre n'est pas encore disponible.
+
+=== Avantage : 
+
+hautes performances sur courtes distances avec le VDSL.
+
+=== Intérêt : 
+
+possibilité de profiter de vitesses élevées sans fibre pour certains foyers.
+
+
+
+

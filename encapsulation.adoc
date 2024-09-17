@@ -1,0 +1,173 @@
+= L'encapsulation et la décapsulation des données
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+L'encapsulation et la décapsulation des données sont des processus fondamentaux dans le modèle de communication en couches, tel que:
+[%step]
+* le modèle OSI
+* le modèle TCP/IP, 
+
+=== ...
+
+qui régissent le transfert de données entre les ordinateurs et les dispositifs réseau. 
+
+=== ...
+
+Ces processus permettent de structurer les données à chaque couche du modèle pour assurer une transmission efficace et correcte des informations à travers un réseau.
+
+
+== Encapsulation des données
+
+
+L'encapsulation est le processus par lequel les données d'une application sont préparées pour être envoyées à travers un réseau. 
+
+
+=== ...
+
+Cela implique que chaque couche du modèle réseau ajoute des informations spécifiques (appelées en-têtes ou en-têtes et queues) à la donnée d'origine, formant une unité de données pour cette couche. 
+
+
+=== ...
+
+Ce processus se déroule du haut vers le bas du modèle, en partant de la couche application jusqu'à la couche physique.
+
+
+== Processus d'encapsulation dans le modèle OSI :
+
+=== Couche application (7ème couche) :
+
+Les données sont créées et manipulées par des applications (par exemple, un navigateur web, une application de messagerie).
+
+=== ...
+
+Ces données sont appelées données utilisateur.
+
+
+
+=== Couche transport (4ème couche) :
+
+Les données sont encapsulées dans des segments ou datagrammes (dans le cas de TCP ou UDP respectivement).
+
+=== ...
+
+Cette couche ajoute un en-tête contenant des informations importantes telles que:
+[%step]
+* les numéros de port source et destination pour identifier les applications.
+
+
+=== Couche réseau (3ème couche) :
+
+Les segments ou datagrammes sont encapsulés dans des paquets.
+
+=== ...
+
+Un en-tête réseau est ajouté contenant les adresses IP source et destination, permettant le routage des données à travers différents réseaux.
+
+
+=== Couche liaison de données (2ème couche) :
+
+Les paquets sont encapsulés dans des trames.
+
+=== ...
+
+Un en-tête de liaison de données est ajouté, qui inclut les adresses MAC (adresse physique) source et destination, pour la transmission à travers un segment de réseau local.
+
+=== Couche physique (1ère couche) :
+
+Les trames sont converties en un flux de bits sous forme de signaux électriques, optiques ou radio pour être envoyées sur le support physique (câble, fibre optique, ondes radio).
+
+
+=== Exemple d'encapsulation (du point de vue TCP/IP) :
+
+Si vous envoyez un email, les données de l'email (corps du texte) sont encapsulées par chaque couche :
+
+=== ...
+
+La couche application prépare les données (protocole SMTP).
+
+=== ...
+
+La couche transport (TCP) les encapsule dans un segment.
+
+=== ...
+
+La couche réseau (IP) encapsule ce segment dans un paquet.
+
+=== ...
+
+La couche liaison de données encapsule ce paquet dans une trame Ethernet, qui sera envoyée sous forme de bits via la couche physique.
+
+=== ...
+
+
+== Décapsulation des données
+
+
+La décapsulation est le processus inverse de l'encapsulation. Lorsqu'un appareil reçoit des données, chaque couche du modèle réseau retire les en-têtes ajoutés par la couche correspondante à l'émetteur. 
+
+=== ...
+
+
+Ce processus se déroule de la couche physique jusqu'à la couche application. 
+
+
+=== ...
+
+À la fin de ce processus, les données originales sont récupérées et prêtes à être utilisées par l'application.
+
+
+== Processus de décapsulation dans le modèle OSI :
+
+=== Couche physique (1ère couche) :
+
+Les bits reçus sous forme de signaux sont convertis en une trame de données.
+
+
+=== Couche liaison de données (2ème couche) :
+
+La trame est analysée et l'en-tête de la couche liaison de données est retiré, laissant le paquet réseau.
+
+
+=== Couche réseau (3ème couche) :
+
+Le paquet est examiné et l'en-tête de la couche réseau est retiré, laissant le segment ou le datagramme.
+
+=== Couche transport (4ème couche) :
+
+Le segment ou le datagramme est décapsulé, retirant l'en-tête transport, et les données de l'application sont extraites.
+
+
+=== Couche application (7ème couche) :
+
+Les données brutes sont finalement présentées à l'application (comme un programme de messagerie ou un navigateur), qui les utilise.
+
+
+== Exemple de décapsulation :
+
+
+Lorsque le destinataire reçoit l'email envoyé dans l'exemple précédent, l'encapsulation se déroule dans l'ordre inverse :
+
+=== ...
+
+Les bits sont convertis en une trame par la couche physique.
+
+=== ...
+
+
+La trame est décapsulée en paquet par la couche liaison de données.
+
+=== ...
+
+Le paquet est décapsulé en segment par la couche réseau.
+
+=== ...
+
+Le segment est décapsulé en données applicatives par la couche transport.
+
+=== ...
+
+L'application (client de messagerie) reçoit finalement le contenu de l'email.
+

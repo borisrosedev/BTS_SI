@@ -1,0 +1,103 @@
+= Modèle TCP/IP (Transmission Control Protocol / Internet Protocol)
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le modèle TCP/IP, également appelé modèle Internet, est un modèle en 4 couches qui est à la base de l'architecture d'Internet. 
+
+=== ...
+
+Contrairement au modèle OSI, il est directement lié aux protocoles utilisés sur Internet et est donc plus pratique et largement adopté.
+
+=== Les 4 couches du modèle TCP/IP :
+
+=== Explication des couches :
+
+== Couche accès au réseau (1) :
+
+== Rôle : 
+
+Combine les aspects de la couche physique et de la couche liaison de données du modèle OSI. 
+
+=== ...
+
+Elle gère l'envoi de bits à travers le support physique et le formatage des trames pour la transmission.
+
+=== Exemple : 
+Ethernet, Wi-Fi.
+
+== Couche Internet (2) :
+
+=== Rôle : 
+
+Responsable de l'adressage logique et du routage des paquets à travers le réseau. 
+
+Elle utilise principalement le protocole IP.
+
+=== Exemple : Protocole IP, ICMP.
+
+== Couche transport (3) :
+
+=== Rôle : 
+
+Gère la livraison de bout en bout des données. 
+
+=== ...
+
+Deux protocoles principaux sont utilisés : 
+
+=== ...
+
+TCP (garantit l'intégrité et la fiabilité des données) et 
+UDP (livraison rapide sans garantie de livraison).
+
+== Exemple : TCP, UDP.
+
+== Couche application (4) :
+
+=== Rôle : 
+
+Regroupe les fonctions des couches application, présentation et session du modèle OSI. 
+
+=== ...
+
+Elle permet aux applications d'accéder aux services réseau, tels que:
+[%step]
+* le transfert de fichiers, 
+* l'envoi de mails, 
+* la navigation web.
+
+=== Exemple : 
+
+HTTP, FTP, SMTP, DNS.
+
+== Avantages du modèle TCP/IP :
+
+=== Simplicité : 
+
+Le modèle TCP/IP est plus simple à mettre en œuvre que le modèle OSI.
+
+=== Pratique : 
+
+C'est la base de la communication sur Internet, et il est donc largement utilisé.
+
+=== Flexibilité : 
+
+Compatible avec différents types de réseaux et évolutif.
+
+=== Réaliste : 
+
+Il est utilisé en pratique dans la plupart des implémentations réseau.
+
+== Inconvénients :
+
+== Pas de distinction claire des couches : 
+
+Certaines couches du modèle OSI, comme la session et la présentation, sont implicites dans TCP/IP, ce qui rend l'analyse moins détaillée.
+
+=== Dépendance à certains protocoles : 
+
+Le modèle TCP/IP repose fortement sur des protocoles spécifiques comme IP et TCP, limitant la flexibilité pour 
+les nouvelles technologies.

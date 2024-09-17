@@ -1,0 +1,88 @@
+= Le DHCP
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le DHCP (Dynamic Host Configuration Protocol) est un protocole réseau utilisé pour attribuer automatiquement des adresses IP et d'autres paramètres réseau aux dispositifs connectés à un réseau. 
+
+=== ...
+
+Cela permet de simplifier la gestion des adresses IP et de garantir que chaque appareil a une adresse unique sur le réseau local, sans avoir à configurer manuellement chaque appareil.
+
+== Fonctionnement du DHCP :
+
+=== Découverte (DHCP Discover) : 
+
+Lorsqu'un appareil (client) se connecte à un réseau, il envoie une requête de découverte DHCP en diffusion (broadcast) pour signaler qu'il a besoin d'une adresse IP.
+
+=== Offre (DHCP Offer) : 
+
+Le serveur DHCP (souvent intégré au routeur ou à la box internet, comme celle de SFR la mienne ah ah) répond avec une offre qui contient une adresse IP disponible et des informations complémentaires, comme la passerelle et les serveurs DNS.
+
+
+=== Demande (DHCP Request) : 
+
+L'appareil (client) répond en demandant l'adresse IP spécifique qui lui a été offerte, confirmant ainsi qu'il souhaite utiliser cette adresse.
+
+=== Accusé de réception (DHCP Acknowledge) : 
+
+Le serveur DHCP envoie une confirmation, indiquant que l'adresse IP est maintenant attribuée à l'appareil pour une durée déterminée (appelée bail).
+
+== Informations transmises par le DHCP :
+
+=== Adresse IP : L'adresse unique attribuée à l'appareil sur le réseau local.
+
+=== Masque de sous-réseau : Indique quelle partie de l'adresse IP représente le réseau et quelle partie représente l'hôte (par exemple, 255.255.255.0).
+
+=== Passerelle par défaut : 
+
+L'adresse IP du routeur ou de la box qui connecte le réseau local à Internet.
+
+=== Serveur DNS : 
+
+Les adresses IP des serveurs DNS utilisés pour traduire les noms de domaine en adresses IP.
+
+=== Avantages du DHCP :
+
+=== Simplification de la configuration : 
+
+L'attribution manuelle des adresses IP à chaque appareil sur un réseau peut être complexe et source d'erreurs, surtout sur les réseaux avec beaucoup d'appareils. DHCP automatise ce processus.
+
+=== Gestion dynamique des adresses IP : 
+
+Les adresses IP sont attribuées temporairement, sous forme de bail, ce qui permet de réutiliser les adresses lorsqu'elles ne sont plus en usage. Cela est particulièrement utile sur des réseaux avec des utilisateurs mobiles (ordinateurs portables, téléphones, etc.).
+
+
+=== Facilité d'ajout d'appareils : 
+
+Les nouveaux appareils peuvent se connecter facilement au réseau sans configuration manuelle des paramètres IP.
+
+== Exemple de fonctionnement dans un réseau domestique:
+
+Lorsque tu connectes un nouveau périphérique (ordinateur, smartphone, console de jeu) à ton réseau Wi-Fi ou via un câble Ethernet, il envoie une requête DHCP.
+
+=== ...
+
+La box SFR, qui agit comme serveur DHCP, attribue automatiquement une adresse IP privée à ce périphérique (par exemple, 192.168.1.x), ainsi que les autres paramètres nécessaires pour accéder au réseau et à Internet.
+
+=== ...
+
+Le périphérique peut alors commencer à communiquer sur le réseau sans que tu aies à configurer manuellement son adresse IP ou ses paramètres réseau.
+
+
+=== Gérer les réservations DHCP : 
+
+Assigner des adresses IP spécifiques à des périphériques définis (par exemple, une imprimante réseau ou un serveur).
+
+=== Surveiller et dépanner les connexions réseau : 
+
+Résoudre les problèmes liés à la non-attribution d'adresses IP par le DHCP.
+Le DHCP est donc un protocole essentiel pour la gestion des réseaux locaux, aussi bien dans les environnements domestiques que professionnels.
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+= Le NFC
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le NFC (Near Field Communication, ou Communication en Champ Proche) est une technologie de communication sans fil à courte portée. 
+
+=== ...
+
+Elle permet à deux dispositifs, généralement des appareils mobiles, de communiquer entre eux lorsqu'ils sont placés à quelques centimètres l'un de l'autre (généralement moins de 10 cm). 
+
+=== ...
+
+Cette technologie repose sur des fréquences radio à haute fréquence (13,56 MHz) et permet des échanges de données rapides et sécurisés.
+
+=== Fonctionnement du NFC :
+
+Le NFC est une extension de la technologie RFID (Radio Frequency Identification), mais avec une portée beaucoup plus courte. 
+
+
+=== ...
+
+Il permet trois modes principaux de fonctionnement :
+
+=== Mode passif (lecture/écriture) : 
+
+
+Un appareil NFC actif (comme un smartphone) peut lire ou écrire des informations sur une puce NFC passive (comme celles présentes dans les cartes de transport ou des étiquettes intelligentes).
+
+=== Mode actif (peer-to-peer) : 
+
+Deux appareils NFC actifs (comme deux smartphones) peuvent échanger des informations entre eux, comme des photos, des fichiers, ou des contacts.
+
+
+=== Mode émulation de carte : 
+
+Un appareil NFC (souvent un smartphone) peut se comporter comme une carte NFC et être utilisé dans des systèmes de paiement sans contact ou de contrôle d'accès.
+
+== Applications courantes du NFC :
+
+=== Paiements sans contact : 
+
+Une des utilisations les plus populaires de la technologie NFC est dans les systèmes de paiement sans contact, comme Apple Pay, Google Pay, ou des cartes bancaires avec NFC. 
+
+=== ...
+
+En plaçant simplement un smartphone ou une carte de paiement près d'un terminal de paiement compatible NFC, la transaction est effectuée sans contact physique.
+
+=== Cartes de transport : 
+
+Beaucoup de systèmes de transport en commun utilisent des cartes NFC pour permettre aux usagers de payer et d'accéder aux services en passant leur carte sur un lecteur NFC.
+
+=== Partage de fichiers : 
+
+Le NFC permet également de partager rapidement des fichiers, des contacts, ou des liens entre deux appareils compatibles, souvent via un "toucher" entre les appareils 
+
+=== ...
+
+(bien que cette fonctionnalité ait été en grande partie remplacée par des technologies comme le Bluetooth ou Wi-Fi Direct pour des transferts de fichiers plus volumineux).
+
+=== Contrôle d'accès : 
+
+Les badges NFC sont souvent utilisés dans les entreprises pour permettre aux employés d'entrer dans des zones sécurisées 
+
+=== ...
+
+ou pour enregistrer leur temps de présence.
+
+=== Étiquettes intelligentes : 
+
+Les tags NFC peuvent être utilisés dans les magasins ou les musées pour donner des informations supplémentaires aux clients ou visiteurs. 
+
+=== ...
+
+En scannant l'étiquette avec leur smartphone, les utilisateurs peuvent accéder à des informations supplémentaires.
+
+=== Caractéristiques techniques du NFC :
+
+=== Portée courte : 
+
+Moins de 10 cm, ce qui offre une sécurité accrue, car cela limite le risque de capture des données à distance.
+
+=== Vitesse de transmission : 
+
+Modérée, avec des vitesses allant jusqu'à 424 kbit/s, suffisante pour les petites quantités de données (par exemple, pour des paiements ou l'échange de petits fichiers).
+
+=== Mode bidirectionnel : 
+
+Le NFC permet une communication bidirectionnelle, ce qui signifie que les deux appareils peuvent envoyer et recevoir des données.
+
+== Différence avec d'autres technologies (Bluetooth, RFID) :
+
+=== Par rapport au Bluetooth : 
+
+Le NFC a une portée beaucoup plus courte, mais il consomme beaucoup moins d'énergie et offre un couplage instantané. 
+
+=== ...
+
+Le Bluetooth nécessite généralement une configuration plus longue (appariement des appareils), 
+
+=== ...
+
+alors que le NFC permet de connecter deux appareils instantanément simplement en les rapprochant.
+
+=== Par rapport au RFID : 
+
+Le NFC est une forme de RFID à courte portée, mais contrairement à la plupart des systèmes RFID, 
+
+=== ...
+
+le NFC permet une communication bidirectionnelle entre les appareils.
+
+== Sécurité du NFC :
+
+Le NFC est considéré comme relativement sûr, notamment en raison de sa courte portée. 
+
+=== ...
+
+Cependant, comme pour toutes les technologies sans fil, il existe des risques de sécurité :
+
+=== Ecoute (eavesdropping) : 
+
+Un pirate pourrait intercepter les communications NFC s'il se trouve très proche des appareils (moins de 10 cm).
+
+=== Skimming : 
+
+Dans le contexte des paiements, quelqu'un pourrait tenter de lire les informations d'une carte de paiement NFC à distance, 
+
+=== ...
+
+bien que ce soit extrêmement rare grâce aux systèmes de sécurité intégrés dans les cartes et les appareils.
+
+=== Attaques par relais : 
+
+Ce type d'attaque consiste à intercepter et retransmettre les communications NFC pour simuler une transaction.
+
+=== ...
+
+Cependant, de nombreuses applications NFC, notamment les systèmes de paiement, utilisent des méthodes de chiffrement et d'authentification robustes pour protéger les données.

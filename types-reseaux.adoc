@@ -1,0 +1,265 @@
+= Introduction aux réseaux informatiquibes
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Section 1 : Les types de réseaux
+
+== Définition de réseaux informatiques
+
+Les réseaux informatiques sont des ensembles de dispositifs (ordinateurs, serveurs, imprimantes, etc.) interconnectés pour partager des ressources et échanger des données. 
+
+=== ...
+
+Il existe différents types de réseaux, classés en fonction de leur taille, portée géographique et objectifs. 
+
+
+
+== LAN (Local Area Network) - Réseau Local
+
+=== Définition : 
+
+Un LAN est un réseau qui couvre une petite zone géographique, comme une maison, un bureau, une école ou un bâtiment. 
+
+=== ...
+
+Il relie des appareils tels que des ordinateurs, des imprimantes, des serveurs, souvent via des câbles Ethernet ou des connexions sans fil (Wi-Fi).
+
+=== Caractéristiques :
+
+=== Portée géographique : 
+
+Petite (quelques mètres à plusieurs kilomètres)
+
+=== Vitesse de transmission : 
+
+Très élevée (généralement entre 100 Mbps et 10 Gbps)
+
+=== Technologies utilisées : 
+
+Ethernet, Wi-Fi
+
+=== Topologies courantes : 
+
+En étoile (avec un switch ou un routeur central), bus, anneau
+
+=== Exemples : 
+
+Réseau d'une entreprise, réseau domestique
+
+=== Avantages :
+
+Facile à configurer et à maintenir.
+
+Partage de ressources locales (comme une imprimante ou un serveur).
+
+Haute vitesse et faible latence.
+
+=== Inconvénients :
+
+Limité à une petite zone géographique.
+
+Doit être connecté à un réseau plus large (ex : WAN) pour accéder à Internet.
+
+=== Utilisations courantes :
+
+Connexion des ordinateurs d’une entreprise pour le partage de fichiers et d'imprimantes.
+
+Réseau domestique pour partager l’accès à Internet entre plusieurs appareils.
+
+
+== WAN (Wide Area Network) - Réseau Étendu
+
+
+=== Définition : 
+
+Un WAN couvre une vaste zone géographique, allant d'une ville à un pays, voire à plusieurs continents.
+
+=== ...
+
+C'est un réseau qui interconnecte plusieurs LAN. 
+
+=== ...
+
+L'Internet est l'exemple le plus connu d'un WAN. 
+
+=== ...
+
+Les WAN utilisent souvent des infrastructures publiques, telles que:
+[%step]
+* les réseaux téléphoniques
+* les satellites.
+
+=== Caractéristiques :
+
+=== Portée géographique : 
+
+Très vaste (entre plusieurs kilomètres et des milliers de 
+kilomètres)
+
+=== Vitesse de transmission : 
+
+Variable (généralement plus lente que les LAN, allant de quelques Mbps à plusieurs Gbps)
+
+=== Technologies utilisées : 
+
+Fibre optique, satellite, réseaux 4G/5G, MPLS (Multiprotocol Label Switching)
+
+=== Exemples : 
+
+L’Internet, les réseaux d’entreprise internationaux
+
+=== Avantages :
+
+Permet la communication et l’échange de données sur de longues distances.
+
+=== ...
+
+Interconnexion de plusieurs réseaux locaux dans différentes villes ou pays.
+
+=== Inconvénients :
+
+Latence plus élevée que dans un LAN.
+
+=== ...
+
+Coûts d’installation et de maintenance élevés en raison de la distance et des technologies utilisées.
+
+=== ...
+
+Sécurité plus difficile à assurer sur un large périmètre.
+
+=== Utilisations courantes :
+
+Connexion des bureaux d'une multinationale répartis dans différents pays.
+
+=== ...
+
+Accès à Internet pour les utilisateurs d’un réseau local.
+
+
+== MAN (Metropolitan Area Network) - Réseau Métropolitain
+
+=== Définition : 
+
+Un MAN couvre une zone intermédiaire, généralement une ville ou une grande agglomération. 
+
+=== ...
+
+Il est plus grand qu'un LAN mais plus petit qu'un WAN. Les MAN sont souvent utilisés pour interconnecter plusieurs LAN dans une zone métropolitaine. 
+
+=== ...
+
+Ils peuvent appartenir à des entreprises, des universités ou des gouvernements.
+
+=== Caractéristiques :
+
+=== Portée géographique : 
+
+Moyenne (de quelques kilomètres à plusieurs dizaines de kilomètres)
+
+=== Vitesse de transmission : 
+
+Élevée (souvent entre 100 Mbps et plusieurs Gbps)
+
+=== Technologies utilisées : 
+
+Fibre optique, WiMAX, technologies sans fil, Ethernet
+
+=== Exemples : 
+
+Réseaux de campus universitaire, réseaux d’administration municipale, réseaux de transport public
+
+=== Avantages :
+
+Permet de relier plusieurs LAN dans une zone géographique limitée.
+
+=== ...
+
+Vitesse de transmission élevée, souvent grâce à la fibre optique.
+
+=== Inconvénients :
+
+Plus coûteux qu’un LAN en raison de la taille du réseau.
+
+=== ...
+
+Nécessite souvent des équipements spécialisés pour la gestion et la maintenance.
+
+
+=== Utilisations courantes :
+
+
+Interconnexion de plusieurs bâtiments universitaires répartis dans une ville.
+
+=== ...
+
+Réseaux municipaux reliant des institutions publiques telles que des bibliothèques, des écoles et des bureaux administratifs.
+
+
+== PAN (Personal Area Network) - Réseau Personnel
+
+=== Définition : 
+
+Un PAN est un réseau de très courte portée, souvent centré autour d'une seule personne, pour connecter des appareils personnels tels que:
+
+=== ...
+
+[%step]
+- des téléphones, 
+- des ordinateurs portables, 
+- des tablettes, des écouteurs sans fil et des montres intelligentes. 
+
+=== ...
+
+Il utilise principalement des technologies sans fil comme Bluetooth et Wi-Fi.
+
+=== Caractéristiques :
+
+=== Portée géographique : 
+
+Très petite (généralement jusqu'à 10 mètres)
+
+=== Vitesse de transmission : 
+
+Variable (dépend de la technologie utilisée, ex : Bluetooth 5.0 peut atteindre jusqu’à 2 Mbps)
+
+=== Technologies utilisées : 
+
+Bluetooth, Wi-Fi, USB, Zigbee, NFC
+
+
+
+=== Exemples : 
+
+Connexion d’un smartphone à une montre connectée, un casque sans fil ou un ordinateur.
+
+=== Avantages :
+
+Très pratique pour connecter des appareils personnels.
+Peu coûteux et facile à mettre en place.
+
+=== Inconvénients :
+
+Portée limitée.
+
+=== ...
+
+Vitesse de transmission souvent inférieure à celle des autres types de réseaux.
+
+=== Utilisations courantes :
+
+Synchronisation d’un smartphone avec une montre connectée.
+
+=== ...
+
+Connexion d’un ordinateur portable à une imprimante ou à des haut-parleurs via Bluetooth.
+
+=== ...
+
+Communication entre des appareils portables comme des casques ou des écouteurs sans fil.
+
+
+
+
+

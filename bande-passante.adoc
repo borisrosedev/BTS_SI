@@ -1,0 +1,113 @@
+= A large bande
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le terme "à large bande" (ou broadband en anglais) désigne une méthode de transmission de données qui permet de transférer de grandes quantités d'informations à une vitesse élevée. 
+
+=== ...
+
+En matière de télécommunications et de réseaux, une connexion à large bande offre une large capacité de bande passante, ce qui signifie qu'elle peut transporter plusieurs signaux ou canaux de données simultanément.
+
+
+== Caractéristiques de la large bande :
+
+=== Vitesse élevée :
+
+Les connexions à large bande sont généralement associées à des vitesses de transmission de données élevées, comparées aux connexions plus lentes comme le dial-up (connexion par ligne téléphonique).
+
+
+=== ...
+
+La large bande permet des applications exigeantes en termes de bande passante, telles que la streaming vidéo HD, les jeux en ligne, ou les télécommunications avancées (visioconférence, etc.).
+
+=== Large capacité de bande passante :
+
+La bande passante est la quantité de données qui peut être transférée sur un réseau pendant un certain laps de temps. 
+
+=== ...
+
+
+La "large bande" signifie que la connexion peut transférer beaucoup de données simultanément. Cela est possible en utilisant une large gamme de fréquences (spectre).
+
+
+=== ...
+
+Une connexion à large bande peut transporter des flux multiples de données en même temps, par exemple des appels téléphoniques, des connexions Internet et des services de télévision, tout cela via une seule connexion.
+
+== Technologies de large bande :
+
+La technologie à large bande peut être utilisée via différents types de connexion :
+
+=== DSL (Digital Subscriber Line) : 
+
+Utilise les lignes téléphoniques classiques pour offrir des services Internet à haut débit.
+
+=== Fibre optique : 
+
+Utilise des fibres de verre pour transmettre des données à la vitesse de la lumière, offrant des vitesses extrêmement élevées.
+
+=== Câble coaxial : 
+
+Utilisé pour la télévision par câble et l'Internet haut débit.
+
+=== Satellites : 
+
+Utilisés dans les zones rurales ou isolées pour offrir l'accès à Internet.
+
+=== 4G/5G et WiMAX : 
+
+Utilisent des ondes radio pour fournir des connexions Internet à haut débit sans fil.
+
+=== Connexion permanente :
+
+Une connexion à large bande est toujours active, contrairement aux anciennes connexions dial-up qui nécessitaient une numérotation pour se connecter à Internet à chaque fois. 
+
+=== ...
+
+Cette disponibilité constante est cruciale pour les activités professionnelles et personnelles qui nécessitent un accès immédiat à Internet.
+
+=== Utilisation partagée :
+
+Une connexion à large bande peut être utilisée par plusieurs utilisateurs et appareils simultanément, sans ralentir considérablement la connexion. 
+
+=== ...
+
+Cela la rend idéale pour des réseaux domestiques ou professionnels où de nombreux appareils sont connectés en permanence.
+
+=== Comparaison avec les connexions à bande étroite :
+
+Une connexion dite "à bande étroite" (narrowband) est plus lente et a une capacité de bande passante limitée, comme les anciennes connexions dial-up ou les modems 56k.
+
+=== ...
+
+Les connexions à large bande, en revanche, permettent de traiter des volumes beaucoup plus importants de données à des vitesses bien plus élevées.
+
+
+
+== Exemples d'utilisation de la large bande :
+
+
+=== ...
+
+Streaming vidéo (Netflix, YouTube) en haute définition (HD) ou 4K.
+
+=== ...
+
+Jeux en ligne avec un minimum de latence.
+
+=== ...
+
+Télétravail avec des applications de vidéoconférence comme Zoom ou Microsoft Teams.
+
+=== ...
+
+Téléchargement rapide de fichiers volumineux.
+
+=== ...
+
+Accès simultané par plusieurs utilisateurs dans une maison ou un bureau.
+

@@ -1,0 +1,117 @@
+= Le  Modèle OSI (Open Systems Interconnection)
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le modèle OSI, développé par l'ISO (Organisation internationale de normalisation), est un modèle théorique en 7 couches qui structure la communication entre systèmes réseau. 
+
+=== ...
+
+Chaque couche a une fonction spécifique et communique uniquement avec les couches adjacentes. 
+
+
+=== ...
+
+Ce modèle est surtout utilisé comme référence théorique pour comprendre comment les réseaux fonctionnent.
+
+=== Explication des couches :
+
+== Couche physique (1) :
+
+=== Rôle : 
+
+Transmet les signaux physiques sous forme de bits à travers des supports physiques (câbles, fibre optique, etc.).
+
+=== Exemple : 
+
+Interface Ethernet, Wi-Fi.
+
+== Couche liaison de données (2) :
+
+=== Rôle : 
+
+Gère l'accès au support physique et l'encapsulation des données sous forme de trames. 
+
+=== ...
+
+Elle assure également la détection d'erreurs.
+
+=== Exemple : 
+
+Protocole Ethernet, 
+Wi-Fi (IEEE 802.11).
+
+== Couche réseau (3) :
+
+
+=== Rôle : 
+
+Assure le routage des paquets à travers le réseau. Elle est responsable de l'adressage logique (IP) et du choix du chemin à suivre pour les données.
+
+=== Exemple : 
+
+Protocole IP, ICMP (Internet Control Message Protocol).
+
+== Couche transport (4) :
+
+=== Rôle : 
+
+Garantit que les données arrivent correctement entre deux hôtes, via des protocoles comme TCP (contrôle d’erreur et de flux) ou UDP (envoi sans garantie de livraison).
+
+=== Exemple : 
+
+TCP, UDP.
+
+== Couche session (5) :
+
+=== Rôle : 
+
+Gère l'ouverture, la maintenance et la fermeture des sessions entre les applications sur les ordinateurs distants.
+
+=== Exemple : 
+
+RPC (Remote Procedure Call), NetBIOS.
+
+
+== Couche présentation (6) :
+
+=== Rôle : 
+
+Traduit les données entre le format utilisé par l'application et celui requis par le réseau (cryptage, compression, formatage).
+
+=== Exemple : SSL, TLS, JPEG, MPEG.
+
+== Couche application (7) :
+
+=== Rôle : 
+
+Interagit directement avec les applications et fournit des services réseau (envoi de mails, navigation web, transfert de fichiers).
+
+=== Exemple : 
+HTTP, FTP, SMTP, DNS.
+
+=== Avantages du modèle OSI :
+
+=== Clarté conceptuelle : 
+
+Chaque couche a une fonction spécifique, facilitant la compréhension et la conception des réseaux.
+
+=== Standardisation : 
+
+Fournit une norme universelle pour les protocoles réseau.
+
+=== Modularité : 
+
+Les changements dans une couche n'affectent pas les autres couches.
+
+=== Inconvénients :
+
+=== Trop théorique : 
+
+Le modèle OSI est un cadre de référence, mais il n'est pas directement implémenté en tant que tel dans la plupart des systèmes.
+
+=== Complexité : 
+
+Certaines couches, comme la couche session et présentation, ne sont pas toujours pertinentes dans tous les réseaux.

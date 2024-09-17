@@ -1,0 +1,233 @@
+= Un routeur professionnel 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Un routeur professionnel est un appareil réseau conçu pour répondre aux besoins des entreprises, organisations ou environnements réseau exigeants, où les performances, la sécurité, la gestion et la fiabilité sont essentielles. 
+
+=== ...
+
+Contrairement aux routeurs grand public utilisés à domicile, les routeurs professionnels sont souvent plus robustes, configurables et dotés de fonctionnalités avancées pour gérer des réseaux complexes avec un grand nombre d'appareils et d'utilisateurs.
+
+
+== Caractéristiques d'un routeur professionnel :
+
+=== Haute performance :
+
+Les routeurs professionnels sont conçus pour gérer un grand volume de trafic réseau, avec des processeurs plus puissants et une meilleure capacité de traitement des paquets.
+
+=== ...
+
+Ils peuvent également offrir des débits plus élevés, en particulier pour les réseaux qui nécessitent une bande passante importante, comme les bureaux avec de nombreux utilisateurs ou les entreprises ayant des serveurs à forte activité.
+
+== Fonctionnalités de sécurité avancées :
+
+=== Pare-feu intégré : 
+
+Les routeurs professionnels incluent souvent des pare-feu avancés pour protéger le réseau contre les menaces extérieures.
+
+=== VPN (Virtual Private Network) : 
+
+Ils peuvent offrir des options de VPN plus sophistiquées pour permettre aux employés de se connecter de manière sécurisée au réseau de l’entreprise à distance.
+
+=== Contrôle d'accès réseau (NAC) : 
+
+Certains routeurs professionnels peuvent intégrer des solutions de NAC pour contrôler et restreindre l’accès au réseau en fonction de critères définis.
+
+== Gestion du réseau :
+
+=== QoS (Quality of Service) : 
+
+Ces routeurs permettent de définir des priorités pour certains types de trafic (comme la VoIP, les vidéos, etc.) afin de garantir une bonne qualité de service pour les applications critiques.
+
+=== Segmentation réseau : 
+
+Les routeurs professionnels permettent souvent de segmenter le réseau en plusieurs VLANs (Virtual Local Area Networks) pour isoler les différents groupes d'utilisateurs ou services, ce qui est essentiel pour la sécurité et la gestion efficace.
+
+=== Routing avancé : 
+
+Ils prennent en charge des protocoles de routage plus sophistiqués, comme OSPF, BGP, et RIP, ce qui permet de gérer des réseaux distribués et complexes.
+
+=== Fiabilité et redondance :
+
+Les routeurs professionnels sont souvent dotés de fonctionnalités de redondance pour assurer la continuité du service en cas de défaillance (exemple : double alimentation, double WAN pour basculement automatique).
+
+=== ...
+
+Ils peuvent également avoir des options pour agréger plusieurs connexions (link aggregation), ce qui améliore à la fois la bande passante et la tolérance aux pannes.
+
+=== Support multi-sites et gestion centralisée :
+
+Ces routeurs sont souvent utilisés dans des environnements avec plusieurs sites ou bureaux, où ils permettent une gestion centralisée du réseau à distance, ainsi que l’interconnexion de plusieurs sites via des VPN ou des réseaux privés.
+
+
+=== Gestion à distance et administration :
+
+Les routeurs professionnels disposent souvent de fonctionnalités avancées d’administration, comme l’interface web, le support SNMP, et les options de ligne de commande (CLI) pour une gestion fine.
+
+=== ...
+
+Ils permettent également la surveillance du réseau en temps réel et des alertes sur des problèmes potentiels, ce qui est crucial pour une gestion proactive des réseaux d’entreprise.
+
+=== Marques et modèles populaires de routeurs professionnels :
+
+
+Certaines marques sont reconnues pour la fabrication de routeurs professionnels de haute qualité :
+
+=== Cisco : 
+
+Une des marques les plus respectées dans le domaine des équipements réseau professionnels, avec une large gamme de routeurs pour tous types d'entreprises.
+
+=== Juniper Networks : 
+
+Connu pour ses équipements réseau haut de gamme utilisés dans les environnements critiques.
+
+=== MikroTik : 
+
+Propose des routeurs professionnels très flexibles et abordables, souvent utilisés par les PME.
+
+=== Ubiquiti : 
+
+Offre des solutions réseau professionnelles avec une interface intuitive, souvent adoptées par les petites et moyennes entreprises.
+
+=== Fortinet : 
+
+Connu pour ses routeurs avec des fonctionnalités de sécurité avancées, en particulier dans les environnements qui nécessitent des pare-feu et des solutions de sécurité intégrées.
+
+
+
+
+
+
+
+
+
+== ...
+
+Certains routeurs professionnels peuvent combiner plusieurs rôles tels que modem, point d'accès, pare-feu, passerelle, et routeur dans un seul appareil, mais ce n'est pas toujours le cas pour tous les modèles.
+
+
+
+=== Modem :
+
+Un routeur professionnel peut parfois inclure un modem intégré, ce qui est plus courant dans des routeurs tout-en-un destinés aux petites entreprises ou aux PME. 
+
+=== ...
+
+Dans ce cas, le modem intégré permet de se connecter directement à l'Internet via une ligne ADSL, VDSL, fibre optique, ou câble.
+
+
+=== ...
+
+Cependant, dans des environnements d'entreprise plus complexes, le modem est souvent séparé pour des raisons de flexibilité et de gestion. 
+
+=== ...
+
+Le routeur est alors connecté à un modem externe.
+
+
+=== Point d'accès Wi-Fi :
+
+De nombreux routeurs professionnels incluent des fonctions de point d'accès Wi-Fi, permettant aux appareils de se connecter au réseau sans fil. 
+
+=== ...
+
+Cela est surtout utile dans des environnements où l'accès sans fil est nécessaire pour les employés ou les invités.
+
+=== ...
+
+Certains routeurs permettent également de gérer plusieurs points d'accès Wi-Fi à distance à partir d'un contrôleur centralisé, pour une gestion plus efficace du réseau sans fil.
+
+
+
+== Pare-feu :
+
+Presque tous les routeurs professionnels incluent un pare-feu intégré pour protéger le réseau contre les menaces extérieures. 
+
+=== ...
+
+Ce pare-feu est souvent bien plus sophistiqué que ceux des routeurs domestiques, avec des fonctionnalités comme :
+
+[%step]
+
+* Le filtrage de paquets avancé.
+* La prévention des intrusions (IPS).
+* Le filtrage d’URL ou de contenu.
+* La gestion de politiques de sécurité précises pour différents types de trafic réseau.
+
+
+== Passerelle (Gateway) :
+
+Le routeur professionnel agit aussi comme une passerelle entre le réseau local (LAN) et les réseaux externes (WAN), comme l'Internet. 
+
+=== ...
+
+La passerelle est le point de sortie de votre réseau local vers l'extérieur.
+
+=== ...
+
+Cette fonction est toujours présente dans les routeurs, qu'ils soient pour usage domestique ou professionnel.
+
+
+== Routage (Routeur) :
+
+Comme son nom l’indique, la fonction de base d’un routeur est de diriger le trafic réseau entre différents réseaux. 
+
+Dans un environnement professionnel, le routage inclut souvent :
+
+* La gestion des protocoles de routage avancés comme OSPF, BGP, RIP.
+
+=== ...
+
+* Le routage statique ou dynamique pour optimiser la distribution du trafic réseau.
+
+* La gestion de plusieurs réseaux locaux (VLANs) et leur segmentation.
+
+
+== Appareils tout-en-un :
+
+Certains fabricants proposent des appareils tout-en-un combinant toutes ces fonctionnalités pour des PME ou des entreprises avec des besoins simplifiés. 
+
+Par exemple :
+
+=== Ubiquiti UniFi Dream Machine Pro : 
+
+Ce routeur combine des fonctionnalités de routeur, pare-feu, point d’accès Wi-Fi, et passerelle avec des options de gestion centralisée.
+
+
+=== Cisco Meraki MX Series : 
+
+Propose un routeur avec pare-feu, VPN, et gestion cloud intégrée, souvent utilisé dans des déploiements multi-sites.
+
+
+== Appareils spécialisés et modularité :
+
+Dans des environnements plus complexes (grandes entreprises, data centers), il est plus courant de séparer les différentes fonctions :
+
+=== ...
+
+Modem externe pour une gestion spécifique de la connexion Internet.
+
+
+=== ...
+
+Routeur qui se concentre uniquement sur le routage et la gestion du trafic réseau.
+
+
+=== ...
+
+Pare-feu dédié comme ceux de Fortinet ou Palo Alto Networks pour une sécurité renforcée.
+
+=== ...
+
+Contrôleur de point d’accès séparé, comme les solutions Ubiquiti ou Cisco, pour gérer plusieurs points d'accès sur de vastes zones.
+
+
+
+
+
+
+
+

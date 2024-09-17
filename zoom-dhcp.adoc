@@ -1,0 +1,141 @@
+= Le Dynamic Host Configuration Protocol (DHCP)
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le Dynamic Host Configuration Protocol (DHCP) est un protocole réseau qui permet d’attribuer automatiquement des adresses IP et d’autres informations de configuration réseau aux appareils (clients) sur un réseau. 
+
+=== ...
+
+Cela facilite la gestion des adresses IP dans un réseau, en évitant la configuration manuelle sur chaque appareil.
+
+== Fonctionnement du DHCP
+
+Lorsqu’un appareil se connecte à un réseau, il a besoin d’une adresse IP pour communiquer avec les autres appareils sur le réseau.
+
+=== ...
+
+Le DHCP simplifie ce processus en attribuant automatiquement une adresse IP à cet appareil. 
+
+== Les étapes détaillées du processus DHCP :
+
+
+=== Découverte (DHCPDISCOVER) :
+
+Lorsque l’appareil (client DHCP) se connecte à un réseau pour la première fois, il envoie un message de découverte en broadcast (DHCPDISCOVER) sur le réseau pour trouver un serveur DHCP. 
+
+=== ...
+
+Ce message est envoyé à l’adresse de diffusion 255.255.255.255, car le client ne connaît pas encore son adresse IP.
+
+
+=== Offre (DHCPOFFER) :
+
+Les serveurs DHCP présents sur le réseau reçoivent la requête et envoient une offre (DHCPOFFER) au client. 
+
+=== ...
+
+Cette offre contient une adresse IP proposée, le masque de sous-réseau, l’adresse de la passerelle (gateway), et les durées de bail pour l’adresse IP. 
+
+=== ...
+
+Le serveur DHCP envoie aussi d'autres informations, comme l’adresse des serveurs DNS.
+
+== Requête (DHCPREQUEST) :
+
+L’appareil client choisit une des offres reçues (s’il y en a plusieurs) et envoie un message de requête (DHCPREQUEST) pour confirmer qu’il accepte l’offre. 
+
+=== ...
+
+Ce message est également envoyé en broadcast afin que tous les serveurs DHCP sachent quel serveur a été choisi.
+
+
+== Accusé de réception (DHCPACK) :
+
+Le serveur DHCP sélectionné envoie un message de confirmation (DHCPACK) pour informer le client que l'adresse IP a été réservée pour lui. 
+
+=== ...
+
+Le client peut alors commencer à utiliser cette adresse IP. 
+
+=== ...
+
+Le serveur enregistre cette affectation dans sa base de données et associe cette adresse IP à l’adresse MAC du client pendant une durée déterminée (le "bail").
+
+=== Informations fournies par DHCP
+
+Outre l’attribution de l’adresse IP, le DHCP peut fournir plusieurs autres informations utiles pour la configuration du réseau du client, telles que :
+
+=== Masque de sous-réseau : 
+
+Pour identifier la partie réseau de l'adresse IP.
+
+=== Passerelle par défaut (gateway) : 
+
+L’adresse IP du routeur ou de la passerelle qui permet d'accéder à d’autres réseaux, y compris Internet.
+
+=== Serveurs DNS : 
+
+Les adresses IP des serveurs DNS à utiliser pour la résolution de noms de domaine.
+
+=== Durée de bail : 
+
+La durée pendant laquelle l’adresse IP est allouée au client.
+
+== Renouvellement et expiration de l’adresse IP
+
+=== Renouvellement : 
+
+Avant l'expiration du bail, le client tente de renouveler son adresse IP en envoyant un nouveau message DHCPREQUEST au serveur DHCP. 
+
+=== ...
+
+Si le serveur répond avec un DHCPACK, le bail est prolongé.
+
+=== Expiration : 
+
+Si le client ne parvient pas à renouveler son adresse IP (par exemple, si le serveur DHCP est injoignable), l’adresse IP expire et le client doit recommencer le processus de demande d’adresse IP (DHCPDISCOVER).
+
+== Types d’allocation DHCP
+
+=== Attribution dynamique : 
+
+Le serveur DHCP attribue une adresse IP à partir d’un pool d’adresses disponibles pour une durée limitée (bail).
+
+=== Attribution automatique : 
+
+Le serveur DHCP attribue une adresse IP de façon permanente à un client. Une fois attribuée, cette adresse sera toujours réattribuée au même client.
+
+=== Attribution manuelle : 
+
+L’administrateur réseau associe une adresse IP spécifique à une adresse MAC particulière de manière fixe.
+
+== Avantages du DHCP
+
+=== Simplicité d’administration : 
+
+Pas besoin de configurer manuellement chaque appareil sur le réseau.
+
+=== Prévention des conflits IP : 
+
+Le serveur DHCP gère un pool d'adresses IP, empêchant ainsi les adresses en double.
+
+=== Centralisation : 
+
+L'administrateur réseau peut centraliser et automatiser la gestion des configurations IP.
+
+== Inconvénients potentiels
+
+=== Fiabilité : 
+
+Si le serveur DHCP tombe en panne, les nouveaux appareils ne peuvent pas obtenir d’adresses IP, ce qui peut provoquer des problèmes de connexion réseau.
+
+=== Sécurité : 
+
+Un serveur DHCP non autorisé peut être installé sur le réseau (attaques DHCP spoofing), distribuant de fausses adresses IP ou des configurations réseau incorrectes.
+
+=== ...
+
+Le DHCP est donc un élément essentiel pour automatiser et simplifier la gestion des adresses IP dans les réseaux modernes, tout en permettant flexibilité et évolutivité.

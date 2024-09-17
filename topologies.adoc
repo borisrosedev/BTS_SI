@@ -1,0 +1,333 @@
+= Les topologies de réseau
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Définition
+
+Les topologies de réseau désignent la manière dont les dispositifs (ordinateurs, routeurs, commutateurs, etc.) sont organisés et interconnectés dans un réseau. 
+
+=== ...
+
+Chaque topologie présente des avantages et des inconvénients en termes de:
+[%step]
+* coût, 
+* de performance, 
+* de résilience
+* de gestion. 
+
+
+== Topologie en Bus
+
+=== Description : 
+
+Dans la topologie en bus, tous les dispositifs sont connectés à un unique câble principal appelé bus ou ligne de transmission. 
+
+=== ...
+
+Les signaux sont envoyés à travers ce câble, et chaque dispositif du réseau peut recevoir les données.
+
+== Caractéristiques :
+
+=== Coût : Peu coûteux (un seul câble pour tout le réseau)
+
+=== Installation : 
+
+Facile à mettre en place pour les petits réseaux
+
+=== Fiabilité : 
+
+Faible, car une panne sur le câble principal paralyse tout le réseau
+
+=== Performance : 
+
+Dégrade si de nombreux dispositifs envoient des données simultanément (collisions)
+
+=== Avantages :
+
+Simple et économique pour les petits réseaux.
+Moins de câblage comparé à d'autres topologies.
+
+=== Inconvénients :
+
+Difficulté à diagnostiquer les pannes.
+
+=== ...
+
+Si le câble principal est défectueux, tout le réseau est interrompu.
+Vitesse réduite avec l'augmentation du nombre de dispositifs.
+
+=== Utilisation courante :
+
+Réseaux locaux simples et peu étendus dans des environnements limités.
+
+
+
+
+== Topologie en Étoile
+
+=== Description : 
+
+Dans une topologie en étoile, tous les dispositifs sont connectés à un dispositif central (généralement un switch ou un routeur). 
+
+=== ...
+
+Les données passent par ce dispositif central, qui gère le flux d'informations.
+
+=== Caractéristiques :
+
+=== Coût : 
+
+Modéré (nécessite un équipement central et plus de câbles)
+
+=== Installation : 
+
+Relativement simple à installer et à gérer
+
+=== Fiabilité : 
+
+Très fiable ; si un câble vers un dispositif tombe en panne, cela n'affecte pas les autres
+
+=== Performance : 
+
+Bonne, car le dispositif central contrôle le trafic
+
+=== Avantages :
+
+Facile à dépanner, car les pannes sont isolées aux dispositifs défectueux.
+
+=== Extensible : 
+
+il est facile d’ajouter de nouveaux dispositifs sans perturber le réseau.
+
+=== ...
+
+Fiable, car une défaillance d'un câble n'affecte pas l'ensemble du réseau.
+
+=== Inconvénients :
+
+Si le dispositif central tombe en panne, tout le réseau est hors service.
+Nécessite plus de câblage par rapport à une topologie en bus.
+
+=== Utilisation courante :
+
+Réseaux locaux (LAN) dans les maisons, les écoles, et les bureaux.
+
+
+
+
+
+
+
+== Topologie en Anneau
+
+=== Description : 
+
+Dans une topologie en anneau, chaque dispositif est connecté à deux autres, formant une boucle fermée. 
+
+=== ...
+
+Les données circulent dans une direction (ou dans les deux, dans certains cas), et chaque dispositif retransmet les données à son voisin jusqu'à ce que celles-ci atteignent leur destination.
+
+=== Caractéristiques :
+
+=== Coût : 
+
+Modéré
+
+=== Installation : 
+
+Plus complexe qu'un réseau en étoile ou en bus
+
+=== Fiabilité : 
+
+Moins fiable ; si un dispositif ou un câble est défectueux, tout le réseau peut être affecté (sauf si un anneau redondant est utilisé)
+
+=== Performance : 
+
+Bonne pour des réseaux de taille modeste avec un flux de données régulier
+
+=== Avantages :
+
+Un flux de données constant, réduit les risques de collision.
+Convient aux réseaux où les données doivent être transmises régulièrement et de manière ordonnée.
+
+=== Inconvénients :
+
+Si un seul appareil ou câble tombe en panne, le réseau entier peut s'arrêter.
+
+Difficile à étendre sans interrompre le réseau.
+
+=== Utilisation courante :
+
+Réseaux locaux et métropolitains utilisant des technologies comme FDDI ou Token Ring (anciennement).
+
+
+
+
+
+
+
+
+== Topologie Maillée
+
+=== Description : 
+
+Dans une topologie maillée, chaque dispositif est connecté directement à tous les autres dispositifs du réseau. Il existe deux types de topologie maillée :
+
+=== Maillée complète : 
+
+chaque dispositif est connecté à tous les autres.
+
+=== Maillée partielle : 
+
+certains dispositifs sont connectés à plusieurs autres, mais pas à tous.
+
+=== Caractéristiques :
+
+=== Coût : 
+
+Très coûteux (beaucoup de câbles et de connexions)
+
+=== Installation : 
+
+Complexe à mettre en œuvre
+
+=== Fiabilité : 
+
+Très fiable ; si un câble ou un dispositif tombe en panne, il existe toujours des chemins alternatifs
+
+=== Performance : 
+
+Excellente, car il existe plusieurs chemins pour chaque paire de dispositifs
+
+== Avantages :
+
+=== Extrêmement résilient : 
+
+Plusieurs chemins disponibles, rendant les pannes quasiment inoffensives.
+
+=== ...
+
+Bonne performance, car le trafic est distribué sur plusieurs routes.
+Sécurisé, car les données peuvent emprunter plusieurs routes.
+
+=== Inconvénients :
+
+Très coûteux en termes de câblage et d'installation.
+
+=== ...
+
+Complexité accrue avec l'augmentation du nombre de dispositifs.
+
+=== Utilisation courante :
+
+Réseaux où la fiabilité et la redondance sont cruciales, comme les réseaux militaires, certaines infrastructures critiques ou les grands réseaux d'entreprise.
+
+
+
+
+
+
+
+
+
+
+== Topologie en Arbre (ou Hiérarchique)
+
+=== Description : 
+
+La topologie en arbre est une combinaison de plusieurs topologies en étoile interconnectées. 
+
+=== ...
+
+Il y a généralement un nœud racine (souvent un switch ou un routeur principal), avec des branches (d'autres dispositifs centralisés comme des commutateurs) qui s'étendent vers d'autres dispositifs.
+
+== Caractéristiques :
+
+=== Coût : 
+
+Variable selon la taille et la complexité du réseau
+
+=== Installation : 
+
+Assez complexe à installer et à gérer
+
+=== Fiabilité : 
+
+Dépend de la robustesse du nœud racine ; si celui-ci tombe en panne, une grande partie du réseau peut être affectée
+
+=== Performance : 
+Bonne si bien structuré
+
+=== Avantages :
+
+Facile à étendre, car il suffit d'ajouter de nouveaux nœuds.
+Hiérarchie claire qui facilite la gestion.
+
+=== Inconvénients :
+
+Si un nœud central tombe en panne, les nœuds en aval peuvent perdre leur connexion.
+
+=== ...
+
+Coût élevé en termes de câblage et d'équipements.
+
+=== Utilisation courante :
+
+Réseaux locaux d'entreprises avec plusieurs départements ou bâtiments interconnectés.
+
+
+
+
+
+
+
+
+
+
+== Topologie Hybride
+
+=== Description : 
+
+Une topologie hybride est une combinaison de deux ou plusieurs topologies différentes. 
+
+=== ...
+
+Par exemple, une entreprise peut utiliser une topologie en étoile dans ses bureaux individuels, tout en reliant ces bureaux entre eux via une topologie en anneau.
+
+=== Caractéristiques :
+
+=== Coût : 
+
+Variable selon les topologies combinées
+
+=== Installation : 
+
+Peut être complexe selon les topologies intégrées
+
+=== Fiabilité : 
+
+Dépend de la combinaison des topologies ; généralement plus fiable si bien conçu
+
+=== Performance : 
+
+Variable selon les topologies utilisées
+
+=== Avantages :
+
+Flexibilité pour adapter le réseau aux besoins spécifiques.
+
+=== ...
+
+Possibilité de combiner les avantages de plusieurs topologies.
+
+=== Inconvénients :
+
+Peut être coûteux et difficile à gérer.
+
+La complexité augmente avec la combinaison de plusieurs topologies.
+
+=== Utilisation courante :
+
+Grands réseaux d'entreprise ou infrastructures où des sections du réseau nécessitent des topologies différentes pour répondre à des besoins variés.

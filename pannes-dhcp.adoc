@@ -1,0 +1,166 @@
+= Surveiller et dépanner les connexions réseau, 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Si un appareil sur un réseau ne reçoit pas d’adresse IP via DHCP, cela peut engendrer des problèmes de connectivité, et il est essentiel de savoir identifier et résoudre la cause du problème. 
+
+
+== Symptômes d'un problème de DHCP :
+
+=== Appareil sans connexion réseau : 
+
+L'appareil ne parvient pas à se connecter au réseau et/ou à Internet.
+
+=== Adresse IP auto-attribuée : 
+
+Si l’appareil affiche une adresse IP du type 169.254.x.x, cela signifie qu'il n'a pas réussi à obtenir une adresse IP via DHCP. 
+
+=== ...
+
+Windows attribue une adresse de ce type automatiquement lorsque le DHCP échoue.
+
+
+=== Aucune adresse IP : 
+
+L’appareil peut ne pas recevoir d’adresse IP du tout, le laissant sans connectivité réseau.
+
+
+== Étapes pour diagnostiquer et résoudre les problèmes de non-attribution d’adresse IP par le DHCP :
+
+== 1. Vérification de la configuration du client :
+
+=== Vérifier les paramètres réseau de l'appareil :
+
+Assurez-vous que l’appareil est configuré pour obtenir une adresse IP automatiquement. 
+
+=== ...
+
+Sur Windows, cela se fait via les propriétés du protocole TCP/IPv4 ou TCP/IPv6 dans les paramètres réseau.
+
+=== ...
+
+Vérifier qu'il n'y a pas de configuration manuelle de l'adresse IP qui pourrait entrer en conflit avec le DHCP.
+
+=== Commande à utiliser :
+
+=== Sur Windows : 
+
+ipconfig /all pour voir si l’adresse IP est attribuée correctement ou non.
+
+=== Sur Linux/Mac : 
+
+ifconfig ou ip addr pour vérifier l’état des interfaces réseau.
+
+== 2. Vérification des services du serveur DHCP :
+
+=== Vérifier que le serveur DHCP est en marche :
+
+Si tu utilises un serveur DHCP sur un serveur dédié ou un routeur (comme ta box SFR), assure-toi que le service DHCP est activé. Cela peut être vérifié dans l’interface d’administration du routeur ou du serveur.
+
+=== ...
+
+Si tu utilises un serveur Windows, vérifie dans la console des services que le service DHCP est en cours d’exécution.
+
+=== Commande à utiliser sur Windows Server :
+
+[source, powershell]
+----
+net start #dhcpserver pour démarrer le service DHCP si nécessaire.
+----
+
+== 3. Vérification de la plage d’adresses IP disponibles :
+
+=== S'assurer qu’il reste des adresses IP disponibles :
+
+
+Le serveur DHCP attribue des adresses IP à partir d'une plage d'adresses prédéfinie. 
+
+=== ...
+
+Si toutes les adresses disponibles sont déjà attribuées, de nouveaux appareils ne pourront pas recevoir d'adresse IP.
+
+=== ...
+
+Dans l’interface du serveur DHCP ou du routeur, vérifie que la plage d’adresses n’est pas pleine. Si c’est le cas, élargis la plage d’adresses.
+
+=== Exemple :
+
+Si la plage d’adresses configurée est de 192.168.1.100 à 192.168.1.150, et que 51 appareils sont déjà connectés, aucun autre appareil ne pourra obtenir une nouvelle adresse IP.
+
+== 4. Vérification des conflits d’adresses IP :
+
+=== Détection des conflits d’adresses :
+
+Il peut arriver qu'une adresse IP statique ait été configurée manuellement sur un appareil avec la même adresse que celle attribuée par DHCP à un autre appareil. Cela provoque un conflit d'adresses IP, empêchant les deux appareils d'accéder correctement au réseau.
+
+
+Utilise un outil d'analyse réseau comme Wireshark pour vérifier s’il y a des collisions ou des conflits sur le réseau.
+
+== 5. Vérification de la connectivité réseau (couche 1 et 2) :
+Câblage et connectivité physique :
+Assurez-vous que l’appareil est correctement connecté au réseau, que ce soit via un câble Ethernet ou en Wi-Fi. Si le lien physique est défaillant, l’appareil ne pourra pas atteindre le serveur DHCP.
+Vérifie que les commutateurs et les routeurs intermédiaires fonctionnent correctement.
+Test :
+
+Utiliser la commande ping pour vérifier la connectivité entre l’appareil et le serveur DHCP. Si le serveur DHCP ne répond pas, il se peut qu'il y ait un problème au niveau du réseau.
+
+Vérifier si le VLAN est correctement configuré. Si le serveur DHCP et l’appareil se trouvent dans des VLANs différents et qu’il n’y a pas de DHCP relay configuré, l’appareil ne recevra pas d’adresse IP.
+
+== 6. Vérification des autorisations du pare-feu :
+
+=== S’assurer que le pare-feu ne bloque pas le trafic DHCP :
+
+Les pare-feu mal configurés peuvent bloquer les requêtes DHCP Discover ou DHCP Offer. DHCP utilise les ports UDP 67 et 68 pour communiquer, et ces ports doivent être ouverts pour que le processus DHCP fonctionne.
+Vérifier la configuration du pare-feu pour s’assurer qu’il n’y a pas de règle bloquant les paquets DHCP.
+
+== 7. Vérification des réservations DHCP et des exclusions :
+
+=== S’assurer qu’il n’y a pas de conflits avec les réservations DHCP :
+
+
+Si des réservations DHCP ont été configurées (comme vu précédemment), vérifie que l'adresse MAC de l'appareil n'est pas mal configurée ou ne correspond pas à une autre réservation.
+
+=== ...
+
+
+Vérifie aussi si certaines adresses IP sont exclues de l’attribution par DHCP, ce qui empêcherait certains appareils d'obtenir une adresse.
+
+
+== 8. Relancer la requête DHCP sur le client :
+
+=== Relancer manuellement la demande DHCP :
+
+Sur l'appareil qui rencontre le problème, il est possible de forcer l'appareil à refaire une demande d'adresse IP au serveur DHCP. 
+
+
+Cela peut parfois résoudre des problèmes temporaires de non-attribution.
+
+=== Commandes :
+
+=== Sur Windows : 
+
+ipconfig /release suivi de ipconfig /renew pour libérer et renouveler l'adresse IP.
+
+=== Sur Linux/Mac : 
+
+sudo dhclient -r suivi de sudo dhclient pour réinitialiser la requête DHCP.
+
+== Outils de diagnostic :
+
+=== Wireshark : 
+
+Utilisé pour capturer et analyser le trafic réseau, notamment pour vérifier si les paquets DHCP Discover, Offer, Request, et Acknowledge sont envoyés correctement.
+
+=== Ping et Traceroute : 
+
+Pour vérifier la connectivité de base entre l’appareil client et le serveur DHCP.
+
+=== Outils d'administration de routeur : 
+
+Accéder à l'interface de gestion de ton routeur ou de ta box SFR pour voir l’état des appareils connectés, les adresses IP attribuées et les paramètres DHCP.
+
+

@@ -1,0 +1,164 @@
+= Le NAC
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le NAC (Network Access Control), ou Contrôleur d'accès réseau, est une solution de sécurité qui permet de contrôler et de gérer l'accès aux ressources d'un réseau. 
+
+=== ...
+
+Il s'assure que seuls les utilisateurs et les dispositifs autorisés, conformes aux politiques de sécurité de l'organisation, peuvent se connecter et accéder aux ressources du réseau. 
+
+
+=== ...
+
+Le NAC agit comme une couche de défense supplémentaire en sécurisant l'entrée dans le réseau avant même que l'accès ne soit accordé.
+
+=== Fonctionnement du NAC :
+
+Le contrôleur d'accès réseau évalue chaque tentative de connexion pour vérifier si l'utilisateur ou le dispositif respecte les règles de sécurité définies. 
+
+=== ...
+
+Il peut être utilisé pour surveiller les utilisateurs, les appareils et les connexions afin de s'assurer qu'ils sont conformes aux politiques de sécurité. 
+
+
+== Étapes principales du fonctionnement du NAC :
+
+=== Identification :
+
+Le NAC identifie le dispositif et l'utilisateur qui tente d'accéder au réseau. 
+
+=== ...
+
+Cela peut être fait via une authentification basée sur les informations d'identification de l'utilisateur (nom d'utilisateur, mot de passe, etc.) ou des certificats.
+
+
+=== Évaluation :
+
+Le NAC évalue si le dispositif est conforme aux exigences de sécurité de l'organisation. 
+
+
+=== ...
+
+Par exemple, le dispositif doit peut-être avoir un antivirus à jour, un système d'exploitation à jour, ou respecter certaines règles de configuration (comme le chiffrement des données).
+
+==== Contrôle d'accès :
+
+Si l'utilisateur et l'appareil sont conformes, ils sont autorisés à accéder au réseau. Sinon, l'accès peut être restreint, voire complètement bloqué. 
+
+
+=== ...
+
+Dans certains cas, l'appareil peut être redirigé vers une zone de quarantaine où il peut recevoir les mises à jour ou correctifs nécessaires avant de recevoir un accès complet.
+
+=== Suivi et Surveillance :
+
+Une fois connecté, le NAC continue de surveiller les activités des utilisateurs et des appareils pour détecter tout comportement anormal ou non conforme qui pourrait représenter une menace pour le réseau.
+
+== Principales fonctions du NAC :
+
+=== Authentification :
+
+Le NAC vérifie l'identité de l'utilisateur et de l'appareil avant de permettre l'accès. 
+
+
+Cela peut inclure des méthodes d'authentification fortes telles que:
+[%step]
+* l'authentification à deux facteurs (2FA)
+* l'utilisation de certificats numériques.
+
+=== Autorisation : 
+
+En fonction de l'identité et de la conformité de l'appareil, le NAC décide du niveau d'accès à accorder. 
+
+=== ...
+
+Par exemple, un employé interne peut avoir accès à toutes les ressources, tandis qu'un fournisseur externe peut avoir un accès limité à certaines parties du réseau.
+
+=== Conformité : 
+
+Le NAC vérifie si les dispositifs respectent les exigences de sécurité avant de les autoriser à accéder au réseau. 
+
+=== ...
+
+Cela inclut les vérifications des versions logicielles, des mises à jour de sécurité, des antivirus actifs, etc.
+
+=== Isolation des menaces : 
+
+Si un dispositif est jugé non conforme ou suspect, le NAC peut:
+[%step]
+* le mettre en quarantaine, 
+* restreindre son accès ou l'isoler du reste du réseau pour éviter les risques de propagation de menaces.
+
+=== Types de NAC :
+
+=== NAC basé sur l'hôte : 
+
+Cette solution est installée sur les dispositifs eux-mêmes et vérifie leur conformité avant de permettre l'accès au réseau. 
+
+=== ...
+
+C'est souvent utilisé pour les appareils mobiles ou les ordinateurs portables.
+
+=== NAC basé sur le réseau : 
+
+
+Implémenté au niveau de l'infrastructure réseau, généralement au niveau des commutateurs ou des points d'accès, ce type de NAC contrôle l'accès à partir de ces points pour tout appareil qui tente de se connecter.
+
+== Avantages du NAC :
+
+=== Renforcement de la sécurité réseau : 
+
+Le NAC aide à prévenir les accès non autorisés et limite les risques d'intrusion en s'assurant que seuls les utilisateurs et dispositifs conformes peuvent se connecter.
+
+=== Protection contre les menaces internes et externes : 
+
+Il bloque les utilisateurs ou les appareils suspects qui pourraient représenter une menace pour le réseau.
+
+=== Conformité aux politiques : 
+
+En garantissant que tous les dispositifs se conforment aux règles de sécurité (mises à jour, correctifs, antivirus), le NAC aide à réduire les vulnérabilités.
+
+=== Gestion des invités et des appareils non-gérés : 
+
+Les visiteurs ou les appareils externes peuvent être placés dans des réseaux isolés ou limités pour éviter tout accès aux ressources sensibles.
+
+== Scénarios d'utilisation :
+
+=== Entreprises avec BYOD (Bring Your Own Device) : 
+
+Lorsque les employés utilisent leurs propres appareils, le NAC peut vérifier la conformité de ces appareils avant de leur donner accès au réseau.
+
+=== Accès des partenaires ou fournisseurs externes : 
+
+Le NAC peut restreindre l'accès des partenaires ou des fournisseurs externes aux parties du réseau qui leur sont nécessaires, sans compromettre la sécurité des autres segments.
+
+=== Universités et lieux publics : 
+
+Dans les environnements où un grand nombre d'utilisateurs se connectent (comme les étudiants dans une université), le NAC permet de gérer l'accès de manière sécurisée tout en contrôlant la conformité des appareils.
+
+== Exemple de solutions NAC :
+
+=== Cisco Identity Services Engine (ISE) : 
+
+Cisco ISE est une solution NAC qui permet:
+[%step]
+* de contrôler l'accès au réseau, 
+* de gérer les politiques de sécurité
+* de surveiller en temps réel l'activité des utilisateurs et des dispositifs.
+
+=== Aruba ClearPass : 
+
+Une solution NAC proposée par Aruba Networks qui offre des fonctionnalités d'authentification et d'autorisation pour les réseaux filaires et sans fil.
+
+=== FortiNAC : 
+
+Fortinet propose cette solution NAC pour:
+[%step]
+* sécuriser les accès, 
+* surveiller les activités des utilisateurs
+* détecter les menaces potentielles sur le réseau.
+

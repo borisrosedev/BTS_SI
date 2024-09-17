@@ -1,0 +1,124 @@
+= La gestion des réservations DHCP
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+La gestion des réservations DHCP consiste à attribuer des adresses IP spécifiques à des périphériques particuliers sur un réseau tout en utilisant le serveur DHCP.
+
+=== ...
+
+Cela permet de garantir que certains appareils, comme des imprimantes réseau, des serveurs ou d'autres équipements critiques, reçoivent toujours la même adresse IP, sans avoir à les configurer manuellement en IP statique sur chaque appareil. 
+
+=== ...
+
+C’est une méthode très utile pour combiner la flexibilité du DHCP avec les avantages d’une adresse IP fixe pour certains périphériques.
+
+== Pourquoi utiliser des réservations DHCP ?
+
+=== Simplicité de gestion : 
+
+Plutôt que de configurer manuellement chaque appareil en IP statique, la réservation DHCP permet d'attribuer des adresses IP fixes à certains appareils via le serveur DHCP.
+
+=== Fiabilité : 
+
+Certains équipements comme les imprimantes, les caméras de surveillance ou les serveurs doivent toujours avoir la même adresse IP pour que les autres périphériques puissent les trouver facilement.
+
+
+=== Facilité d’administration : 
+
+Les réservations DHCP permettent aux administrateurs de gérer toutes les adresses IP à partir d'un seul endroit (le serveur DHCP), plutôt que d'avoir à configurer chaque appareil individuellement.
+
+=== Comment ça fonctionne ?
+
+Le serveur DHCP attribue une adresse IP à un appareil sur la base de son adresse MAC (Media Access Control), qui est une adresse unique attribuée à chaque carte réseau (NIC) d’un appareil. 
+
+
+=== ...
+
+Dans le cadre d’une réservation DHCP, le serveur DHCP associe une adresse IP fixe à une adresse MAC spécifique. 
+
+
+=== ...
+
+Ainsi, chaque fois que cet appareil envoie une requête DHCP pour obtenir une adresse IP, le serveur lui attribue toujours la même adresse.
+
+== Étapes pour configurer une réservation DHCP :
+
+=== ...
+
+Accéder au serveur DHCP : 
+
+=== ...
+
+Si tu utilises une box SFR, tu peux accéder à l'interface d'administration en ouvrant un navigateur web et en accédant à l'adresse IP de la box (souvent 192.168.1.1).
+
+
+===  ...
+
+Identifier l'adresse MAC de l'appareil auquel tu veux attribuer une adresse IP fixe :
+
+=== ...
+
+L'adresse MAC peut être trouvée sur l'appareil lui-même (souvent dans les paramètres réseau ou avec la commande ipconfig /all sur Windows ou ifconfig sur Linux/Mac).
+
+
+
+=== ...
+
+Ajouter une réservation dans l'interface DHCP :
+
+=== ...
+
+Une fois dans l'interface d'administration du serveur DHCP, tu peux trouver une section appelée DHCP ou Réservation DHCP.
+
+=== ...
+
+Entrez l'adresse MAC de l'appareil et l'adresse IP que tu souhaites lui attribuer.
+Valider la réservation : 
+
+=== ...
+
+Une fois que la réservation est configurée, chaque fois que cet appareil se connectera au réseau, il recevra l’adresse IP spécifiée à partir du serveur DHCP.
+
+== Exemple d'une configuration typique dans une entreprise
+
+=== Imprimante réseau :
+
+Adresse MAC : 00:1A:2B:3C:4D:5E
+Adresse IP réservée : 192.168.1.100
+Avantage : Tous les utilisateurs du réseau pourront imprimer en se connectant toujours à la même adresse IP.
+
+
+=== Serveur local :
+
+Adresse MAC : 11:22:33:44:55:66
+Adresse IP réservée : 192.168.1.200
+Avantage : Les applications et les utilisateurs peuvent toujours accéder à ce serveur avec la même adresse IP.
+
+== Avantages de la réservation DHCP :
+
+=== Automatisation avec contrôle : 
+
+
+La gestion DHCP offre la flexibilité du DHCP (qui évite d'avoir à attribuer manuellement des adresses IP) tout en assurant la stabilité des adresses IP fixes pour des périphériques critiques.
+
+
+=== Prévention des conflits d'adresses IP : 
+
+Le serveur DHCP gère les adresses IP, ce qui évite les conflits d'adresses (deux appareils avec la même adresse IP) qui peuvent se produire lorsque des adresses IP statiques sont mal configurées.
+
+=== Facilité de maintenance : 
+
+Si tu changes un appareil (par exemple, remplacer une imprimante), tu peux simplement mettre à jour l'adresse MAC dans la réservation DHCP sans devoir refaire toute la configuration du réseau.
+
+
+
+
+
+
+
+
+
+

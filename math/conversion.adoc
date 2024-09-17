@@ -1,0 +1,93 @@
+= La conversion d'adresses IP
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Cette conversion est fondamentale pour comprendre comment les adresses sont représentées et utilisées dans les réseaux. 
+
+=== ...
+
+Elles sont (avec la conversion d'adresses MAC) également utiles pour diagnostiquer des problèmes ou analyser des données réseau.
+
+=== Comment y arriver ?
+
+En utilisant les systèmes de numération binaire, décimal, et hexadécimal.
+
+
+=== Conversion d'une adresse IP (IPv4)
+
+Une adresse IP est composée de 4 octets (32 bits), chaque octet étant représenté en décimal (en base 10) séparé par des points.
+
+=== ...
+
+Exemple d'adresse IP : 192.168.1.1
+
+=== Étape 1 : Conversion en binaire
+
+Chaque partie décimale de l'adresse IP peut être convertie en binaire :
+
+=== Exemple avec la conversion de 192 en binaire
+
+Divisons 192 par 2 jusqu'à obtenir 0 :
+192 ÷ 2 = 96 reste 0
+96 ÷ 2 = 48 reste 0
+48 ÷ 2 = 24 reste 0
+24 ÷ 2 = 12 reste 0
+12 ÷ 2 = 6 reste 0
+6 ÷ 2 = 3 reste 0
+3 ÷ 2 = 1 reste 1
+1 ÷ 2 = 0 reste 1
+
+=== ...
+
+Résultat binaire de 192 = 11000000
+
+
+=== 168 en binaire
+
+
+Divisons 168 par 2 jusqu'à obtenir 0 :
+168 ÷ 2 = 84 reste 0
+84 ÷ 2 = 42 reste 0
+42 ÷ 2 = 21 reste 0
+21 ÷ 2 = 10 reste 1
+10 ÷ 2 = 5 reste 0
+5 ÷ 2 = 2 reste 1
+2 ÷ 2 = 1 reste 0
+1 ÷ 2 = 0 reste 1
+
+=== ..
+
+Résultat binaire de 168 = 10101000
+
+=== 1 en binaire :
+
+1 ÷ 2 = 0 reste 1
+
+Résultat binaire de 1 = 00000001
+
+=== ...
+
+Ainsi, l'adresse IP 192.168.1.1 en binaire est :
+
+11000000.10101000.00000001.00000001
+
+
+=== Étape 2 : Conversion en hexadécimal
+
+
+Pour convertir en hexadécimal, prenons chaque octet et convertissons-le en hexadécimal.
+
+192 (décimal) → C0 (hexadécimal)
+168 (décimal) → A8 (hexadécimal)
+1 (décimal) → 01 (hexadécimal)
+1 (décimal) → 01 (hexadécimal)
+
+=== ...
+
+Ainsi, l'adresse IP 192.168.1.1 en hexadécimal est :
+
+C0.A8.01.01
+

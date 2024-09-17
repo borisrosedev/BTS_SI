@@ -1,0 +1,55 @@
+= Un pare-feu matériel 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Un pare-feu matériel est un dispositif de sécurité dédié qui se situe physiquement entre un réseau interne (comme un réseau d'entreprise ou domestique) et l'extérieur (comme Internet). 
+
+=== ...
+
+Contrairement aux pare-feux logiciels, qui sont installés sur des ordinateurs individuels ou des serveurs, les pare-feux matériels sont des dispositifs autonomes qui filtrent tout le trafic entrant et sortant du réseau.
+
+== Quelques caractéristiques d'un pare-feu matériel :
+
+=== Isolation physique : 
+
+Il est séparé du reste des systèmes informatiques, ce qui le rend plus difficile à contourner par des logiciels malveillants ou des pirates informatiques.
+
+
+=== Filtrage avancé : 
+
+Il analyse les paquets de données et peut bloquer ou autoriser des connexions en fonction de règles définies. 
+
+=== ...
+
+Il peut aussi inspecter en profondeur les paquets (DPI, Deep Packet Inspection).
+
+
+=== Protection réseau complète : 
+
+Contrairement aux pare-feux logiciels qui protègent uniquement le système sur lequel ils sont installés, un pare-feu matériel protège l'ensemble du réseau auquel il est connecté.
+
+=== Performances : 
+
+Les pare-feux matériels sont généralement plus performants que les pare-feux logiciels car ils sont spécifiquement conçus pour gérer de grandes quantités de trafic réseau.
+
+=== Fonctionnalités avancées : 
+
+En plus du filtrage de base, ils peuvent inclure des fonctionnalités telles que la détection d'intrusion (IDS/IPS), la gestion de la bande passante, le VPN, et parfois des fonctionnalités de proxy.
+
+
+=== ...
+
+Des exemples de pare-feux matériels incluent des dispositifs comme:
+[%step]
+* Cisco ASA, 
+* pfSense (installé sur un matériel dédié), 
+* Fortinet FortiGate, 
+* SonicWall
+* Palo Alto Networks. 
+
+=== ...
+
+Pour un réseau domestique ou de petite entreprise, des routeurs comme ceux proposés par Ubiquiti peuvent également inclure des fonctionnalités de pare-feu.

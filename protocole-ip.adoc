@@ -1,0 +1,100 @@
+= Le protocole IP
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le protocole IP (Internet Protocol) est un protocole fondamental du modèle OSI et du modèle TCP/IP, utilisé pour acheminer les paquets de données sur un réseau. 
+
+=== ...
+
+Il fonctionne principalement au niveau de la couche 3 (couche réseau) dans le modèle OSI. 
+
+
+== Fonctions principales du protocole IP :
+
+=== Adressage : 
+
+Chaque machine sur un réseau doit avoir une adresse IP unique pour être identifiable. 
+
+
+Deux versions du protocole IP sont couramment utilisées :
+
+=== IPv4 : 
+
+Utilise des adresses sur 32 bits, représentées par des quads décimaux (par exemple, 192.168.1.1).
+
+=== IPv6 : 
+
+Utilise des adresses sur 128 bits, exprimées en notation hexadécimale (par exemple, 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+== Routage : 
+
+IP détermine comment acheminer les paquets de leur source à leur destination en passant par plusieurs réseaux.
+
+== Fragmentation et Réassemblage : 
+
+Si un paquet est trop grand pour être transmis sur un réseau, il peut être fragmenté en plusieurs parties (IPv4 le permet, IPv6 l'évite autant que possible).
+
+
+== En-tête IP :
+
+L'en-tête IP contient des informations essentielles pour l'acheminement des paquets :
+
+Version (IPv4 ou IPv6).
+
+Adresse IP source et adresse IP destination.
+
+
+== TTL (Time to Live) : 
+
+Limite le nombre de sauts qu'un paquet peut effectuer avant d'être supprimé pour éviter la circulation infinie.
+
+== Checksum : 
+
+Pour détecter les erreurs dans l'en-tête.
+
+
+
+== Différences entre IPv4 et IPv6 :
+
+== IPv4 :
+
+Taille de l'adresse : 32 bits.
+Prend en charge environ 4,3 milliards d'adresses.
+Fragmentation possible.
+
+=== IPv6 :
+Taille de l'adresse : 128 bits.
+Prend en charge un nombre beaucoup plus grand d'adresses (environ 340 undecillions).
+
+
+== Améliorations en matière de sécurité et de performances.
+
+Fragmentation évitée, avec gestion des paquets plus efficace.
+
+
+== Routage IP :
+
+Les paquets IP sont envoyés à travers différents routeurs pour atteindre leur destination. 
+
+=== ...
+
+Chaque routeur examine l'adresse IP de destination et utilise une table de routage pour déterminer la meilleure route à emprunter.
+
+
+== Protocoles associés à IP :
+
+=== TCP et UDP
+
+TCP (Transmission Control Protocol) et UDP (User Datagram Protocol) : 
+
+Utilisés pour la transmission de données au-dessus de IP.
+
+=== ICMP
+
+ICMP (Internet Control Message Protocol) : 
+
+Utilisé pour les messages de diagnostic (comme avec la commande ping).
+

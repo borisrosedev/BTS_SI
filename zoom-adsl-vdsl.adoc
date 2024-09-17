@@ -1,0 +1,106 @@
+= L'ADSL et le VDSL
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+L'ADSL et le VDSL sont deux technologies utilisées pour fournir une connexion Internet à haut débit via les lignes téléphoniques en cuivre. 
+
+=== ...
+
+Ces technologies utilisent des fréquences différentes de celles des appels téléphoniques traditionnels, ce qui permet à Internet et au téléphone de fonctionner simultanément sur la même ligne.
+
+
+
+== ADSL (Asymmetric Digital Subscriber Line)
+
+
+L'ADSL est l'une des premières technologies DSL (Digital Subscriber Line) à avoir été déployée pour offrir des connexions Internet à haut débit sur les lignes téléphoniques classiques. 
+
+
+=== ...
+
+Le terme "asymétrique" fait référence au fait que les vitesses de téléchargement (download) et d'envoi (upload) ne sont pas égales, avec une vitesse de téléchargement généralement beaucoup plus rapide que celle d'envoi.
+
+== Caractéristiques principales :
+
+=== Vitesse de téléchargement : 
+
+de 512 kbps à environ 20 Mbps.
+
+=== Vitesse d'envoi : 
+
+généralement de 128 kbps à 1 Mbps.
+
+
+=== Distance maximale au central : 
+
+la performance de l'ADSL diminue avec la distance entre votre domicile et le central téléphonique (répartiteur). 
+
+=== ...
+
+Au-delà de 5 km, les vitesses chutent considérablement.
+
+=== Avantages :
+
+Accessible dans les zones rurales et les zones où la fibre optique n'est pas encore déployée.
+
+Permet l'utilisation simultanée d'Internet et du téléphone sur la même ligne.
+
+=== Limites :
+
+Vitesse limitée, surtout pour les envois de données (upload).
+
+=== Sensible à la distance : 
+
+plus vous êtes loin du central, plus la connexion est lente.
+
+
+
+== VDSL (Very-high-bit-rate Digital Subscriber Line)
+
+Le VDSL est une amélioration de la technologie ADSL, offrant des vitesses beaucoup plus élevées, particulièrement pour le téléchargement. 
+
+=== ...
+
+Comme l'ADSL, il utilise les lignes téléphoniques en cuivre, mais il exploite des fréquences plus élevées pour fournir des débits plus rapides. 
+
+=== ...
+
+VDSL est également asymétrique, avec des vitesses de téléchargement plus élevées que les vitesses d'envoi.
+
+=== Caractéristiques principales :
+
+=== Vitesse de téléchargement : 
+
+jusqu'à environ 50 à 100 Mbps.
+
+=== Vitesse d'envoi : 
+
+de 10 à 30 Mbps.
+
+=== Distance maximale au central : 
+
+le VDSL est efficace seulement à courte distance du central téléphonique, généralement jusqu'à 1 km. Au-delà, la vitesse diminue rapidement, et à environ 1,5 km, le VDSL offre des performances similaires à l'ADSL.
+
+=== Avantages :
+
+Vitesse beaucoup plus rapide que l'ADSL, notamment pour le téléchargement et l'envoi.
+
+=== ...
+
+Idéal pour les connexions courtes distances, donc efficace dans les zones urbaines proches des centraux téléphoniques.
+
+
+=== Limites :
+
+=== Distance limitée : 
+
+les vitesses chutent fortement avec l'éloignement du central téléphonique, ce qui limite son efficacité dans les zones rurales.
+
+=== ...
+
+Moins disponible que l'ADSL dans certaines régions.
+
+

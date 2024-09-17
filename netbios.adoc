@@ -1,0 +1,133 @@
+= RPC et NetBios :
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== RPC
+
+RPC (Remote Procedure Call) est une méthode de communication entre ordinateurs qui permet à un programme d'exécuter une procédure ou une fonction sur un autre ordinateur, comme si cette procédure était exécutée localement.
+
+=== ...
+
+Avec RPC, un programme peut appeler une procédure (fonction) distante sans avoir à gérer explicitement les détails de la communication réseau. 
+
+=== ...
+
+L'idée est de masquer la complexité de la communication sous-jacente, de sorte que la fonction distante apparaisse comme une fonction locale.
+
+=== Fonctionnement de RPC :
+
+Client-serveur : Un appel RPC implique généralement un client qui initie l'appel, et un serveur qui exécute la procédure demandée. 
+
+=== ...
+
+Le client envoie une requête à travers le réseau, le serveur la reçoit et renvoie la réponse au client.
+
+
+=== Transparence : 
+
+L'utilisateur du programme n'a pas besoin de savoir si la procédure est locale ou distante. 
+
+=== ...
+
+Les appels à des fonctions distantes sont transparents pour l'application.
+
+=== Protocole sous-jacent : 
+
+
+Bien que l'appel soit abstrait comme un simple appel de procédure, RPC repose sur des protocoles réseau sous-jacents comme TCP/IP ou UDP pour transmettre les requêtes et les réponses.
+
+
+=== Utilisations de RPC :
+
+
+=== Systèmes distribués : 
+
+
+RPC est souvent utilisé dans des environnements où des processus doivent s'exécuter sur plusieurs machines, comme dans les architectures client-serveur.
+
+
+=== Services Windows : 
+
+Dans les systèmes Windows, RPC est largement utilisé pour permettre aux services et aux processus de communiquer à distance. 
+
+=== ...
+
+Par exemple, de nombreuses fonctionnalités administratives de Windows, comme la gestion des services, dépendent de RPC pour fonctionner correctement.
+
+== Problèmes potentiels :
+
+=== Latence : 
+
+Puisque l'appel de procédure traverse un réseau, il peut y avoir un délai plus élevé par rapport à une exécution locale.
+
+=== Gestion des erreurs : 
+
+
+Les erreurs liées à la connexion réseau (perte de paquets, déconnexions) doivent être gérées par le système RPC.
+
+
+== NetBIOS (Network Basic Input/Output System) :
+
+NetBIOS est une interface logicielle et un ensemble de services qui permettent aux applications sur différents ordinateurs d'un réseau local (LAN) de communiquer entre elles. 
+
+=== ...
+
+Il a été initialement développé dans les années 1980 pour les réseaux basés sur IBM et est largement utilisé dans les réseaux Windows.
+
+=== Fonctionnement de NetBIOS :
+
+=== Nom de machine : 
+
+NetBIOS permet aux machines d’un réseau de se reconnaître et de se connecter via des noms lisibles par l'homme, comme un nom d'ordinateur ou un nom de ressource partagée, plutôt que par des adresses IP.
+
+=== Communication de session : 
+
+Il permet l'établissement d'une session entre deux ordinateurs pour qu'ils puissent échanger des données de manière fiable.
+
+=== Diffusion (broadcast) : 
+
+NetBIOS utilise des diffusions (broadcasts) pour permettre à un ordinateur de découvrir les autres machines sur le réseau local. Cela permet de détecter des ressources partagées telles que des imprimantes ou des fichiers sur d'autres machines.
+
+=== Services NetBIOS :
+
+NetBIOS fournit trois principaux services :
+
+=== NetBIOS Name Service (NBNS) : 
+
+Utilisé pour associer les noms NetBIOS à des adresses IP (similaire à DNS mais pour les noms NetBIOS).
+
+=== NetBIOS Datagram Service : 
+
+Permet l'envoi de paquets de données sans connexion (connexion rapide mais non fiable).
+
+=== NetBIOS Session Service : 
+
+Permet une connexion persistante et fiable entre deux machines (utile pour des communications continues, comme un partage de fichiers).
+
+== Utilisation de NetBIOS :
+
+=== Windows Networking : 
+
+NetBIOS a été largement utilisé dans les anciennes versions de Windows pour permettre aux ordinateurs de partager des fichiers et des imprimantes sur un réseau local.
+
+=== Partage de fichiers : 
+
+Le protocole de partage de fichiers SMB (Server Message Block), utilisé dans les réseaux Windows, repose souvent sur NetBIOS pour la découverte des partages réseau dans les anciennes versions. Cela a changé avec SMB version 2 et 3, qui n'utilisent plus NetBIOS directement.
+
+== Problèmes de NetBIOS :
+
+=== Incompatibilité avec Internet :
+
+NetBIOS n'est pas bien adapté à Internet ou aux réseaux étendus (WAN), car il est principalement conçu pour des réseaux locaux (LAN). 
+
+=== ...
+
+Cela peut poser des problèmes de sécurité et de performances lorsqu'il est exposé au réseau Internet.
+
+
+=== Obsolescence : 
+
+Bien que NetBIOS soit encore utilisé dans certains environnements, il est de moins en moins courant avec l'apparition de protocoles plus modernes comme DNS pour la résolution de noms et SMB sans NetBIOS pour le partage de fichiers.
+

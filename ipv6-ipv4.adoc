@@ -1,0 +1,156 @@
+= Introduction à IPv6
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+:stem:
+
+== Introduction
+
+IPv6, ou Internet Protocol version 6, est la version la plus récente du protocole Internet, conçu pour répondre aux limitations d'IPv4, en particulier la pénurie d'adresses. 
+
+=== ...
+
+Il a été créé pour prendre en charge la croissance continue d'Internet, améliorer l'efficacité et la sécurité, tout en facilitant l'autoconfiguration des réseaux.
+
+
+== Contexte de création d'IPv6 :
+
+L'IPv4, utilisé depuis les années 1980, ne peut gérer qu'environ 4,3 milliards d'adresses uniques (stem:[2^32]). 
+
+=== ...
+
+Avec l'explosion des appareils connectés (ordinateurs, smartphones, objets IoT), ce nombre est devenu insuffisant. IPv6 a été conçu pour pallier cette limite avec un espace d'adressage beaucoup plus large.
+
+
+== Adresse et espace d'adressage
+
+== IPv4 : 
+
+Adresses codées sur 32 bits, donnant environ 4,3 milliards d'adresses. 
+
+En raison de la pénurie, des techniques comme le NAT (Network Address Translation) sont utilisées pour partager une adresse publique entre plusieurs appareils privés.
+
+=== IPv6 : 
+
+Adresses codées sur 128 bits, ce qui permet d'attribuer un nombre astronomique d'adresses (environ 340 sextillions d'adresses). 
+
+Cela élimine le besoin de NAT, permettant une connexion directe entre chaque appareil.
+
+
+== Représentation des adresses
+
+=== IPv4 : 
+
+Une adresse est représentée sous la forme de quatre octets séparés par des points, par exemple : 192.168.1.1.
+
+=== IPv6 : 
+
+Les adresses sont beaucoup plus longues et sont représentées en hexadécimal, séparées par des deux-points, comme : 
+
+=== ...
+
+2001:0db8:85a3:0000:0000:8a2e:0370:7334. 
+
+
+=== ...
+
+Pour simplifier, les zéros consécutifs peuvent être omis (::), ce qui donne 2001:db8:85a3::8a2e:370:7334.
+
+
+
+== Autoconfiguration
+
+
+=== IPv4 : 
+
+Les adresses IP sont souvent attribuées manuellement ou par DHCP (Dynamic Host Configuration Protocol).
+
+=== IPv6 : 
+
+IPv6 prend en charge une autoconfiguration sans état via SLAAC (Stateless Address Autoconfiguration), où les appareils peuvent générer automatiquement leurs adresses IP en fonction du préfixe du réseau, rendant DHCPv6 optionnel.
+
+
+== Fragmentation
+
+=== IPv4 : 
+
+Les routeurs peuvent fragmenter des paquets pour les adapter à la MTU (Maximum Transmission Unit) du réseau.
+
+=== IPv6 : 
+
+La fragmentation est uniquement réalisée par l'hôte d'origine, ce qui réduit la charge sur les routeurs et améliore les performances.
+
+== Broadcast, Multicast et Anycast
+
+=== IPv4 : 
+
+Utilise le broadcast pour envoyer des messages à tous les hôtes d'un réseau.
+
+== IPv6 : 
+
+N'utilise pas de broadcast.
+
+ À la place, il utilise multicast (pour envoyer des messages à un groupe d'hôtes) et anycast (pour envoyer un message à un seul hôte parmi un groupe).
+
+== En-tête simplifié
+
+=== IPv4 : 
+
+Les en-têtes IP peuvent avoir une taille variable (de 20 à 60 octets) en fonction des options.
+
+=== IPv6 : 
+
+L'en-tête est simplifié et a une taille fixe de 40 octets, ce qui facilite le traitement par les routeurs et optimise les performances réseau.
+
+== Sécurité (IPsec)
+
+=== IPv4 : 
+
+Le protocole IPsec (pour sécuriser les communications IP) est optionnel.
+
+=== IPv6 : 
+
+IPsec est intégré dès la conception et est obligatoire pour sécuriser les échanges.
+
+== Avantages d’IPv6
+
+=== Espaces d'adressage massifs : 
+
+La quantité quasi infinie d'adresses permet à chaque appareil d'avoir une adresse publique unique, éliminant le besoin de NAT.
+
+=== Meilleure sécurité : 
+
+Avec IPsec intégré, les communications peuvent être plus facilement sécurisées.
+
+=== Performance améliorée : 
+
+En-tête simplifié et gestion de la fragmentation uniquement par les hôtes, réduisant la charge des routeurs.
+
+=== Autoconfiguration : 
+
+SLAAC simplifie la gestion des adresses IP sur les grands réseaux.
+
+=== Meilleur support pour la mobilité et l'IoT : 
+
+IPv6 facilite la gestion des appareils mobiles et des objets connectés.
+
+== Transition d’IPv4 à IPv6
+
+La transition entre IPv4 et IPv6 est encore en cours. 
+
+=== ...
+
+Plusieurs méthodes sont utilisées pour faciliter la coexistence des deux protocoles :
+
+=== Double stack : 
+
+Les appareils et les réseaux prennent en charge à la fois IPv4 et IPv6.
+
+=== Tunneling : 
+
+IPv6 est encapsulé dans IPv4 pour permettre une communication sur des réseaux IPv4 existants.
+
+=== Traduction d'adresses : 
+
+Des systèmes comme NAT64 traduisent les adresses IPv6 en IPv4 pour permettre la communication entre les appareils des deux protocoles.
+

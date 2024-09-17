@@ -1,0 +1,210 @@
+= Les switches (commutateurs)
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Les switches (commutateurs) sont des dispositifs essentiels dans les réseaux locaux (LAN), où ils permettent la communication entre différents appareils connectés. 
+
+
+=== ...
+
+Leur rôle principal est de commuter (ou rediriger) les paquets de données vers leur destination correcte en fonction de l'adresse **MAC** (Media Access Control) des appareils dans le réseau.
+
+
+
+== Fonctionnement d'un switch :
+
+Un switch opère au niveau 2 du modèle OSI, c'est-à-dire au niveau de la couche de liaison de données (Data Link Layer). 
+
+
+=== ...
+
+Étapes de base de son fonctionnement :
+
+
+== Réception du paquet : 
+
+Lorsqu'un appareil (ordinateur, imprimante, etc.) envoie des données à un autre appareil du réseau, ces données sont encapsulées dans des paquets. 
+
+
+=== ...
+
+Chaque paquet contient une adresse MAC source et une adresse MAC de destination. 
+
+
+=== ...
+
+Le switch reçoit ces paquets sur un de ses ports.
+
+== Consultation de la table d'adresses MAC : 
+
+Le switch dispose d'une table interne appelée table CAM (Content Addressable Memory) ou table d'adresses MAC. 
+
+=== ...
+
+Cette table associe chaque adresse MAC à un port spécifique du switch. 
+
+
+=== ...
+
+Ainsi, quand le switch reçoit un paquet, il consulte cette table pour déterminer sur quel port l'adresse MAC de destination est présente.
+
+
+== Commutation du paquet : 
+
+
+Si l'adresse MAC de destination se trouve dans la table, le switch envoie le paquet directement sur le port associé à cette adresse, ce qui évite de "flooder" (envoyer le paquet à tous les ports). 
+
+
+=== ...
+
+Si l'adresse MAC n'est pas encore dans la table (par exemple, si c'est un nouvel appareil), le switch diffuse (ou inonde) temporairement le paquet sur tous les ports, sauf celui de l'émetteur, pour trouver l'appareil concerné. 
+
+
+=== ...
+
+Une fois que l'appareil répond, le switch met à jour sa table CAM avec l'adresse MAC et son port.
+
+=== Apprentissage des adresses MAC : 
+
+Le switch apprend continuellement les adresses MAC des appareils connectés. 
+
+=== ...
+
+À chaque fois qu'il reçoit un paquet, il associe l'adresse MAC source au port d'où provient le paquet et met à jour sa table CAM en conséquence.
+
+
+== Types de commutation (switching) :
+
+Les switches peuvent utiliser différents modes de commutation pour transférer les paquets. 
+
+
+Les trois principaux modes sont :
+
+=== Cut-through (commutation immédiate) :
+
+Le switch commence à transmettre le paquet dès qu'il a lu l'adresse MAC de destination (après avoir lu les premiers octets du paquet).
+
+
+=== ...
+
+Très rapide, mais il ne permet pas de détecter les erreurs dans le paquet avant sa transmission.
+
+=== ...
+
+=== Store-and-forward (commutation différée) :
+
+Le switch attend de recevoir l'intégralité du paquet avant de le transmettre. 
+
+=== ...
+
+Il vérifie ensuite l'intégrité du paquet en contrôlant les erreurs (via le CRC, Cyclic Redundancy Check).
+
+=== ...
+
+Ce mode est plus fiable, car il ne transmet pas de paquets corrompus, mais il introduit un léger délai.
+
+
+=== Fragment-free (commutation sans fragmentation) :
+
+Le switch attend de recevoir les 64 premiers octets du paquet avant de le transmettre, ce qui permet de détecter les erreurs de collision (qui surviennent généralement dans les premiers octets).
+
+=== ...
+
+
+C'est un compromis entre les deux autres méthodes, offrant un meilleur équilibre entre vitesse et sécurité.
+
+
+
+== Différence entre un switch et un hub :
+
+
+Bien qu'ils puissent sembler similaires, un hub et un switch fonctionnent de manière très différente :
+
+=== ...
+
+Un hub diffuse les paquets à tous les ports, sans distinction d'adresse de destination. 
+
+
+=== ...
+
+Cela peut entraîner des collisions de paquets et une réduction des performances réseau.
+
+
+=== ...
+
+Un switch, en revanche, envoie les paquets uniquement au port correspondant à l'adresse MAC de destination, ce qui optimise le trafic réseau et évite les collisions.
+
+
+
+
+== Commutation de paquets :
+
+La commutation de paquets fait référence à la manière dont les données sont transférées dans les réseaux, en particulier dans les réseaux de type IP. 
+
+
+=== ...
+
+Le switch, dans le cadre d'un réseau local, utilise un processus de commutation de trame basé sur les adresses MAC.
+
+=== ...
+
+Dans la commutation de paquets, les données à transmettre sont découpées en petits blocs appelés paquets.
+
+=== ...
+
+Chaque paquet contient une partie des données et des informations de routage (adresse source, adresse destination, numéro de séquence, etc.).
+
+=== ...
+
+Le rôle du switch est de transférer ces paquets vers la bonne destination à l'intérieur du réseau local, en se basant principalement sur l'adresse MAC.
+
+
+
+== Fonctions avancées des switches :
+
+Certains switches modernes, appelés switches de niveau 3, peuvent également effectuer des fonctions de routage (commutation au niveau 3).
+
+=== ...
+
+Ce qui signifie qu'ils peuvent prendre des décisions basées non seulement sur les adresses MAC, mais aussi sur les adresses IP, comme un routeur.
+
+=== ...
+
+De plus, les switches peuvent intégrer des fonctionnalités avancées telles que :
+
+=== VLAN (Virtual LAN) : 
+
+Permet de segmenter un réseau physique en plusieurs réseaux virtuels isolés les uns des autres.
+
+=== QoS (Quality of Service) : 
+
+Priorisation du trafic pour garantir une meilleure qualité de service, utile pour les applications sensibles à la latence comme la voix sur IP (VoIP) ou la vidéo en temps réel.
+
+
+=== Spanning Tree Protocol (STP) : 
+
+Empêche les boucles réseau, qui peuvent entraîner des tempêtes de broadcast et des interruptions de service.
+
+== Exemple de fonctionnement d'un switch :
+
+Imaginons un réseau avec trois ordinateurs (A, B, C) connectés à un switch.
+
+=== ...
+
+L'ordinateur A envoie un paquet à l'ordinateur B. 
+
+=== ...
+
+Le switch reçoit le paquet sur le port où A est connecté, consulte sa table MAC et voit que l'adresse MAC de B est sur un autre port. 
+
+=== ...
+
+Il transmet donc le paquet directement à ce port.
+
+=== ...
+
+Si l'ordinateur A veut envoyer un paquet à un nouvel appareil C dont le switch n'a pas encore enregistré l'adresse MAC, le switch inondera tous les ports (sauf celui de l'émetteur) pour trouver l'appareil, puis mettra à jour sa table une fois que C répondra.

@@ -1,0 +1,213 @@
+= Le protocole Ethernet
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le protocole Ethernet est une technologie standard de communication utilisée dans les réseaux locaux (LAN - Local Area Network) pour permettre le transfert de données entre différents dispositifs (ordinateurs, imprimantes, serveurs, etc.). 
+
+=== ..;
+
+Ethernet fonctionne au niveau des couches physique et liaison de données du modèle OSI (couches 1 et 2), et il définit la manière dont les dispositifs sur un réseau échangent des trames de données via des connexions câblées.
+
+== Caractéristiques du protocole Ethernet :
+
+Transmission de données sous forme de trames : Ethernet transmet les données sous forme de trames. 
+
+=== ...
+
+Chaque **trame** contient des informations essentielles, notamment :
+
+
+=== Adresse MAC source et destination : 
+
+Les adresses physiques des dispositifs pour s'assurer que les données atteignent le bon destinataire.
+
+
+=== Données utiles : 
+
+Le contenu réel du message.
+
+=== CRC (Cyclic Redundancy Check) : 
+
+Un mécanisme de détection d'erreurs pour vérifier l'intégrité des données reçues.
+
+== Topologie : 
+
+Ethernet utilise traditionnellement une topologie en étoile dans laquelle chaque dispositif est connecté à un switch ou un hub centralisé. 
+
+=== ...
+
+Cela permet à plusieurs dispositifs de communiquer sans interférer les uns avec les autres.
+
+== Méthode d'accès : 
+
+CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+
+=== ...
+
+CSMA/CD est une méthode utilisée pour éviter les collisions lorsque plusieurs dispositifs tentent d'envoyer des données en même temps sur le réseau.
+
+=== ...
+
+Si deux dispositifs essaient de transmettre des données en même temps, une collision se produit. 
+
+=== ...
+
+Avec CSMA/CD, les dispositifs détectent cette collision, arrêtent la transmission, attendent un moment aléatoire, puis réessaient de transmettre.
+
+
+=== Note : 
+
+Avec l'évolution vers les réseaux commutés (switch-based), les collisions sont devenues rares, car les dispositifs communiquent directement avec le switch, ce qui évite les interférences.
+
+== Débit et standards : 
+
+Ethernet a évolué au fil du temps pour offrir des débits de plus en plus rapides. 
+
+Quelques-uns des principaux standards :
+
+=== Ethernet classique (10 Mbps) : 
+
+Le premier standard Ethernet, avec un débit de 10 mégabits par seconde (Mbps).
+
+=== Fast Ethernet (100 Mbps) : 
+
+Une version plus rapide, offrant 100 Mbps.
+
+=== Gigabit Ethernet (1 Gbps) : 
+
+Permet un débit de 1 gigabit par seconde (Gbps).
+
+=== 10 Gigabit Ethernet (10 Gbps) et au-delà : 
+
+Utilisé dans les centres de données et les réseaux à haute performance.
+
+== Types de câbles utilisés : 
+
+Ethernet peut utiliser plusieurs types de câbles pour la transmission de données :
+
+
+=== Câble coaxial 
+utilisé dans les premières versions d'Ethernet.
+
+=== Câble à paires torsadées  : 
+
+Comme les câbles Cat5e, Cat6, etc. Ce sont les câbles les plus couramment utilisés aujourd'hui dans les réseaux Ethernet.
+
+
+=== Fibre optique : 
+
+Utilisée pour les réseaux longue distance ou à très haut débit, comme le Gigabit Ethernet ou le 10 Gigabit Ethernet.
+
+== Commutation (Switching) : 
+
+Aujourd'hui, la plupart des réseaux Ethernet sont basés sur des switchs plutôt que des hubs. 
+
+Les switchs permettent de diriger les trames de données directement vers le bon destinataire en fonction de son adresse MAC, ce qui améliore la performance et évite les collisions.
+
+== Full-Duplex et Half-Duplex :
+
+=== Half-Duplex : 
+
+Les dispositifs peuvent soit envoyer, soit recevoir des données, mais pas les deux en même temps. 
+
+Cela était commun avec les anciens hubs.
+
+
+=== Full-Duplex : 
+
+Les dispositifs peuvent envoyer et recevoir des données simultanément, ce qui est standard avec les switchs modernes et améliore la performance du réseau.
+
+== Structure d'une trame Ethernet :
+
+Une trame Ethernet est composée de plusieurs champs :
+
+=== Préambule : 
+
+7 octets qui signalent l’arrivée d’une trame.
+
+=== SFD (Start Frame Delimiter) : 
+
+1 octet pour indiquer le début de la trame.
+
+=== Adresse MAC de destination : 
+
+6 octets indiquant l'adresse MAC du destinataire.
+
+=== Adresse MAC source : 
+
+6 octets indiquant l'adresse MAC de l'expéditeur.
+
+== Type/EtherType : 
+
+2 octets pour indiquer le protocole utilisé (par exemple, IPv4 ou IPv6).
+
+=== Données : 
+
+Jusqu’à 1500 octets de données utiles.
+
+=== CRC (Cyclic Redundancy Check) : 
+
+4 octets pour détecter les erreurs dans la trame.
+
+== Les évolutions d'Ethernet :
+
+Ethernet a constamment évolué pour répondre aux besoins croissants de bande passante et de performance. 
+
+
+=== Étapes importantes de cette évolution :
+
+
+=== Ethernet sur cuivre : 
+
+Utilisé dans la plupart des environnements de bureau, il offre des connexions abordables avec des câbles à paires torsadées (RJ45).
+
+=== Ethernet sur fibre optique : 
+
+Utilisé pour des connexions longue distance et à très haut débit, surtout dans les réseaux de centres de données ou les réseaux métropolitains.
+
+=== Power over Ethernet (PoE) : 
+
+Permet de fournir à la fois l'alimentation électrique et la connexion réseau via un seul câble Ethernet, couramment utilisé pour alimenter:
+[%step]
+* des caméras IP, 
+* des points d'accès Wi-Fi, 
+* des téléphones VoIP.
+
+
+== Avantages d'Ethernet :
+
+=== Fiabilité : 
+
+Ethernet est une technologie très robuste et éprouvée, utilisée depuis des décennies.
+
+=== Simplicité : 
+
+Le protocole est simple à configurer et à déployer, surtout avec l'utilisation de switchs.
+
+=== Évolutivité : 
+
+Ethernet est très évolutif, allant de réseaux de petite taille à de grandes infrastructures d’entreprise.
+
+=== Vitesse : 
+
+Avec l’évolution vers le Gigabit Ethernet et au-delà, il peut offrir des performances très élevées.
+
+== Limitations d'Ethernet :
+
+=== Portée limitée : 
+
+Avec les câbles à paires torsadées, la distance maximale entre deux appareils est généralement limitée à 100 mètres.
+
+=== Performance dégradée sur de longues distances : 
+
+Ethernet sur cuivre est moins performant que la fibre optique pour des distances longues.
+
+
+
+
+
+
