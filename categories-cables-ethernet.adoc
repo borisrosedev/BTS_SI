@@ -9,7 +9,11 @@ Les catégories de câbles Ethernet comme Cat 5e et Cat 6 sont des standards lar
 
 === ...
 
-Ces câbles appartiennent à la famille des câbles à paires torsadées (comme UTP, STP, et FTP) et se différencient principalement par leur capacité à supporter des vitesses et des fréquences de transmission de données spécifiques.
+Ces câbles appartiennent à la famille des câbles à paires torsadées (comme UTP, STP, et FTP)  ...
+
+=== ...
+
+et se différencient principalement par leur capacité à supporter des vitesses et des fréquences de transmission de données spécifiques.
 
 == Catégorie 5e (Cat 5e) :
 
@@ -40,6 +44,9 @@ Les câbles Cat 5e sont encore très courants et suffisants pour les réseaux r�
 == Exemples d’utilisation :
 
 Connexion des ordinateurs, imprimantes et autres périphériques dans un réseau local.
+
+=== ...
+
 Utilisé dans des infrastructures de petites et moyennes entreprises, ou à domicile.
 
 

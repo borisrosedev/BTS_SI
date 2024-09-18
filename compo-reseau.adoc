@@ -13,9 +13,19 @@ Les composants d'un réseau sont essentiels pour:
 * garantir le bon fonctionnement des flux de données. 
 
 
+
+//----------------------------ROUTEUR----------------------------
+//--------------------------------------------------------
 == Routeur
 
 Un routeur est un appareil réseau qui assure la communication entre plusieurs réseaux différents, comme un réseau local (LAN) et l'Internet. 
+
+=== ...
+
+En savoir plus sur le LAN 
+
+link:./lan-vlan.adoc[version adoc]
+link:./lan-vlan.html[version html]
 
 === ...
 
@@ -36,6 +46,10 @@ acheminer les paquets de données entre différents réseaux.
 
 connecter un LAN à l'Internet ou à un autre réseau LAN.
 
+
+
+//--------------------------------------------------------
+//-------------------------SWITCH-------------------------------
 
 == Switch (Commutateur)
 
@@ -64,6 +78,11 @@ interconnecter:
 * serveurs, 
 * imprimantes au sein d'un même réseau.
 
+
+
+
+//--------------------------------------------------------
+//------------------------POINT D'ACCES--------------------------------
 
 == Point d'Accès (Access Point - AP)
 
@@ -112,13 +131,19 @@ pour des connexions à très haut débit, sur de longues distances.
 
 connecter des routeurs, switchs, ordinateurs et autres dispositifs au sein d’un LAN.
 
+
 == Serveur
 
 Un serveur est un ordinateur ou un dispositif puissant qui fournit des services, des ressources et des données à d'autres dispositifs appelés clients dans un réseau. 
 
 === ...
 
-Les serveurs peuvent héberger des applications, des fichiers, des bases de données, etc.
+Les serveurs peuvent héberger:
+[%step]
+* des applications, 
+* des fichiers, 
+* des bases de données, 
+* etc.
 
 === Fonction : 
 
@@ -132,6 +157,10 @@ serveurs de fichiers, serveurs d’applications, serveurs Web.
 
 gérer et fournir des ressources pour l’ensemble du réseau.
 
+
+
+//--------------------------------------------------------
+//-----------------------------------PARE-FEU------------------------
 == Pare-feu (Firewall)
 
 Un pare-feu est un dispositif de sécurité réseau qui surveille et contrôle le trafic réseau entrant et sortant, selon des règles de sécurité prédéfinies. 
@@ -152,6 +181,10 @@ pare-feu d’entreprise, pare-feu sur routeur domestique.
 
 Sécuriser les connexions réseau et prévenir les intrusions.
 
+
+
+//--------------------------------------------------------
+//-------------------------PASSERELLE-------------------------------
 
 == Passerelle (Gateway)
 
@@ -179,6 +212,14 @@ convertir et acheminer le trafic entre différents protocoles et réseaux.
 * link:./zoom-passerelle.adoc[version adoc]
 * link:./zoom-passerelle.html[version html]
 
+
+
+
+
+
+//--------------------------------------------------------
+//---------------------------NIC-----------------------------
+
 == Carte réseau (NIC - Network Interface Card)
 
 Une carte réseau est un composant matériel qui permet à un ordinateur ou à tout autre appareil de se connecter à un réseau, que ce soit via une connexion filaire ou sans fil.
@@ -195,9 +236,18 @@ cartes réseau Ethernet, cartes Wi-Fi.
 
 permettre aux ordinateurs de communiquer dans un réseau local ou avec l'Internet.
 
+
+
+
+//--------------------------------------------------------
+//--------------------------MODEM------------------------------
 == Modem
 
-Un modem est un appareil qui convertit les signaux numériques des ordinateurs en signaux analogiques et vice versa, permettant ainsi la communication sur les lignes téléphoniques ou via la fibre optique.
+Un modem est un appareil qui convertit les signaux numériques des ordinateurs en signaux analogiques et vice versa, ... 
+
+=== ...
+
+permettant ainsi la communication sur les lignes téléphoniques ou via la fibre optique.
 
 === Fonction : 
 
@@ -210,6 +260,15 @@ modem ADSL, modem câble.
 === Utilisation : 
 
 connecter un réseau domestique ou professionnel à l’Internet.
+
+
+
+
+
+
+
+//--------------------------------------------------------
+//---------------------NAC-----------------------------------
 
 == Contrôleur d'accès (NAC - Network Access Control)
 
@@ -226,6 +285,15 @@ système NAC pour les réseaux d’entreprise.
 === Utilisation : 
 
 filtrer les accès et garantir la sécurité des connexions réseau.
+
+
+
+
+
+//--------------------------------------------------------
+//---------------------CLOUD NETWORKING-----------------------------------
+
+
 
 == Cloud Networking (Composants Virtuels)
 

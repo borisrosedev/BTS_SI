@@ -1,50 +1,10 @@
-= Réseau local (LAN)
+//----------------------------------------------VLANs-----------------------
+= VLANs (Réseaux Locaux Virtuels)
 :revealjs_theme: beige
 :source-highlighter: highlight.js
 :icons: font
 
-
 == Introduction
-
-Un réseau local (Local Area Network ou LAN) est un réseau qui interconnecte un ensemble d'appareils (ordinateurs, imprimantes, serveurs, etc.) ...
-
-=== ...
-
-dans un espace géographique restreint, comme un bâtiment, un bureau ou une maison. 
-
-=== ...
-
-Il permet aux utilisateurs de partager des ressources telles que des fichiers, des applications, des imprimantes et des connexions Internet.
-
-
-== Caractéristiques clés d'un LAN :
-
-=== Portée géographique limitée : 
-
-Les LAN couvrent généralement une petite zone, comme une salle, un étage ou un bâtiment.
-
-=== Débit élevé : 
-
-Comme les LANs couvrent de courtes distances, ils offrent des débits élevés (100 Mbps, 1 Gbps ou plus) par rapport à d'autres types de réseaux (comme les réseaux étendus WAN).
-
-=== Technologies courantes : 
-
-
-Les réseaux LAN utilisent souvent des technologies telles que Ethernet pour les connexions câblées et Wi-Fi pour les connexions sans fil.
-
-
-=== Contrôle centralisé : 
-
-Les LANs sont généralement administrés de manière centralisée par un serveur ou un groupe de serveurs.
-
-
-
-
-
-
-//----------------------------------------------VLANs-----------------------
-
-=== VLANs (Réseaux Locaux Virtuels)
 
 Un VLAN (Virtual Local Area Network) est une technologie qui permet de segmenter un réseau physique en plusieurs réseaux logiques virtuels. 
 

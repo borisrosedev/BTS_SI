@@ -53,6 +53,21 @@ Les données sont encapsulées dans des segments ou datagrammes (dans le cas de 
 
 === ...
 
+En savoir plus sur TCP :
+
+link:./tcp.adoc[version adoc]
+link:./tcp.html[version html]
+
+=== ...
+
+En savoir plus sur UDP
+
+link:./udp.adoc[version adoc]
+link:./udp.html[version html]
+
+
+=== ...
+
 Cette couche ajoute un en-tête contenant des informations importantes telles que:
 [%step]
 * les numéros de port source et destination pour identifier les applications.
@@ -67,6 +82,22 @@ Les segments ou datagrammes sont encapsulés dans des paquets.
 Un en-tête réseau est ajouté contenant les adresses IP source et destination, permettant le routage des données à travers différents réseaux.
 
 
+=== ...
+
+En savoir plus sur les adresses IP
+
+link:./protocole-ip.adoc[version adoc]
+link:./protocole-ip.html[version html]
+
+=== ...
+
+En savoir plus sur le routage IP
+
+link:./routage-ip.adoc[version adoc]
+link:./routage-ip.html[version html]
+
+
+
 === Couche liaison de données (2ème couche) :
 
 Les paquets sont encapsulés dans des trames.
@@ -78,6 +109,22 @@ Un en-tête de liaison de données est ajouté, qui inclut les adresses MAC (adr
 === Couche physique (1ère couche) :
 
 Les trames sont converties en un flux de bits sous forme de signaux électriques, optiques ou radio pour être envoyées sur le support physique (câble, fibre optique, ondes radio).
+
+=== ...
+
+En savoir plus sur les cables-ethernet 
+
+link:./cables-ethernet.adoc[version adoc]
+link:./cables-ethernet.html[version html]
+
+=== ...
+
+En savoir plus sur les normes Ethernet
+
+link:./normes-ethernet.adoc[version adoc]
+link:./normes-ethernet.html[version html]
+
+
 
 
 === Exemple d'encapsulation (du point de vue TCP/IP) :

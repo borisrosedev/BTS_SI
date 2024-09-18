@@ -34,6 +34,14 @@ L'une des principales fonctions d'une passerelle est de convertir les données d
 
 Par exemple, une passerelle pourrait permettre à un réseau utilisant le protocole IPv4 de communiquer avec un autre réseau utilisant IPv6.
 
+=== ...
+
+En savoir plus sur IPv4 et IPv6
+
+link:./ipv6-ipv4.adoc[version adoc]
+link:./ipv6-ipv4.html[version html]
+
+
 === Communication entre réseaux différents : 
 
 Si un réseau local (LAN) doit se connecter à un réseau externe comme Internet, la passerelle permet cette communication en agissant comme point de sortie et d’entrée pour le trafic réseau. 
@@ -52,6 +60,12 @@ Dans une configuration domestique ou professionnelle classique, un routeur avec 
 
 Le routeur traduit les adresses IP privées des machines locales en une adresse IP publique utilisable sur Internet (via NAT, Network Address Translation).
 
+=== ...
+
+En savoir plus NAT 
+
+link:./nat.adoc[version adoc]
+link:./nat.html[version html]
 
 
 === Sécurité et filtrage : 
@@ -102,9 +116,27 @@ Par exemple, une passerelle de messagerie pourrait permettre à un serveur de me
 Une passerelle permettant à un système utilisant le protocole SMTP de communiquer avec un système utilisant le protocole POP3.
 
 
+=== ...
+
+En savoir plus sur SMTP et POP3
+
+link:./smtp-pop3.adoc[version adoc]
+link:./smtp-pop3.html[version html]
+
+=== ...
+
+En savoir plus sur les clients de messagerie
+
+link:./client-de-messagerie.adoc[version adoc]
+link:./client-de-messagerie.html[version html]
+
 === Passerelle de téléphonie VoIP :
 
-Dans le contexte de la téléphonie sur IP, une passerelle VoIP convertit les signaux téléphoniques analogiques en données numériques et inversement, pour permettre la communication entre des réseaux téléphoniques classiques (PSTN) et des réseaux IP.
+Dans le contexte de la téléphonie sur IP, une passerelle VoIP convertit les signaux téléphoniques analogiques en données numériques et inversement, ...
+
+=== ...
+
+pour permettre la communication entre des réseaux téléphoniques classiques (PSTN) et des réseaux IP.
 
 
 === Exemple : 

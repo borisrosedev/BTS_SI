@@ -1,8 +1,9 @@
-= Plan
+= Bases de réseau 
 :revealjs_theme: beige
 :source-highlighter: highlight.js
 :icons: font
 // JOUR 1
+
 
 == Introduction aux réseaux informatiques 
 
@@ -17,10 +18,12 @@ Se familiariser aux notions de base des réseaux et leur utilité.
 
 * Types de réseaux : LAN, MAN, WAN, PAN.
 
+=== Les types de réseaux
+
 * link:./types-reseaux.adoc[version adoc]
 * link:./types-reseaux.html[version html]
 
-=== ...
+=== Les LAN et VLAN 
 
 * link:./lan-vlan.adoc[version adoc]
 * link:./lan-vlan.html[version html]
@@ -29,16 +32,14 @@ Se familiariser aux notions de base des réseaux et leur utilité.
 
 * Avantages et inconvénients des réseaux.
 
-=== ...
-
-* Introduction à Internet, Intranet et Extranet.
+=== Introduction à Internet, Intranet et Extranet.
 
 * link:./internet-intranet-extranet.adoc[version adoc]
 * link:./internet-intranet-extranet.html[version html]
 
-=== ...
+=== Composants d’un réseau : 
 
-* Composants d’un réseau : routeurs, switchs, points d’accès, câbles, etc.
+routeurs, switchs, points d’accès, câbles, etc.
 
 * link:./compo-reseau.adoc[version adoc]
 * link:./compo-reseau.html[version html]
@@ -48,7 +49,9 @@ Se familiariser aux notions de base des réseaux et leur utilité.
 
 
 
-== Modèles de communication en réseau : OSI et TCP/IP 
+== Modèles de communication en réseau : 
+
+OSI et TCP/IP 
 
 === Objectifs : 
 
@@ -58,43 +61,43 @@ Comprendre les modèles en couches, avec une étude particulière du modèle OSI
 
 * Présentation des architectures en couches.
 
-=== ...
+=== Modèle OSI : 
 
-* Modèle OSI : Étude détaillée des 7 couches et leurs fonctionnalités.
+Étude détaillée des 7 couches et leurs fonctionnalités.
 
 * link:./modele-osi.adoc[version adoc]
 * link:./modele-osi.html[version html]
 
-=== ...
+=== Modèle TCP/IP : 
 
-* Modèle TCP/IP : Comparaison avec le modèle OSI, explication des 4 couches.
-
-
+Comparaison avec le modèle OSI, explication des 4 couches.
 
 * link:./modele-tcp-ip.adoc[version adoc]
 * link:./modele-tcp-ip.html[version html]
 
 
-=== ...
+=== L'importance des protocoles à chaque couche 
 
-* L'importance des protocoles à chaque couche (IP, TCP, UDP, HTTP, etc.).
+IP, TCP, UDP, HTTP, ...
+
+=== TCP
 
 * link:./tcp.adoc[version adoc]
 * link:./tcp.html[version html]
 
-=== ...
+=== UPD
 
 * link:./udp.adoc[version adoc]
 * link:./udp.html[version html]
 
 
-=== ...
-
-* Processus de segmentation et encapsulation des données.
+=== Processus de segmentation et encapsulation des données.
 
 * link:./encapsulation.adoc[version adoc]
 * link:./encapsulation.html[version html]
 // JOUR 2
+
+
 
 == Adressage IP et sous-réseaux
 
@@ -104,25 +107,29 @@ Maîtriser les concepts de l'adressage IP et la notion de sous-réseaux.
 
 == Contenu :
 
-* IPv4 : Structure des adresses IP, notation décimale.
+=== IPv4 : 
+
+Structure des adresses IP, notation décimale.
+
+=== Protocole IP
 
 * link:./protocole-ip.adoc[version adoc]
 * link:./protocole-ip.html[version html]
 
-=== ...
+=== CIRD
 
 * Notions de masque de sous-réseau et CIDR (Classless Inter-Domain Routing).
 
-=== ...
+=== IPv6 : 
 
-* IPv6 : Introduction à l’IPv6, comparaison avec IPv4.
+Introduction à l’IPv6, comparaison avec IPv4.
 
 * link:./ipv6-ipv4.adoc[version adoc]
 * link:./ipv6-ipv4.html[version html]
 
-=== ...
+=== Calcul des sous-réseaux : 
 
-* Calcul des sous-réseaux : découpage d’un réseau en sous-réseaux.
+découpage d’un réseau en sous-réseaux.
 
 == Composants réseau et équipements actifs
 
@@ -137,52 +144,51 @@ Présentation des principaux équipements réseau et leurs fonctions.
 * link:./switch.adoc[version adoc]
 * link:./switch.html[version html]
 
-=== ...
+=== Routeurs : 
 
-* Routeurs : Rôle des routeurs, routage et tables de routage.
+Rôle des routeurs, routage et tables de routage.
 
 * link:./routage-ip.adoc[version adoc]
 * link:./routage-ip.html[version html]
 
-=== ...
+=== Table de routage
 
 * link:./routage-table-de-routage.adoc[version adoc]
 * link:./routage-table-de-routage.html[version html]
 
-=== ...
+=== Routeur professionnel
 
 * link:./routeur-pro.adoc[version adoc]
 * link:./routeur-pro.html[version html]
 
-=== ...
+=== Points d’accès : 
 
-* Points d’accès : Utilisation et gestion des réseaux sans fil (Wi-Fi).
+Utilisation et gestion des réseaux sans fil (Wi-Fi).
 
 * link:./wifi.adoc[version adoc]
 * link:./wifi.html[version html]
 
 
-=== ...
+=== Introduction aux concepts de NAT et DHCP
 
-* Introduction aux concepts de NAT (Network Address Translation) et DHCP (Dynamic Host Configuration Protocol).
+NAT (Network Address Translation) et DHCP (Dynamic Host Configuration Protocol).
+
+=== NAT
 
 * link:./nat.adoc[version adoc]
 * link:./nat.html[version html]
 
-=== ...
-
+=== DHCP
 
 * link:./dhcp.adoc[version adoc]
 * link:./dhcp.html[version html]
 
-=== ...
+=== Réservation DHCP
 
 * link:./reservation-dhcp.adoc[version adoc]
 * link:./reservation-dhcp.html[version html]
 
-=== ///
-
-* Introduction à la virtualisation des réseaux (VLAN).
+===  Introduction à la virtualisation des réseaux (VLAN).
 
 * link:./lan-vlan.adoc[version html]
 * link:./lan-vlan.html[version html]
@@ -198,30 +204,27 @@ vous sensibiliser aux concepts de base de la sécurité des réseaux.
 
 == Contenu :
 
-* Principales menaces et attaques : phishing, attaques par déni de service (DDoS), intrusions.
+=== Principales menaces et attaques : 
 
-=== ...
+phishing, attaques par déni de service (DDoS), intrusions.
 
-* Techniques de sécurisation :
+=== Techniques de sécurisation :
 
-=== ...
+=== Pare-feu (firewall) : 
 
-Pare-feu (firewall) : Types et rôles.
+Types et rôles.
 
 * link:./techniques-securite.adoc[version adoc]
 * link:./techniques-securite.html[version html]
 
-=== ...
+=== VPN (Virtual Private Network) : 
 
-VPN (Virtual Private Network) : Fonctionnement et applications.
-
+Fonctionnement et applications.
 
 * link:./vpn.adoc[version adoc]
 * link:./vpn.html[version html]
 
-=== ...
-
-Chiffrement des données (HTTPS, SSL/TLS).
+=== Chiffrement des données (HTTPS, SSL/TLS).
 
 * link:./https-ssl.adoc[version adoc]
 * link:./https-ssl.html[version html]
