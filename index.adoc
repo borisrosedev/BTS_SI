@@ -1,4 +1,4 @@
-= Bases de réseau 
+= Bases des réseaux 
 :revealjs_theme: beige
 :source-highlighter: highlight.js
 :icons: font

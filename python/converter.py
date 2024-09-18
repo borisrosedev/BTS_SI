@@ -51,7 +51,6 @@ class IPAddressConvertingStrategy(ConvertingStrategy):
                 for bits_group in formatted_groups:
                     binary_bits_groups.append(self.convert_8_bits_group(bits_group=bits_group))
                 print(".".join(binary_bits_groups))
-
 class BinaryToDecimalConvertingStrategy(ConvertingStrategy):
     def __init__(self, val: str) -> None:
         self.val = val;
