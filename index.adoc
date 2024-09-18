@@ -12,11 +12,10 @@
 Se familiariser aux notions de base des réseaux et leur utilité.
 
 === Contenu :
+ 
+Qu'est-ce qu'un réseau informatique ?
 
-=== Qu'est-ce qu'un réseau informatique ?
-
-
-* Types de réseaux : LAN, MAN, WAN, PAN.
+=== Types de réseaux : LAN, MAN, WAN, PAN.
 
 === Les types de réseaux
 
@@ -131,6 +130,8 @@ Introduction à l’IPv6, comparaison avec IPv4.
 
 découpage d’un réseau en sous-réseaux.
 
+
+
 == Composants réseau et équipements actifs
 
 === Objectifs : 
@@ -168,7 +169,6 @@ Utilisation et gestion des réseaux sans fil (Wi-Fi).
 * link:./wifi.adoc[version adoc]
 * link:./wifi.html[version html]
 
-
 === Introduction aux concepts de NAT et DHCP
 
 NAT (Network Address Translation) et DHCP (Dynamic Host Configuration Protocol).
@@ -202,7 +202,7 @@ NAT (Network Address Translation) et DHCP (Dynamic Host Configuration Protocol).
 
 vous sensibiliser aux concepts de base de la sécurité des réseaux.
 
-== Contenu :
+=== Contenu :
 
 === Principales menaces et attaques : 
 
@@ -232,6 +232,10 @@ Fonctionnement et applications.
 === ...
 
 Introduction à l'authentification et aux politiques de sécurité.
+
+
+
+
 
 == Câblage réseau et topologies
 
@@ -275,6 +279,10 @@ Apprendre les différentes topologies et les types de câblage utilisés dans le
 
 * link:./normes-ethernet.adoc[version adoc]
 * link:./normes-ethernet.html[version html]
+
+
+
+
 
 == Outils et commandes réseau
 

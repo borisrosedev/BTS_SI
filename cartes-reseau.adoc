@@ -1,0 +1,31 @@
+= Carte réseau
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Une carte réseau peut être conçue pour supporter à la fois des connexions Wi-Fi et Ethernet, mais cela dépend du modèle spécifique de la carte. 
+
+=== ...
+
+Il existe des cartes réseau combinées qui intègrent à la fois une interface sans fil (Wi-Fi) et une interface filaire (Ethernet). 
+
+=== ...
+
+Ces cartes peuvent basculer entre les deux types de connexion en fonction de ce qui est disponible ou configuré.
+
+
+=== Cartes réseau combinées : 
+
+Certaines cartes réseau, surtout sur les ordinateurs portables ou les cartes mères modernes, prennent en charge à la fois le Wi-Fi et l'Ethernet, ...
+
+=== ...
+
+permettant une connexion simultanée ou une gestion alternative entre les deux interfaces.
+
+=== Fonctionnement simultané : 
+
+Bien que les deux connexions puissent être actives en même temps, la configuration du système peut déterminer laquelle sera prioritaire pour le trafic réseau, souvent en donnant la priorité à la connexion Ethernet lorsque disponible, car elle est généralement plus stable et rapide.
+

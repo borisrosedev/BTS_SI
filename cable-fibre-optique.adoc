@@ -1,0 +1,99 @@
+= Câble en fibre optique
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Un câble en fibre optique est un type de câble utilisé pour transmettre des données à l'aide de la lumière. 
+
+=== ...
+
+Contrairement aux câbles traditionnels en cuivre qui utilisent des signaux électriques, ... 
+
+=== ...
+
+les câbles en fibre optique utilisent des faisceaux de lumière pour transporter des informations, ce qui permet d'atteindre des vitesses beaucoup plus élevées sur de longues distances avec une faible perte de signal.
+
+== Caractéristiques principales d'un câble en fibre optique :
+
+=== Vitesse de transmission élevée : 
+
+Grâce à la lumière, la fibre optique peut transporter des données à des débits très élevés, souvent supérieurs à ceux des câbles en cuivre traditionnels.
+
+=== Longues distances : 
+
+Les signaux lumineux peuvent parcourir de grandes distances sans avoir besoin de répéteurs ou d'amplificateurs, 
+
+=== ...
+
+contrairement aux câbles en cuivre qui perdent rapidement leur signal.
+
+=== Immunité aux interférences électromagnétiques : 
+
+Les câbles en fibre optique ne sont pas affectés par les interférences électromagnétiques (EMI) et les interférences radiofréquences (RFI), ...
+
+=== ...
+
+ce qui en fait une solution idéale pour des environnements bruyants sur le plan électromagnétique.
+
+=== Sécurité : 
+
+Il est plus difficile d'intercepter les données transmises par fibre optique, car il n'y a pas de **rayonnement électromagnétique** qui pourrait être capté comme avec les câbles en cuivre.
+
+== Types de câbles en fibre optique :
+
+
+=== Monomode (SMF) : 
+
+Utilisé pour des connexions longue distance (plusieurs kilomètres). 
+
+=== ...
+
+Ce type de fibre permet à un seul mode de lumière de se propager, ce qui réduit la dispersion et augmente la capacité et la portée.
+
+=== Multimode (MMF) : 
+
+Utilisé pour des distances plus courtes (environ 500 mètres ou moins). 
+
+=== ...
+
+La fibre multimode permet à plusieurs modes de lumière de se propager, ce qui peut causer plus de dispersion et donc des performances moindres sur de longues distances.
+
+== Utilisation :
+
+=== Internet haut débit : 
+
+Les câbles en fibre optique sont couramment utilisés pour les connexions Internet haut débit, notamment dans les réseaux de fibre jusqu'à domicile (FTTH, Fibre to the Home).
+
+=== Télécommunications : 
+
+Les opérateurs de télécommunications utilisent la fibre optique pour transmettre les appels, les données mobiles, et la télévision par câble sur de longues distances.
+
+=== Centres de données : 
+
+La fibre est privilégiée dans les environnements de centres de données pour connecter les serveurs, les routeurs et les commutateurs à haute vitesse.
+
+== Connecteurs courants pour la fibre optique :
+
+=== Connecteurs SC (Subscriber Connector) : 
+
+Utilisés principalement pour les réseaux haut débit.
+
+=== Connecteurs LC (Lucent Connector) : 
+
+Plus petits que les SC, ils sont utilisés pour des équipements où l'espace est limité.
+
+=== Connecteurs ST (Straight Tip) :
+
+Utilisés dans les environnements réseau et de télécommunication.
+
+=== ...
+
+Le fait est que l'installation de la fibre optique nécessite une expertise spécifique, surtout lorsqu'il s'agit de souder ou de connecter les fibres, car la manipulation des brins de fibre est délicate.
+
+
+
+
+
+

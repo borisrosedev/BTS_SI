@@ -79,6 +79,14 @@ interconnecter:
 * imprimantes au sein d'un même réseau.
 
 
+=== ...
+
+En savoir plus sur le switch:
+
+* link:./switch.adoc[version adoc]
+* link:./switch.html[version html]
+
+
 
 
 //--------------------------------------------------------
@@ -94,7 +102,11 @@ Il étend la connectivité sans fil et peut faire partie d'un LAN pour couvrir d
 
 === Fonction : 
 
-fournir la connectivité Wi-Fi à des appareils tels que des ordinateurs portables, des téléphones mobiles, des tablettes.
+fournir la connectivité Wi-Fi à des appareils tels que :
+[%step]
+* des ordinateurs portables, 
+* des téléphones mobiles, 
+* des tablettes.
 
 === Exemple : 
 
@@ -123,13 +135,20 @@ image::./images/rj45.webp[alt="cable Ethernet RJ45", width="200", height="200" ]
 
 utilisé dans la majorité des réseaux locaux pour des connexions filaires.
 
+=== ...
+
+En savoir plus sur le câble Ethernet
+
+* link:./cables-ethernet.adoc[version adoc]
+* link:./cables-ethernet.html[version html]
+
 === Câble fibre optique : 
 
 pour des connexions à très haut débit, sur de longues distances.
 
 === Utilisation : 
 
-connecter des routeurs, switchs, ordinateurs et autres dispositifs au sein d’un LAN.
+Connecter des routeurs, switchs, ordinateurs et autres dispositifs au sein d’un LAN.
 
 
 == Serveur
@@ -155,7 +174,7 @@ serveurs de fichiers, serveurs d’applications, serveurs Web.
 
 === Utilisation : 
 
-gérer et fournir des ressources pour l’ensemble du réseau.
+Gérer et fournir des ressources pour l’ensemble du réseau.
 
 
 
@@ -200,11 +219,13 @@ Permettre l'interconnexion entre des réseaux hétérogènes.
 
 === Exemple : 
 
-Passerelle Internet, passerelle IoT.
+[%step]
+* Passerelle Internet, 
+* Passerelle IoT.
 
 === Utilisation : 
 
-convertir et acheminer le trafic entre différents protocoles et réseaux.
+Convertir et acheminer le trafic entre différents protocoles et réseaux.
 
 
 ===  En savoir plus
@@ -231,6 +252,13 @@ fournir l'interface matérielle pour se connecter à un réseau.
 === Exemple : 
 
 cartes réseau Ethernet, cartes Wi-Fi.
+
+=== ...
+
+En savoir plus sur les cartes réseau (nota. combinées)
+
+link:./cartes-reseau.adoc[version adoc]
+link:./cartes-reseau.html[version html]
 
 === Utilisation : 
 
