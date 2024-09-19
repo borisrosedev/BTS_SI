@@ -10,7 +10,13 @@ Le protocole Ethernet est une technologie standard de communication utilisée da
 
 === ..;
 
-Ethernet fonctionne au niveau des couches physique et liaison de données du modèle OSI (couches 1 et 2), et il définit la manière dont les dispositifs sur un réseau échangent des trames de données via des connexions câblées.
+Ethernet fonctionne au niveau des couches physique et liaison de données du modèle OSI (couches 1 et 2), ...
+
+
+=== ...
+
+
+et il définit la manière dont les dispositifs sur un réseau échangent des trames de données via des connexions câblées.
 
 == Caractéristiques du protocole Ethernet :
 

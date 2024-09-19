@@ -1,0 +1,174 @@
+= Frame Relay, PPP, MPL
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Frame Relay, PPP (Point-to-Point Protocol), et MPLS (Multiprotocol Label Switching) sont trois technologies utilisées pour le transport de données sur des réseaux WAN. 
+
+=== ...
+
+Elles ont chacune leurs caractéristiques et leurs cas d'utilisation spécifiques. 
+
+
+== Frame Relay
+
+=== Description : 
+
+Frame Relay est une technologie de commutation de paquets utilisée principalement pour les réseaux WAN. 
+
+=== ...
+
+Elle fonctionne en créant des circuits virtuels (PVC - Permanent Virtual Circuits) entre les endpoints pour transporter les données sur un réseau partagé.
+
+=== Caractéristiques :
+
+Basée sur la commutation de paquets.
+
+=== ...
+
+Utilisation efficace de la bande passante en multiplexant plusieurs connexions sur une même ligne physique.
+
+=== ...
+
+Utilise des PVC pour établir des chemins fixes pour les données.
+
+=== ...
+
+Moins fiable comparé à MPLS ou PPP en termes de gestion des erreurs, mais économique pour des connexions à faible coût.
+
+=== Utilisation :
+
+Frame Relay a été largement utilisé pour les connexions WAN dans les années 1990 et au début des années 2000, notamment pour interconnecter des sites distants ou des succursales avec des sièges sociaux.
+
+=== ...
+
+Aujourd'hui, cette technologie est considérée comme obsolète et a été largement remplacée par MPLS ou des connexions VPN.
+
+
+== PPP (Point-to-Point Protocol)
+
+=== Description : 
+
+PPP est un protocole de communication qui permet l'encapsulation des paquets de données pour la transmission sur des connexions point à point, comme les lignes téléphoniques, les liaisons série, ou les connexions WAN.
+
+=== Caractéristiques :
+
+Encapsulation des données pour les connexions point à point.
+
+=== ...
+
+Offre des mécanismes d'authentification (PAP, CHAP), de compression des données et de chiffrement.
+
+=== ...
+
+Fournit des fonctionnalités de gestion des erreurs et de négociation de lien pour établir et maintenir la connexion.
+
+=== ...
+
+Peut encapsuler des paquets IP pour les acheminer sur des réseaux série.
+
+=== Utilisation :
+
+
+Utilisé principalement sur les connexions série et les réseaux WAN point à point.
+
+=== ...
+
+Il est souvent utilisé pour connecter des routeurs via des liaisons série dans des réseaux WAN traditionnels.
+
+=== ...
+
+Parfois utilisé dans les connexions DSL, où PPPoE (PPP over Ethernet) est implémenté pour établir une connexion Internet.
+
+
+== MPLS (Multiprotocol Label Switching)
+
+=== Description : 
+
+MPLS est une technologie de commutation de paquets qui dirige les données en fonction des étiquettes (**labels**) plutôt que des adresses réseau. 
+
+=== ...
+
+Elle permet un routage rapide des paquets en utilisant ces labels pour choisir le chemin optimal sur le réseau.
+
+
+=== Caractéristiques :
+
+=== Commutation par étiquette :
+
+MPLS attribue des étiquettes à chaque paquet de données, ce qui permet de prendre des décisions de routage rapidement sans avoir à consulter la table de routage.
+
+=== ...
+
+
+Fournit des services de bout en bout pour le transport de données, souvent utilisé pour interconnecter plusieurs sites d'une entreprise avec une grande fiabilité.
+
+=== QoS (Quality of Service) : 
+
+MPLS permet la priorisation des paquets, ce qui garantit la qualité des services critiques comme la voix ou la vidéo.
+
+=== ...
+
+Offre des services VPN MPLS pour isoler le trafic des différents clients sur un même réseau physique.
+
+
+=== Utilisation :
+
+Utilisé dans les réseaux d'entreprises pour les réseaux privés virtuels (VPN MPLS), ...
+
+
+=== ...
+
+où il permet de connecter plusieurs sites via un backbone commun tout en garantissant une haute qualité de service.
+
+=== ...
+
+Prend en charge plusieurs protocoles réseau (IPv4, IPv6) et est largement utilisé pour les services de fournisseurs d'accès Internet (ISP).
+
+
+=== ...
+
+Remplace progressivement les technologies plus anciennes comme Frame Relay dans les réseaux d'entreprise.
+
+
+
+== Cas d'utilisation de chaque technologie
+
+=== Frame Relay :
+
+Applications anciennes où une connexion WAN entre des sites distants est nécessaire, mais avec un budget limité. 
+
+=== ...
+
+Cependant, cette technologie est en voie d'obsolescence et rarement utilisée aujourd'hui.
+
+=== PPP :
+
+Utilisé pour des connexions point à point simples entre routeurs sur des lignes série ou dans les configurations DSL avec PPPoE. 
+
+=== ...
+
+PPP est encore utilisé pour des connexions temporaires ou des liaisons dédiées simples, mais de plus en plus remplacé par des technologies modernes.
+
+=== MPLS :
+
+Grande entreprise : 
+
+MPLS est privilégié dans les environnements d'entreprise complexes ...
+
+=== ...
+
+où plusieurs sites distants doivent être connectés de manière fiable avec des exigences strictes de qualité de service (QoS). 
+
+=== ...
+
+Il est également très utilisé pour les réseaux VPN d'entreprise, les services VoIP, la vidéo, et ...
+
+=== ...
+
+les données critiques nécessitant des garanties de latence faible et de bande passante élevée.
+
+
+

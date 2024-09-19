@@ -1,0 +1,209 @@
+= Les types de routeur de Packet Tracer
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Cisco Packet Tracer, un outil de simulation de réseau, plusieurs types de routeurs sont disponibles pour simuler des environnements réseau et apprendre à configurer des réseaux. 
+
+=== ...
+
+Les principaux types de routeurs que vous trouverez dans Packet Tracer, avec une description de chacun et leurs caractéristiques :
+
+== Routeurs de la série 1841
+
+=== Description : 
+
+Le Cisco 1841 est un routeur de la gamme ISR (Integrated Services Router) conçu pour les petites et moyennes entreprises.
+
+=== Caractéristiques :
+
+Il dispose de deux interfaces Fast Ethernet (10/100 Mbps) et de plusieurs emplacements pour modules (WIC, HWIC) permettant d'ajouter des interfaces série, des cartes voix, ou d'autres types de connectivité.
+
+
+Idéal pour apprendre la configuration de base des routeurs et les réseaux simples.
+Utilisation : Routage de base, configuration de VLANs, routage statique et dynamique (RIP, OSPF, EIGRP).
+
+== Routeurs de la série 1941
+
+=== Description : 
+
+Le Cisco 1941 fait partie de la même famille ISR, mais avec des fonctionnalités plus avancées et un meilleur support de performance par rapport à la série 1841.
+
+=== Caractéristiques :
+
+Prend en charge des interfaces Gigabit Ethernet, Fast Ethernet, et plusieurs modules d'extension.
+
+=== ...
+
+Permet la configuration de réseaux plus complexes avec une meilleure capacité de routage et de services supplémentaires (sécurité, VPN).
+
+=== Utilisation : 
+
+Routage avancé, gestion de services de sécurité, VPN, QoS, routage dynamique avancé (EIGRP, OSPF, BGP).
+
+== Routeurs de la série 2811
+
+=== Description : 
+
+Le Cisco 2811 est également un routeur ISR conçu pour les petites et moyennes entreprises, avec une capacité d'intégration de services plus complète.
+
+=== Caractéristiques :
+
+Supporte des interfaces Gigabit Ethernet, des modules de voix, des interfaces série et des cartes supplémentaires pour améliorer la sécurité et les services VPN.
+
+=== ...
+
+Dispose de plusieurs slots d'extension pour ajouter des modules de service, comme des modules de sécurité ou de connectivité WAN.
+
+
+=== Utilisation : 
+
+Pour des réseaux plus robustes et des services multiples tels que la voix, le VPN, et la gestion du trafic à grande échelle.
+
+
+== Routeurs de la série 2911
+
+=== Description : 
+
+Le Cisco 2911 est un routeur de la série ISR de deuxième génération, offrant des performances améliorées pour des entreprises de taille moyenne à grande.
+
+=== Caractéristiques :
+
+Supporte Gigabit Ethernet, des interfaces WAN, des modules d'extension pour services VPN, et des fonctionnalités de sécurité plus avancées.
+Compatible avec les nouveaux services de sécurité comme le firewall intégré et les services de voix et vidéo sur IP.
+Utilisation : Conçu pour des configurations de routage plus complexes, avec un support pour la téléphonie IP, la sécurité renforcée, et le VPN.
+5. Routeurs de la série 4321
+Description : Le Cisco 4321 fait partie de la série ISR 4000, conçue pour offrir des performances élevées et des services intégrés pour les entreprises de taille moyenne à grande.
+Caractéristiques :
+Supporte Gigabit Ethernet, modules de sécurité, VPN, et des interfaces de connectivité avancées.
+Permet d'implémenter des fonctionnalités de haute performance avec la prise en charge de services virtualisés (NFV).
+Utilisation : Utilisé dans des environnements avec des besoins de routage à haute performance, avec une intégration de services de sécurité, de VPN, et de QoS pour la gestion du trafic.
+
+== Routeurs de la série 819
+
+=== Description : 
+
+Le Cisco 819 est un routeur compact destiné aux déploiements dans les environnements industriels ou mobiles, souvent utilisé pour des applications M2M (Machine-to-Machine).
+
+=== Caractéristiques :
+
+Compact, il supporte des connexions cellulaires (3G/4G), ce qui le rend idéal pour les environnements éloignés où l'accès réseau traditionnel est difficile.
+Utilisé pour des connexions de faible volume avec des modules WAN intégrés.
+Utilisation : Routage mobile, M2M, connexion en environnements distants ou industriels.
+
+== Routeurs de la série 4221
+
+=== Description : 
+
+Le Cisco 4221 est un autre routeur ISR de la série 4000, conçu pour les entreprises nécessitant une plus grande flexibilité en matière de services et de performance.
+
+=== Caractéristiques :
+
+Offre un routage à haute vitesse avec un support avancé des services virtualisés.
+Supporte le routage dynamique (OSPF, EIGRP, BGP), VPN, et QoS.
+
+=== Utilisation : 
+
+Conçu pour les grandes entreprises avec des besoins de routage complexes et des services intégrés (sécurité, voix, VPN, etc.).
+
+== Routeurs Cloud (Generic) dans Packet Tracer
+
+=== Description : 
+
+Ce type de routeur est utilisé pour simuler une connexion au réseau Cloud dans Packet Tracer, représentant généralement des connexions Internet ou externes à l'environnement local.
+
+=== Caractéristiques :
+
+Utilisé pour représenter un réseau distant ou Internet, souvent utilisé pour la simulation des connexions WAN dans Packet Tracer.
+
+=== ...
+
+Il permet de configurer des connexions PPP, Frame Relay, ou autres technologies WAN.
+
+=== Utilisation : 
+
+Simulation de connexion à Internet ou d’autres réseaux externes.
+
+
+
+
+
+
+== Routeurs de la série 1240 (Cisco 1240AG Wireless Access Point)
+
+=== Description : 
+
+Ce routeur est principalement utilisé pour la connectivité sans fil (Wi-Fi), et permet d'ajouter des points d'accès sans fil aux simulations réseau.
+
+=== Caractéristiques :
+
+Prend en charge des connexions sans fil, peut être utilisé comme point d'accès Wi-Fi dans Packet Tracer.
+
+=== ...
+
+Il peut être configuré pour gérer les clients sans fil dans un réseau LAN.
+
+=== Utilisation : 
+
+Simulation de réseaux sans fil et de la gestion de la connectivité des appareils mobiles.
+
+
+== Routeur multi-niveaux (Multilayer Router)
+
+=== Description : 
+
+Un routeur à plusieurs couches peut agir à la fois comme un routeur et un switch de niveau 3 (routage intra-VLAN).
+
+=== Caractéristiques :
+
+Permet de combiner des fonctionnalités de routage et de commutation.
+
+=== ...
+
+Prend en charge des protocoles de routage avancés ainsi que la configuration de VLANs.
+
+=== Utilisation : 
+
+Souvent utilisé dans des configurations plus avancées, où le routage inter-VLAN est nécessaire.
+
+=== Utilisation des routeurs dans Packet Tracer
+
+Les routeurs dans Cisco Packet Tracer sont utilisés pour pratiquer et simuler des configurations réseau. 
+
+=== Routage statique : 
+
+Configuration de routes statiques entre différents segments de réseau.
+
+=== Routage dynamique : 
+
+Utilisation de protocoles de routage dynamique tels que RIP, OSPF, EIGRP, ou BGP.
+
+=== Configuration WAN : 
+
+Simulation de connexions WAN comme Frame Relay, PPP, ou MPLS.
+
+=== NAT (Network Address Translation) : 
+
+Configuration de NAT pour permettre la translation des adresses privées en adresses publiques.
+
+=== ACL (Access Control Lists) : 
+
+Création et gestion d'ACL pour filtrer le trafic réseau.
+
+=== VPN : 
+
+Simulation de configurations VPN pour des connexions sécurisées entre sites distants.
+
+=== Sécurité : 
+
+Configuration de fonctionnalités de sécurité telles que les pare-feux, le filtrage IP, et la gestion des accès.
+
+
+
+
+
+
+
+

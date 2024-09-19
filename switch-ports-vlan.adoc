@@ -1,0 +1,130 @@
+= Switch et VLANS : les ports 
+
+
+== Introduction
+
+Lorsque vous créez des VLANs (Virtual Local Area Networks), vous segmentez le réseau en plusieurs sous-réseaux logiques au sein d’un même switch. 
+
+=== ...
+
+Les VLANs permettent d'isoler le trafic réseau pour améliorer la sécurité, les performances et la gestion. 
+
+
+== Comment connecter les dispositifs à un switch VLAN ?
+
+=== Assigner un port à un VLAN : 
+
+Chaque port d'un switch peut être assigné à un VLAN spécifique. 
+
+=== ...
+
+Ainsi, tout dispositif connecté à ce port fait partie du VLAN correspondant. 
+
+=== ...
+
+Cela signifie que le switch sait dans quel VLAN chaque dispositif se trouve grâce à l'assignation du port à un VLAN.
+
+
+== Exemple de configuration :
+
+Si vous avez un réseau avec deux VLANs :
+
+=== VLAN 10 : 
+
+Réseau des ordinateurs de bureau.
+
+=== VLAN 20 : 
+
+Réseau des imprimantes.
+
+=== ...
+
+Vous devez configurer chaque port du switch pour indiquer à quel VLAN il est associé. 
+
+=== ...
+
+VLAN 10 : Vous branchez tous les ordinateurs sur des ports assignés au VLAN 10.
+VLAN 20 : Vous branchez les imprimantes sur des ports assignés au VLAN 20.
+Commandes de configuration d'un switch Cisco :
+Pour assigner un port spécifique à un VLAN, vous pouvez utiliser les commandes suivantes sur un switch Cisco :
+
+Accéder au switch :
+
+bash
+Copier le code
+Switch> enable
+Switch# configure terminal
+Sélectionner le port à configurer : Par exemple, pour configurer le port FastEthernet 0/1 pour le VLAN 10 :
+
+bash
+Copier le code
+Switch(config)# interface fastEthernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Configurer un autre port pour le VLAN 20 : Par exemple, pour une imprimante sur le port FastEthernet 0/2, vous configurez le port pour le VLAN 20 :
+
+bash
+Copier le code
+Switch(config)# interface fastEthernet 0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20
+Mode access : Utilisé pour assigner un port à un seul VLAN. Cela signifie que le dispositif connecté à ce port ne peut appartenir qu'à un seul VLAN.
+
+Vérification de la configuration : Pour vérifier quels ports sont assignés à quel VLAN, utilisez :
+
+bash
+Copier le code
+Switch# show vlan brief
+Dispositifs comme les imprimantes dans un VLAN
+Oui, les imprimantes doivent être branchées au switch si elles font partie du réseau. Comme les ordinateurs ou autres dispositifs réseau, les imprimantes peuvent être assignées à des VLANs spécifiques en fonction de leur utilisation.
+
+Pourquoi assigner une imprimante à un VLAN ?
+Sécurité : Vous pouvez isoler les imprimantes dans un VLAN séparé pour qu'elles ne soient accessibles qu'à partir de certains VLANs autorisés (ex : VLAN 10 pour les utilisateurs).
+Gestion : Si vous avez plusieurs imprimantes ou services partagés, il peut être utile de les regrouper dans un VLAN dédié pour un meilleur contrôle.
+Cas pratique : Réseau avec VLANs
+1. Exemple de réseau avec plusieurs VLANs :
+VLAN 10 - Réseau Utilisateurs : Tous les ordinateurs et postes de travail sont connectés à des ports du switch assignés au VLAN 10.
+VLAN 20 - Réseau Imprimantes : Toutes les imprimantes sont connectées à des ports assignés au VLAN 20.
+VLAN 30 - Réseau Administratif : Vous pouvez avoir un VLAN réservé pour l'équipe d'administration IT, séparé des autres utilisateurs.
+Dans ce cas, les utilisateurs du VLAN 10 ne peuvent pas automatiquement communiquer avec les imprimantes du VLAN 20, sauf si vous configurez une passerelle de routage entre les VLANs (via un routeur ou un switch multicouche avec routage inter-VLAN).
+
+2. Connexion entre VLANs (Routage inter-VLAN)
+Si vous voulez que les utilisateurs du VLAN 10 puissent imprimer sur les imprimantes du VLAN 20, vous devez configurer du routage inter-VLAN.
+
+Le routage inter-VLAN permet à des dispositifs de VLANs différents de communiquer entre eux en utilisant un routeur ou un switch multicouche. Cela se fait généralement avec un routeur connecté à un trunk port sur le switch, ou un switch multicouche (L3) capable de faire du routage entre VLANs.
+
+Exemple de configuration de routage inter-VLAN :
+Configurer un switch multicouche : Sur un switch multicouche (par exemple, le Cisco 3560), vous pouvez activer le routage inter-VLAN en créant une interface VLAN pour chaque VLAN.
+
+Configuration d’une interface VLAN 10 :
+
+bash
+Copier le code
+Switch(config)# interface vlan 10
+Switch(config-if)# ip address 192.168.10.1 255.255.255.0
+Configuration d’une interface VLAN 20 :
+
+bash
+Copier le code
+Switch(config)# interface vlan 20
+Switch(config-if)# ip address 192.168.20.1 255.255.255.0
+Activer le routage IP :
+
+bash
+Copier le code
+Switch(config)# ip routing
+Configurer les PC et les imprimantes avec une passerelle par défaut : Chaque dispositif dans un VLAN devra avoir une adresse IP dans la plage du VLAN et une passerelle par défaut correspondant à l'adresse de l'interface VLAN.
+
+PC dans VLAN 10 : Passerelle 192.168.10.1
+Imprimante dans VLAN 20 : Passerelle 192.168.20.1
+Cela permettra à tous les dispositifs des différents VLANs de communiquer via le switch multicouche.
+
+Conclusion
+Lorsque vous créez des VLANs sur un switch, vous devez assigner chaque port à un VLAN spécifique pour que les dispositifs connectés sachent à quel VLAN ils appartiennent.
+Tous les dispositifs, y compris les imprimantes, doivent être branchés au switch si vous souhaitez qu'ils fassent partie du réseau VLAN.
+Si vous avez plusieurs VLANs et que vous souhaitez permettre la communication entre eux (comme l'accès des utilisateurs aux imprimantes), vous devrez configurer du routage inter-VLAN via un routeur ou un switch multicouche.
+
+
+
+
+

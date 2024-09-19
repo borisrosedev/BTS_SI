@@ -1,0 +1,144 @@
+= L'ICMP (Internet Control Message Protocol) 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+L'ICMP (Internet Control Message Protocol) est un protocole réseau utilisé principalement pour ...
+
+=== ...
+
+échanger des informations de contrôle et des messages d'erreur entre les périphériques réseau. 
+
+=== ...
+
+Il fait partie de la suite de protocoles TCP/IP et est crucial pour le bon fonctionnement des réseaux IP, car il permet de signaler les problèmes dans la transmission des paquets.
+
+
+== Fonctionnement de l'ICMP :
+
+ICMP est utilisé par les routeurs, hôtes et autres dispositifs pour communiquer des informations sur des erreurs ou des conditions particulières rencontrées lors du traitement des paquets IP. 
+
+
+=== ...
+
+Contrairement aux protocoles tels que TCP ou UDP, ICMP n'est pas utilisé pour transmettre des données entre les hôtes, mais pour envoyer des messages courts sur l'état des connexions réseau.
+
+
+=== Utilisations principales de l'ICMP :
+
+L'ICMP est surtout connu pour deux utilitaires réseau qui reposent sur ce protocole :
+
+== Ping :
+
+=== But : 
+
+Tester la connectivité entre deux hôtes.
+
+=== Fonctionnement : 
+
+L'outil ping envoie un message ICMP Echo Request à une autre machine. 
+
+=== ...
+
+Si la machine cible est accessible et fonctionne correctement, elle répond avec un ICMP Echo Reply. 
+
+=== ...
+
+Cela permet de vérifier que le réseau est fonctionnel entre l’hôte source et la destination.
+
+
+.Exemple :
+[source, bash]
+----
+ping google.com
+----
+
+
+
+== Traceroute :
+
+=== But : 
+
+Tracer le chemin emprunté par les paquets à travers un réseau.
+
+=== Fonctionnement : 
+
+Traceroute envoie des paquets avec des valeurs croissantes de TTL (Time to Live). 
+
+=== ...
+
+Chaque routeur sur le chemin du paquet décrémente le TTL et, quand il atteint zéro, le routeur retourne un message ICMP Time Exceeded. 
+
+=== ...
+
+Cela permet de connaître chaque routeur traversé entre la source et la destination.
+
+.Exemple :
+[source, bash]
+----
+traceroute google.com
+----
+
+=== Types de messages ICMP :
+
+Les messages ICMP sont organisés en plusieurs types, les plus courants étant :
+
+=== Type 0 : Echo Reply
+
+Réponse à une requête d’écho (utilisé par le ping).
+
+=== Type 3 : Destination Unreachable
+
+Indique que la destination est injoignable pour diverses raisons, telles que:
+[%step]
+* une route non trouvée
+* un port inaccessible.
+
+=== Type 5 : Redirect
+
+Utilisé par les routeurs pour informer un hôte que les paquets doivent être envoyés via un autre routeur pour atteindre la destination.
+
+=== Type 8 : Echo Request
+
+Requête d'écho envoyée pour tester la connectivité (utilisé par ping).
+
+=== Type 11 : Time Exceeded
+
+Signale que le TTL (Time to Live) d’un paquet a expiré. 
+
+=== ...
+
+Utilisé dans traceroute pour identifier les routeurs intermédiaires.
+
+== Scénarios d'utilisation de l'ICMP :
+
+=== Diagnostic de réseau : 
+
+Lorsque tu utilises ping ou traceroute, tu relies des messages ICMP pour vérifier la connectivité, la latence ou les chemins des paquets à travers un réseau.
+
+=== Détection des erreurs : 
+
+ICMP est également essentiel pour notifier l'expéditeur d'un paquet si ce dernier n'a pas pu être délivré, par exemple, ...
+
+
+si un routeur n'a pas de chemin vers la destination.
+
+=== Gestion des routeurs : 
+
+Les routeurs utilisent ICMP pour informer les hôtes des problèmes de routage ou pour rediriger le trafic via une route alternative (ICMP Redirect).
+
+== Sécurité et ICMP :
+
+Bien que l'ICMP soit utile pour le diagnostic réseau, il peut aussi être exploité à des fins malveillantes. 
+
+=== ...
+
+TIP: Certains types d'attaques, comme les attaques Ping Flood (déluge de requêtes ICMP) et Ping of Death (envoi de paquets ICMP trop volumineux), visent à perturber les réseaux.
+
+
+=== ...
+
+Pour cette raison, de nombreuses organisations choisissent de limiter ou de bloquer certains messages ICMP via des pare-feu, tout en laissant les autres circuler pour permettre un diagnostic réseau basique.
+

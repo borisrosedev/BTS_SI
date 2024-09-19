@@ -15,37 +15,38 @@ Se familiariser aux notions de base des réseaux et leur utilité.
  
 Qu'est-ce qu'un réseau informatique ?
 
-=== Types de réseaux : LAN, MAN, WAN, PAN.
+=== Types de réseaux : 
 
-=== Les types de réseaux
+LAN, MAN, WAN, PAN.
+
+=== ...
+
+Les types de réseaux:
 
 * link:./types-reseaux.adoc[version adoc]
 * link:./types-reseaux.html[version html]
 
-=== Les LAN et VLAN 
+=== ...
+
+Les LAN et VLAN: 
 
 * link:./lan-vlan.adoc[version adoc]
 * link:./lan-vlan.html[version html]
 
-== ...
 
-* Avantages et inconvénients des réseaux.
+=== ...
 
-=== Introduction à Internet, Intranet et Extranet.
+Introduction à Internet, Intranet et Extranet:
 
 * link:./internet-intranet-extranet.adoc[version adoc]
 * link:./internet-intranet-extranet.html[version html]
 
-=== Composants d’un réseau : 
+=== ... 
 
-routeurs, switchs, points d’accès, câbles, etc.
+Composants d’un réseau:
 
 * link:./compo-reseau.adoc[version adoc]
 * link:./compo-reseau.html[version html]
-
-=== ...
-
-
 
 
 == Modèles de communication en réseau : 
@@ -58,7 +59,7 @@ Comprendre les modèles en couches, avec une étude particulière du modèle OSI
 
 === Contenu :
 
-* Présentation des architectures en couches.
+Présentation des architectures en couches.
 
 === Modèle OSI : 
 
@@ -75,22 +76,37 @@ Comparaison avec le modèle OSI, explication des 4 couches.
 * link:./modele-tcp-ip.html[version html]
 
 
-=== L'importance des protocoles à chaque couche 
+=== ...
+
+L'importance des protocoles à chaque couche 
 
 IP, TCP, UDP, HTTP, ...
 
-=== TCP
+=== ...
+
+TCP:
 
 * link:./tcp.adoc[version adoc]
 * link:./tcp.html[version html]
 
-=== UPD
+=== ...
+
+UPD:
 
 * link:./udp.adoc[version adoc]
 * link:./udp.html[version html]
 
+=== ...
 
-=== Processus de segmentation et encapsulation des données.
+DHCP:
+
+* link:./dhcp.adoc[version adoc]
+* link:./dhcp.html[version html]
+
+
+=== ...
+
+Processus de segmentation et encapsulation des données:
 
 * link:./encapsulation.adoc[version adoc]
 * link:./encapsulation.html[version html]
@@ -110,12 +126,21 @@ Maîtriser les concepts de l'adressage IP et la notion de sous-réseaux.
 
 Structure des adresses IP, notation décimale.
 
-=== Protocole IP
+=== ...
+
+DNS :
+
+* link:./dns.adoc[version adoc]
+* link:./dns.html[version html]
+
+=== ...
+
+Protocole IP:
 
 * link:./protocole-ip.adoc[version adoc]
 * link:./protocole-ip.html[version html]
 
-=== CIRD
+=== CIRD :
 
 * Notions de masque de sous-réseau et CIDR (Classless Inter-Domain Routing).
 
@@ -140,7 +165,7 @@ Présentation des principaux équipements réseau et leurs fonctions.
 
 === Contenu :
 
-* Switchs : Fonctions, différence entre hub et switch, commutation.
+Switchs : Fonctions, différence entre hub et switch, commutation.
 
 * link:./switch.adoc[version adoc]
 * link:./switch.html[version html]
@@ -152,12 +177,16 @@ Rôle des routeurs, routage et tables de routage.
 * link:./routage-ip.adoc[version adoc]
 * link:./routage-ip.html[version html]
 
-=== Table de routage
+=== ...
+
+Table de routage:
 
 * link:./routage-table-de-routage.adoc[version adoc]
 * link:./routage-table-de-routage.html[version html]
 
-=== Routeur professionnel
+=== ...
+
+Routeur professionnel:
 
 * link:./routeur-pro.adoc[version adoc]
 * link:./routeur-pro.html[version html]
@@ -301,19 +330,38 @@ ping, tracert, nslookup, netstat.
 === ...
 
 
-* Analyse des protocoles avec des outils comme Wireshark.
+Analyse des protocoles avec des outils comme Wireshark.
 
 === ...
 
-* Suivi des paquets réseau et diagnostic des pannes.
+Suivi des paquets réseau et diagnostic des pannes.
 
 === ...
 
-* Utilisation de logiciels de simulation de réseaux (Packet Tracer, GNS3).
+Utilisation de logiciels de simulation de réseaux (Packet Tracer, GNS3).
 
+* link:./packet-tracer-routers.adoc[Les types de routers avec Packet Tracer version adoc]
+* link:./packet-tracer-routers.html[Les types de routers avec Packet Tracer version html]
+
+=== ...
+
+
+* link:./switches-packet-tracer.adoc[Les types de switch avec Packet Tracer version adoc]
+
+* link:./switches-packet-tracer.html[Les types de switch avec Packet Tracer version html]
  
+=== ...
+
+* link:./connecteurs-packet-tracer.adoc[Les types de connecteurs avec Packet Tracer version adoc]
+
+* link:./connecteurs-packet-tracer.html[Les types de connecteurs avec Packet Tracer version html]
 
 
+=== ...
+
+* link:./vlans-packet-tracer.adoc[Cas pratique avec vlans dans Packet Tracer version adoc]
+
+* link:./vlans-packet-tracer.html[Cas pratique avec vlans dans Packet Tracer version html]
 
 
 

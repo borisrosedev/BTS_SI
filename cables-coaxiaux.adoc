@@ -1,0 +1,257 @@
+= Les cables coaxiaux
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Les câbles coaxiaux sont un type de câblage utilisé pour la transmission de signaux électriques, notamment pour:
+
+=== ...
+
+[%step]
+* les signaux de télévision, 
+* Internet à haut débit, 
+* certains types de réseaux informatiques. 
+
+=== ...
+
+Le câble coaxial est constitué de plusieurs couches concentriques qui protègent le signal et réduisent les interférences électromagnétiques.
+
+== Structure d'un câble coaxial
+
+Un câble coaxial est constitué de quatre couches principales :
+
+=== Conducteur central :
+
+Il s'agit d'un fil de cuivre ou d'un autre métal conducteur qui transporte le signal électrique. 
+
+=== ...
+
+Ce fil peut être solide ou constitué de plusieurs brins.
+
+=== Isolant interne (diélectrique) :
+
+Autour du conducteur central se trouve une couche isolante en plastique ou en matériau similaire, appelée diélectrique. 
+
+=== ...
+
+Elle sépare le conducteur central du blindage extérieur et aide à maintenir la qualité du signal.
+
+
+=== Blindage tressé ou feuille métallique :
+
+Il s'agit d'une couche conductrice qui entoure l'isolant interne. 
+
+=== ...
+
+Elle est généralement constituée de tresses de cuivre ou d'une feuille métallique (ou une combinaison des deux). 
+
+=== ...
+
+Son rôle est de protéger le signal des interférences électromagnétiques (EMI) provenant de l'environnement.
+
+
+=== Gaine externe :
+
+La dernière couche est une gaine protectrice en plastique qui enveloppe le tout. Elle protège le câble des dommages physiques et de l'usure.
+
+== Types de câbles coaxiaux
+
+Il existe plusieurs types de câbles coaxiaux, chacun adapté à des usages spécifiques en fonction de la fréquence du signal, de la distance de transmission, et du niveau de blindage. 
+
+
+== RG-6 :
+
+=== Description : 
+
+Le RG-6 est le type de câble coaxial le plus courant pour les connexions de télévision par câble, le satellite, et les connexions Internet à haut débit.
+
+=== Caractéristiques :
+
+Utilisé pour les fréquences plus élevées (jusqu'à plusieurs gigahertz).
+
+Bon blindage contre les interférences, adapté aux installations extérieures.
+
+=== Utilisation :
+[%step]
+* Télévision par câble, 
+* Télévision satellite, 
+* Internet par câble.
+
+== RG-59 :
+
+=== Description : 
+
+Le RG-59 est un câble coaxial plus ancien, avec un conducteur central plus petit que le RG-6. 
+
+=== ...
+
+Il est généralement utilisé pour des applications à plus courte distance.
+
+=== Caractéristiques :
+
+Moins de blindage et adapté aux signaux de fréquence inférieure.
+
+=== ...
+
+Convient pour des installations intérieures ou des connexions vidéo analogiques.
+
+=== Utilisation : 
+
+[%step]
+* Connexions vidéo analogiques, 
+* CCTV (caméras de sécurité), 
+* anciennes installations de télévision par câble.
+
+
+== RG-11 :
+
+=== Description : 
+
+Le RG-11 est un câble plus épais, capable de transporter des signaux sur des distances plus longues avec moins de perte de signal.
+
+=== Caractéristiques :
+
+Conçu pour les longues distances et les fréquences élevées.
+Plus rigide et difficile à manipuler en raison de sa taille.
+
+=== Utilisation : 
+
+Transmission de signaux sur de longues distances, installations extérieures.
+
+== Câble coaxial tri-bande (Triaxial) :
+
+
+=== Description : 
+
+Ce type de câble a une structure plus complexe, avec une couche supplémentaire de blindage pour encore mieux protéger le signal.
+
+== Caractéristiques :
+
+Améliore la protection contre les interférences électromagnétiques et les pertes de signal.
+
+=== Utilisation : 
+
+Utilisé dans des environnements où des signaux très sensibles doivent être protégés contre les interférences, comme dans la télévision professionnelle et les systèmes de surveillance.
+
+== Applications des câbles coaxiaux
+
+
+Les câbles coaxiaux sont utilisés dans divers domaines, principalement pour la transmission de signaux vidéo, Internet, et de télécommunications.
+
+=== Télévision par câble et satellite :
+
+Les câbles coaxiaux (principalement RG-6) sont largement utilisés pour transmettre les signaux de télévision depuis les antennes paraboliques ou les fournisseurs de câble vers les téléviseurs des foyers.
+
+
+=== Internet à haut débit :
+
+Le câble coaxial est également utilisé pour fournir une connexion Internet via les services DOCSIS (Data Over Cable Service Interface Specification), où il transporte à la fois des signaux Internet et de télévision sur un même câble.
+
+=== Systèmes de vidéosurveillance (CCTV) :
+
+Les câbles coaxiaux, tels que le RG-59, sont utilisés pour connecter les caméras de surveillance dans les systèmes de CCTV (Closed-Circuit Television).
+
+=== Réseaux informatiques (anciennes technologies) :
+
+Historiquement, les câbles coaxiaux ont été utilisés dans certains types de réseaux informatiques, notamment les réseaux Ethernet 10BASE2 et 10BASE5, ... 
+
+=== ...
+
+qui ont été largement remplacés par les câbles à paires torsadées (UTP) comme les câbles Ethernet modernes.
+
+=== Transmission radio et antennes :
+
+Dans les systèmes de transmission radio, les câbles coaxiaux sont utilisés pour connecter les émetteurs et récepteurs aux antennes, en assurant une transmission de signal de haute qualité et sans interférences.
+
+
+== Avantages des câbles coaxiaux
+
+=== Protection contre les interférences :
+
+Grâce à leur structure blindée, les câbles coaxiaux offrent une excellente protection contre les interférences électromagnétiques et radiofréquences, ce qui permet de transmettre des signaux de manière plus fiable que d'autres types de câblage.
+
+
+=== Transmission sur de longues distances :
+
+Les câbles coaxiaux peuvent transporter des signaux sur de longues distances avec relativement peu de perte de signal, en particulier avec des types comme le RG-11.
+
+=== Durabilité :
+
+Les câbles coaxiaux, avec leur gaine externe robuste, sont résistants aux dommages physiques et aux conditions extérieures, ...
+
+=== ...
+
+ce qui les rend adaptés à une utilisation en extérieur ou dans des environnements difficiles.
+
+=== Capacité de bande passante :
+
+Les câbles coaxiaux, en particulier les versions comme le RG-6, peuvent supporter des fréquences élevées et donc fournir une bande passante suffisante pour des services tels que la télévision HD et l'Internet à haut débit.
+Inconvénients des câbles coaxiaux
+
+=== Rigidité et encombrement :
+
+Les câbles coaxiaux sont plus rigides que d'autres types de câbles (comme les câbles Ethernet à paires torsadées), ...
+
+=== ...
+
+ce qui les rend plus difficiles à installer dans certains environnements, en particulier sur de longues distances ou dans des espaces confinés.
+
+=== Cout supérieur :
+
+Par rapport à d'autres types de câblage, comme le câble Ethernet (UTP), les câbles coaxiaux peuvent être plus coûteux à installer et à entretenir, notamment ...
+
+
+=== ...
+
+en raison de la nécessité de connecteurs spécifiques et de leur structure plus complexe.
+
+
+=== Technologie vieillissante :
+
+Bien que les câbles coaxiaux soient encore largement utilisés pour la télévision par câble et certaines applications Internet, ...
+
+=== ...
+
+ils sont de plus en plus remplacés par des technologies plus modernes comme la fibre optique, qui offre une bande passante bien plus élevée et des performances accrues sur de longues distances.
+
+=== ...
+
+== Connecteurs utilisés avec les câbles coaxiaux
+
+Les câbles coaxiaux utilisent des connecteurs spécifiques pour assurer une connexion fiable et sécurisée. 
+
+
+Les connecteurs les plus couramment utilisés sont :
+
+=== Connecteur F :
+
+Utilisé principalement pour les connexions de télévision par câble et satellite.
+
+=== ...
+
+Il est vissé sur le câble et offre une connexion solide pour les signaux de télévision et Internet.
+
+=== Connecteur BNC (Bayonet Neill–Concelman) :
+
+Utilisé pour les applications vidéo professionnelles, les systèmes de surveillance (CCTV) et certaines applications radio.
+
+=== ...
+
+Il est verrouillé à sa place par un système de baïonnette pour assurer une connexion stable.
+
+
+=== Connecteur RCA :
+
+Utilisé dans les anciens systèmes vidéo et audio pour la connexion des signaux analogiques.
+
+=== Connecteur N :
+
+Connecteur robuste utilisé pour des applications RF (radiofréquences) et micro-ondes, souvent dans les systèmes de transmission d'antenne ou de transmission de données sans fil.
+
+
+
+
+
+

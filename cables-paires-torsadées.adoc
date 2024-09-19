@@ -1,0 +1,294 @@
+= Les câbles à paires torsadées 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+Les câbles à paires torsadées sont l'un des types de câbles les plus couramment utilisés dans les réseaux locaux (LAN), tels que les réseaux Ethernet. 
+
+== ..
+
+Ils se composent de paires de fils en cuivre torsadés les uns avec les autres, ce qui permet de réduire les interférences électromagnétiques et de transmettre des données à des vitesses élevées sur des distances relativement courtes.
+
+== Structure des câbles à paires torsadées
+
+Les câbles à paires torsadées se composent de plusieurs éléments :
+
+=== Conducteurs en cuivre :
+
+Les fils conducteurs, généralement en cuivre, sont regroupés par paires. 
+
+=== ...
+
+Chaque fil transporte un signal électrique, et les deux fils d'une paire transportent des signaux opposés (un pour le signal et l'autre pour la mise à la terre), réduisant ainsi les interférences électromagnétiques.
+
+
+=== Paires torsadées :
+
+Les fils sont torsadés en paires pour minimiser les interférences électromagnétiques externes et internes (appelées diaphonie). 
+
+=== ...
+
+Le nombre de torsions par mètre varie entre les différentes paires pour éviter la diaphonie entre elles.
+
+=== Gaine externe :
+
+L'ensemble des paires torsadées est enveloppé dans une gaine en plastique qui protège les fils et donne au câble sa robustesse physique.
+
+== Types de câbles à paires torsadées
+
+Il existe deux principales catégories de câbles à paires torsadées, qui se distinguent par leur niveau de blindage contre les interférences électromagnétiques :
+
+== Câble UTP (Unshielded Twisted Pair) :
+
+=== Description : 
+
+Câble à paires torsadées non blindé. Il n'a pas de protection supplémentaire contre les interférences électromagnétiques (EMI).
+
+=== Caractéristiques :
+
+Moins cher que le câble blindé (STP).
+
+=== ...
+
+Suffisant pour la plupart des réseaux locaux (LAN) dans des environnements peu soumis aux interférences électromagnétiques.
+
+=== Utilisation : 
+
+Utilisé dans les réseaux Ethernet, les systèmes de téléphonie, et les connexions de base de données.
+
+== Câble STP (Shielded Twisted Pair) :
+
+=== Description : 
+
+Câble à paires torsadées blindé. 
+
+=== ...
+
+Il dispose d'une couche supplémentaire de protection contre les interférences, généralement:
+[%step]
+* sous la forme d'une tresse métallique 
+* sous la forme d'une feuille de métal ...
+
+=== ...
+
+entourant les paires torsadées.
+
+=== Caractéristiques :
+
+Plus coûteux que l'UTP, mais offre une meilleure protection contre les interférences.
+
+
+Utile dans des environnements industriels ou à haute densité d'équipements électriques.
+
+=== Utilisation : 
+
+Utilisé dans les environnements où les interférences électromagnétiques sont un problème majeur, ou pour les applications nécessitant une transmission à haute vitesse et à haute sécurité.
+
+== Catégories de câbles à paires torsadées
+
+Les câbles à paires torsadées sont classés en différentes catégories (Cat) en fonction de leurs performances et de leur capacité à transporter des données à certaines vitesses et sur des distances spécifiques. 
+
+
+Voici les catégories les plus courantes :
+
+== Cat 5 :
+
+=== Description : 
+
+Le câble Category 5 (ou Cat 5) est conçu pour des vitesses de transmission allant jusqu'à 100 Mbps.
+
+=== Caractéristiques :
+
+Fréquence maximale de 100 MHz.
+
+Peut transporter des signaux Ethernet 10BASE-T et 100BASE-T.
+
+=== Utilisation : 
+
+Réseaux locaux (LAN) à faible vitesse. Le Cat 5 est aujourd'hui obsolète et a été largement remplacé par le Cat 5e et des catégories supérieures.
+
+== Cat 5e (enhanced) :
+
+=== Description : 
+
+Amélioration de la norme Cat 5, le Category 5e offre de meilleures performances pour réduire la diaphonie (interférences entre paires) et est capable de supporter des vitesses plus élevées.
+
+=== Caractéristiques :
+
+Fréquence maximale de 100 MHz.
+
+Prend en charge des vitesses de transmission jusqu'à 1 Gbps (Gigabit Ethernet).
+
+=== Utilisation : 
+
+Largement utilisé pour les réseaux locaux Ethernet modernes, en particulier dans les petites et moyennes entreprises ou les réseaux domestiques.
+
+== Cat 6 :
+
+=== Description : 
+
+Le câble Category 6 est conçu pour supporter des débits plus élevés et des fréquences plus importantes.
+
+=== Caractéristiques :
+
+Fréquence maximale de 250 MHz.
+
+=== ...
+
+Prend en charge des vitesses jusqu'à 10 Gbps sur des distances allant jusqu'à 55 mètres.
+
+=== ...
+
+Offre une meilleure protection contre la diaphonie par rapport au Cat 5e.
+
+
+=== Utilisation : 
+
+Utilisé dans les réseaux locaux à haute performance, les réseaux d'entreprise et les centres de données.
+
+== Cat 6a (augmented) :
+
+=== Description : 
+
+Une version améliorée du Cat 6, le Category 6a est conçu pour réduire encore davantage les interférences et augmenter les performances.
+
+=== Caractéristiques :
+
+Fréquence maximale de 500 MHz.
+
+=== ...
+
+Prend en charge des vitesses de 10 Gbps sur des distances allant jusqu'à 100 mètres.
+
+=== Utilisation : 
+
+Utilisé dans les centres de données, les réseaux à haute performance nécessitant une large bande passante.
+
+== Cat 7 :
+
+=== Description : 
+
+Le Category 7 est conçu pour des applications de transmission de données encore plus exigeantes, notamment pour les réseaux 10 Gigabit Ethernet.
+
+=== Caractéristiques :
+
+Fréquence maximale de 600 MHz.
+
+=== ...
+
+Prend en charge des vitesses de 10 Gbps sur des distances allant jusqu'à 100 mètres, avec une meilleure protection contre les interférences.
+
+== Câble blindé (STP ou S/FTP).
+
+=== Utilisation : 
+
+Réseaux d'entreprise à très haute performance, centres de données, applications multimédia.
+
+== Cat 8 :
+
+=== Description : 
+
+Le Category 8 est conçu pour les réseaux à très haute performance, tels que les centres de données avec des besoins de transmission très rapides.
+
+=== Caractéristiques :
+
+Fréquence maximale de 2000 MHz.
+
+=== ...
+
+Prend en charge des vitesses de 25 à 40 Gbps sur des distances allant jusqu'à 30 mètres.
+
+=== ...
+
+Utilise une conception blindée pour réduire les interférences.
+
+=== Utilisation : 
+
+Principalement utilisé dans les centres de données ou les environnements avec des exigences de bande passante extrêmement élevées.
+
+=== ...
+
+Connecteurs utilisés avec les câbles à paires torsadées
+
+=== ...
+
+Le connecteur standard utilisé pour les câbles à paires torsadées dans les réseaux Ethernet est le connecteur RJ-45 (Registered Jack 45). 
+
+=== ...
+
+Il comporte 8 broches, correspondant aux 8 fils de cuivre (4 paires torsadées) du câble, et est utilisé pour connecter des équipements réseau tels que:
+
+=== ...
+
+[%step]
+* les ordinateurs, 
+* les commutateurs, 
+* les routeurs, 
+* les modems.
+
+
+== T568A et T568B : 
+
+
+Ce sont deux standards de câblage pour la disposition des fils à l'intérieur du connecteur RJ-45. 
+
+Les deux standards définissent des séquences de fils différentes, mais ils fonctionnent de manière identique tant que la même norme est utilisée aux deux extrémités d'un câble.
+
+
+== Avantages des câbles à paires torsadées
+
+=== Coût :
+
+Les câbles à paires torsadées, en particulier les câbles UTP, sont peu coûteux à produire et à installer, ce qui en fait le choix le plus économique pour les réseaux locaux.
+
+=== Flexibilité :
+
+Ils sont flexibles et faciles à installer, même dans des environnements complexes. 
+
+=== ...
+
+Leur souplesse permet de les tirer facilement dans les conduits ou le long des murs.
+
+=== Compatibilité :
+
+Les câbles à paires torsadées sont le standard pour les réseaux Ethernet, et sont largement pris en charge par la majorité des équipements réseau modernes, tels que 
+[%step]
+* les routeurs, 
+* les commutateurs,
+* es cartes réseau.
+
+=== Réduction des interférences :
+
+Grâce à la torsion des fils, les câbles à paires torsadées réduisent efficacement les interférences électromagnétiques, en particulier dans les réseaux UTP où les paires torsadées suffisent pour les environnements à faible interférence.
+
+
+
+
+== Inconvénients des câbles à paires torsadées
+
+
+=== Distance limitée :
+
+Les câbles à paires torsadées, bien que performants sur de courtes distances (jusqu'à 100 mètres pour le Cat 5e et 6), ne conviennent pas pour les longues distances. 
+
+=== ...
+
+Pour des transmissions plus longues, des solutions comme la fibre optique sont préférées.
+
+
+=== Sensibilité aux interférences (UTP) :
+
+Les câbles UTP, qui ne sont pas blindés, peuvent être sensibles aux interférences électromagnétiques dans des environnements bruyants, ce qui peut entraîner une dégradation du signal.
+
+
+=== Performance limitée dans les environnements haute vitesse :
+
+Les câbles des catégories inférieures (Cat 5 et 5e) peuvent devenir insuffisants pour les réseaux à très haute vitesse (au-dessus de 1 Gbps) ou les environnements nécessitant une bande passante très élevée (comme les centres de données modernes).
+
+
+
+
+
+

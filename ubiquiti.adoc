@@ -1,0 +1,119 @@
+= Ubiquiti
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Ubiquiti est une société spécialisée dans la fabrication d'équipements de réseau et de télécommunications, notamment des routeurs, des points d'accès sans fil, des switches et des solutions de sécurité. 
+
+=== ...
+
+Ses produits sont particulièrement prisés pour leur performance, leur flexibilité et leur prix abordable, en particulier dans les environnements professionnels et les réseaux domestiques avancés.
+
+
+== UniFi Series
+
+La gamme UniFi est probablement la plus populaire de chez Ubiquiti. 
+
+=== ...
+
+Elle est destinée aux entreprises, mais aussi aux particuliers souhaitant un réseau robuste. 
+
+=== ...
+
+Les produits sont gérés via le "UniFi Network Controller", une plateforme centralisée qui permet de configurer et de surveiller l’ensemble des équipements.
+
+
+=== UniFi Access Points (AP) : 
+
+Points d'accès Wi-Fi qui fournissent un réseau sans fil performant. Ils existent en différents modèles, comme le UniFi AC Pro ou le UniFi 6 pour les normes Wi-Fi plus récentes.
+
+=== UniFi Switches : 
+
+Switches managés qui permettent une gestion fine du réseau avec des fonctionnalités comme le VLAN, l'agrégation de ports, et la QoS.
+
+=== UniFi Security Gateway (USG) : 
+
+Un routeur avec pare-feu intégré, souvent utilisé pour sécuriser et optimiser la gestion du trafic réseau.
+
+=== UniFi Dream Machine (UDM) : 
+
+Solution tout-en-un qui combine un routeur, un switch, un point d'accès Wi-Fi, et le contrôleur UniFi dans un seul appareil. 
+
+=== ...
+
+C'est idéal pour les petites entreprises ou pour une utilisation à domicile.
+
+
+== EdgeMax Series
+
+La série EdgeMax, qui comprend des produits comme les EdgeRouters et les EdgeSwitches, est davantage orientée vers les utilisateurs avancés ou les administrateurs réseau ayant des besoins de configuration plus complexes.
+
+=== EdgeRouter : 
+
+Routeurs puissants avec une interface de configuration qui propose des options avancées, comme le routage dynamique, le VPN, et plus encore. 
+
+=== ...
+
+Ils sont idéaux pour les réseaux professionnels nécessitant des performances élevées et une configuration précise.
+
+=== EdgeSwitch : 
+
+Switches managés avec de nombreuses fonctionnalités réseau avancées, comme le support du PoE (Power over Ethernet) pour alimenter les périphériques réseau comme les caméras IP ou les points d'accès sans fil.
+
+=== AmpliFi Series
+
+La gamme AmpliFi est orientée vers les utilisateurs domestiques qui souhaitent installer un réseau Wi-Fi maillé (mesh). 
+
+=== ...
+
+Ces appareils sont faciles à configurer et conviennent aux utilisateurs ayant peu d'expertise technique.
+
+=== AmpliFi HD : 
+
+Solution de réseau maillé qui offre une couverture Wi-Fi étendue dans les grandes maisons ou les bureaux avec plusieurs étages.
+
+
+== Ubiquiti Protect
+
+Cette solution est axée sur la sécurité et la vidéosurveillance, avec des caméras et des NVR (Network Video Recorders) compatibles avec le système de gestion vidéo UniFi Protect.
+
+== UniFi Protect : 
+
+Une plateforme qui permet de gérer l'ensemble des caméras de surveillance d'un réseau à partir d'une interface centralisée. Elle propose des options d'enregistrement, de visualisation en direct, et de gestion des événements.
+
+== Gestion via Cloud ou sur site
+
+L'un des points forts de l'écosystème Ubiquiti est la possibilité de gérer tous les appareils via une interface unifiée, soit localement via un contrôleur installé sur site, soit via un Cloud Key (contrôleur hébergé sur le cloud). 
+
+=== ...
+
+Cela permet de gérer les réseaux à distance tout en ayant une vue complète sur la performance et la sécurité du réseau.
+
+
+
+== Cas d'utilisation :
+
+Si tu souhaites mettre en place un réseau fiable et performant pour ton entreprise ou ton domicile, les produits Ubiquiti sont particulièrement adaptés. Par exemple :
+
+
+=== ...
+
+Tu pourrais utiliser un UniFi Security Gateway ou un EdgeRouter avec un UniFi Switch pour segmenter et sécuriser ton réseau.
+
+=== ...
+
+Pour une configuration Wi-Fi performante dans un grand bureau ou une maison, les points d'accès UniFi avec gestion centralisée via le UniFi Network Controller sont un excellent choix.
+
+
+
+
+
+
+
+
+
+
+
+

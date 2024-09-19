@@ -1,0 +1,325 @@
+= Les utilitaires réseau
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Les utilitaires réseau sont des outils utilisés pour diagnostiquer, analyser et gérer les connexions réseau ainsi que les performances. 
+
+=== ...
+
+Ils sont souvent utilisés par les administrateurs réseau, mais aussi par les utilisateurs ordinaires pour résoudre des problèmes de connectivité et pour évaluer l'état des réseaux. 
+
+
+
+
+== Ping
+
+=== Fonction : 
+
+Teste la connectivité entre deux hôtes en envoyant des requêtes ICMP Echo Request et en attendant des réponses ICMP Echo Reply.
+
+=== Utilisation :
+
+Vérifier si un hôte est accessible.
+
+Mesurer la latence (temps de réponse).
+
+=== Commande :
+
+[source, bash]
+----
+ping google.com
+----
+
+
+== Traceroute / Tracert
+
+=== Fonction :
+
+Affiche le chemin emprunté par les paquets pour atteindre un hôte cible, en listant tous les routeurs intermédiaires.
+
+=== Utilisation :
+
+* Diagnostiquer les problèmes de routage.
+* Identifier les goulots d'étranglement sur un réseau.
+
+=== Commande sous Linux/macOS :
+[source, bash]
+----
+traceroute google.com
+----
+
+=== Commande sous Windows :
+[source, bash]
+----
+tracert google.com
+----
+
+== Netstat
+
+=== Fonction : 
+
+Affiche les connexions réseau actives, les tables de routage, les statistiques d'interface, et les ports ouverts.
+
+=== Utilisation :
+
+* Vérifier les connexions ouvertes sur un hôte.
+* Surveiller les statistiques du réseau.
+* Identifier les services qui écoutent sur les ports spécifiques.
+
+=== Commande :
+[source, bash]
+----
+netstat -an
+----
+
+
+== nslookup / dig
+
+=== Fonction : 
+
+Outils de résolution DNS. Ils permettent de rechercher l'adresse IP d'un nom de domaine, ou inversement.
+
+=== Utilisation :
+
+Vérifier les enregistrements DNS pour un domaine.
+Diagnostiquer des problèmes de résolution DNS.
+
+=== ...
+
+Commande sous Windows (nslookup) :
+[source, powershell]
+----
+nslookup google.com
+----
+
+=== ...
+
+Commande sous Linux/macOS (dig) :
+[source, bash]
+----
+dig google.com
+----
+
+
+== ARP (Address Resolution Protocol)
+
+=== Fonction : 
+
+Affiche ou modifie la table ARP, qui associe les adresses IP aux adresses MAC dans un réseau local.
+
+=== Utilisation :
+
+Diagnostiquer les problèmes liés à la résolution des adresses MAC.
+Voir les adresses MAC des dispositifs connectés à un réseau local.
+
+=== Commande :
+[source, bash]
+----
+arp -a
+----
+
+== IPconfig / ifconfig
+
+=== Fonction : 
+
+Affiche les informations de configuration réseau pour chaque interface réseau d'un hôte.
+
+=== Utilisation :
+
+Vérifier les adresses IP attribuées aux interfaces réseau.
+Renouveler les adresses IP DHCP.
+
+=== ...
+Commande sous Windows (ipconfig) :
+[source, powershell]
+----
+ipconfig
+----
+
+=== ...
+Commande sous Linux/macOS (ifconfig) :
+[source, bash]
+----
+ifconfig
+----
+
+== Nmap (Network Mapper)
+
+=== Fonction : 
+
+Un outil d'analyse réseau qui permet de scanner les réseaux pour découvrir les hôtes, les services et les ports ouverts.
+
+=== Utilisation :
+
+Scanner les réseaux pour identifier les machines et les services disponibles.
+Effectuer des audits de sécurité et des analyses de vulnérabilités.
+
+=== Commande :
+[source, bash]
+---
+nmap 192.168.1.1
+---
+
+== Netcat (nc)
+
+=== Fonction : 
+
+Outil réseau polyvalent utilisé pour établir des connexions TCP/UDP, écouter les ports, et effectuer des transferts de fichiers ou du dépannage réseau.
+
+=== Utilisation :
+
+Tester les connexions réseau.
+Configurer un serveur ou un client simple pour envoyer ou recevoir des données.
+
+=== Commande :
+[source, bash]
+----
+Copier le code
+nc -l 12345
+----
+Pour envoyer des données vers un port spécifique :
+[source, bash]
+----
+nc 192.168.1.1 12345
+----
+
+== Wireshark
+
+=== Fonction : 
+
+Un outil d'analyse de paquets (sniffer) qui capture et analyse le trafic réseau.
+
+=== Utilisation :
+
+Surveiller le trafic réseau en temps réel.
+Analyser les paquets pour diagnostiquer des problèmes de réseau.
+Identifier des attaques réseau ou des anomalies.
+
+=== Interface : 
+
+Wireshark dispose d'une interface graphique pour une analyse détaillée des paquets.
+
+== Tshark
+
+=== Fonction : 
+
+La version en ligne de commande de Wireshark. Il capture et affiche les paquets réseau.
+
+=== Utilisation :
+
+Analyser les paquets réseau via la ligne de commande.
+Capturer le trafic sur une interface spécifique.
+
+=== Commande :
+[source, bash]
+----
+tshark -i eth0
+----
+
+== Iperf
+
+=== Fonction : 
+
+Mesure la bande passante et les performances d'un réseau entre deux hôtes.
+
+=== Utilisation :
+
+Tester la capacité d’un lien réseau.
+Diagnostiquer les problèmes de performances réseau.
+
+=== Commande :
+
+Pour démarrer un serveur :
+[source, bash]
+----
+iperf -s
+----
+
+=== ...
+Pour démarrer un client :
+[source, bash]
+----
+iperf -c 192.168.1.1
+----
+
+
+== MTR (My Traceroute)
+
+=== Fonction : 
+
+Combine les fonctionnalités de ping et traceroute pour afficher un chemin dynamique en temps réel, avec des statistiques détaillées.
+
+=== Utilisation :
+
+
+Surveiller les changements de chemin réseau et la perte de paquets en temps réel.
+Diagnostiquer les problèmes de réseau avec des statistiques de latence.
+
+=== Commande :
+[source, bash]
+----
+mtr google.com
+----
+
+
+== Whois
+
+=== Fonction : 
+
+Outil pour rechercher les informations d’enregistrement d’un nom de domaine ou d’une adresse IP.
+
+=== Utilisation :
+
+Obtenir des informations sur le propriétaire d’un domaine.
+Identifier les contacts et les serveurs de noms associés à un domaine.
+
+=== Commande :
+
+[source, bash]
+----
+whois google.com
+----
+
+
+== FTP / SCP / SFTP
+
+=== Fonction : 
+
+Outils pour transférer des fichiers à travers le réseau.
+
+=== FTP (File Transfer Protocol) : 
+
+Protocole de transfert de fichiers standard.
+
+=== SCP (Secure Copy) : 
+
+Transfert sécurisé de fichiers entre hôtes via SSH.
+
+=== SFTP (SSH File Transfer Protocol) : 
+
+Une alternative sécurisée à FTP basée sur SSH.
+
+=== Utilisation :
+
+* Transférer des fichiers entre hôtes distants.
+* Gérer des fichiers sur des serveurs distants.
+
+=== Commandes :
+
+=== Pour un transfert SCP :
+
+[source, bash]
+----
+scp fichier.txt user@192.168.1.1:/chemin/destination
+----
+
+
+
+
+
+
+
+

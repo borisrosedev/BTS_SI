@@ -1,0 +1,196 @@
+= Le Port Mirroring, 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le Port Mirroring, également appelé SPAN (Switched Port Analyzer) dans le cadre des équipements Cisco, est une fonctionnalité des switches qui permet ...
+
+=== ...
+
+de dupliquer le trafic d'un ou plusieurs ports réseau vers un autre port, ...
+
+=== ...
+
+afin d'analyser le trafic pour des raisons de surveillance, de diagnostic ou de sécurité.
+
+== Fonctionnement du Port Mirroring (SPAN)
+
+Le Port Mirroring permet de surveiller le trafic réseau en temps réel sur un ou plusieurs ports du switch en ...
+
+=== ...
+
+copiant tout le trafic qui transite par ces ports vers un autre port (appelé port de destination ou port d'analyse). 
+
+=== ...
+
+Un outil d'analyse, tel que Wireshark, peut ensuite être connecté à ce port d'analyse pour capturer et examiner les paquets réseau.
+
+=== ...
+
+== Types de Port Mirroring (SPAN)
+
+== Local SPAN :
+
+=== Description : 
+
+Cette méthode est utilisée pour analyser le trafic qui se trouve sur le même switch. 
+
+=== ...
+
+Le trafic de certains ports ou VLANs est copié vers un autre port sur le même switch pour surveillance.
+
+
+=== Exemple : 
+
+Vous pouvez copier le trafic des ports d'un serveur vers un port où un logiciel d'analyse réseau est connecté pour surveiller les communications du serveur.
+
+
+
+== RSPAN (Remote SPAN) :
+
+=== Description : 
+
+Contrairement au SPAN local, le RSPAN permet d'analyser le trafic sur un switch distant. 
+
+=== ...
+
+Le trafic est copié à travers un réseau vers un autre switch, où se trouve le port d'analyse.
+
+=== Utilisation : 
+
+Utile lorsque vous voulez analyser le trafic d'un switch qui est physiquement distant ou situé dans un autre emplacement réseau. 
+
+=== ...
+
+Le trafic est acheminé via des VLANs pour atteindre le port de destination.
+
+== Configuration du Port Mirroring (SPAN)
+
+
+Voici un exemple de la configuration de base d'un SPAN local sur un switch Cisco :
+
+Exemple de configuration :
+
+Accéder au switch via la console ou une session SSH.
+
+Entrer en mode de configuration globale :
+
+[source, bash]
+----
+Switch> enable
+Switch# configure terminal
+----
+
+
+=== ...
+
+Configurer le port source (port que vous voulez surveiller) et le port de destination (port où le trafic sera envoyé) :
+
+[source, bash]
+----
+Switch(config)# monitor session 1 source interface fastEthernet 0/1
+Switch(config)# monitor session 1 destination interface fastEthernet 0/10
+----
+
+=== ...
+
+source interface : Le port à surveiller (où le trafic est capturé).
+
+=== ...
+
+destination interface : Le port où le trafic dupliqué sera envoyé (où l'outil d'analyse est connecté).
+
+=== Vérifier la configuration :
+
+[source, bash]
+----
+Switch# show monitor
+----
+
+=== ...
+
+Cela montrera les détails de la session SPAN, y compris les ports source et destination.
+
+== Cas d'utilisation du Port Mirroring (SPAN)
+
+
+=== Surveillance réseau :
+
+Le Port Mirroring est utilisé pour surveiller le trafic réseau en temps réel. Par exemple, un administrateur peut surveiller un serveur critique pour ...
+
+=== ...
+
+observer les connexions entrantes et sortantes ou les paquets suspects.
+
+=== Diagnostic de réseau :
+
+Les administrateurs réseau utilisent le Port Mirroring pour diagnostiquer les problèmes de connectivité ou pour identifier ...
+
+=== ...
+
+les goulets d'étranglement dans le réseau en analysant le trafic de certains segments du réseau.
+
+=== Analyse de la sécurité :
+
+Les outils de détection des intrusions (IDS/IPS) ou les pare-feux peuvent être connectés à un port miroir pour surveiller les flux de trafic en temps réel ...
+
+=== ...
+
+afin de détecter des comportements malveillants ou des attaques réseau.
+
+=== Capture de paquets :
+
+Les ingénieurs peuvent utiliser des logiciels comme Wireshark pour capturer et analyser les paquets réseau qui transitent par les ports source, ...
+
+=== ...
+
+afin d'identifier des erreurs de protocole, des latences anormales, ou des pertes de paquets.
+
+
+== Avantages du Port Mirroring (SPAN)
+
+
+=== Surveillance passive : 
+
+Le port mirroring permet de surveiller le trafic sans impacter le fonctionnement du réseau, car il s'agit d'une copie du trafic réel.
+
+
+=== Diagnostic précis : 
+
+Il permet d'analyser en détail les communications d'un port ou d'un VLAN, ce qui est essentiel pour diagnostiquer des problèmes complexes.
+
+
+=== Sécurité : 
+
+En surveillant le trafic réseau, les administrateurs peuvent détecter des anomalies ou des comportements suspects avant qu'ils ne deviennent problématiques.
+
+== Limites du Port Mirroring (SPAN)
+
+=== Surcharge du port de destination :
+
+Si plusieurs ports source ou VLANs sont surveillés simultanément et que beaucoup de trafic est copié vers un seul port de destination, ...
+
+=== ...
+
+ce port peut devenir saturé et ne pas être capable de traiter tout le trafic dupliqué.
+
+=== Portée limitée :
+
+Dans le cas d'un SPAN local, l'analyse est limitée à un seul switch. Le RSPAN est utilisé pour étendre cette portée, mais nécessite une configuration plus complexe.
+
+=== Perte de paquets :
+
+Si le port de destination est surchargé ou si l'outil d'analyse n'est pas capable de traiter tout le trafic capturé en temps réel, ...
+
+
+=== ...
+
+certains paquets peuvent être perdus, ce qui peut affecter l'exactitude de l'analyse.
+
+
+
+
+

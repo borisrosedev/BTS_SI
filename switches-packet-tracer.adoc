@@ -1,0 +1,199 @@
+= Les types de switch de Packet Tracer
+
+
+== Introduction
+
+Dans Cisco Packet Tracer, il existe plusieurs types de switches (commutateurs) qui permettent de simuler différents scénarios réseau. 
+
+=== ...
+
+Chaque type de switch est conçu pour des besoins spécifiques en fonction des fonctionnalités réseau requises, telles que la gestion des VLANs, le routage de niveau 3, et les capacités PoE (Power over Ethernet). 
+
+
+
+== Switch 2960
+
+=== Description : 
+
+Le Cisco Catalyst 2960 est un switch de couche 2 utilisé pour les réseaux LAN classiques. 
+
+=== ...
+
+Il permet la commutation Ethernet de base, avec des fonctionnalités de gestion des VLANs et de sécurité réseau.
+
+=== Caractéristiques :
+
+Supporte les VLANs, STP (Spanning Tree Protocol), et Trunking.
+
+=== ...
+
+Interfaces Fast Ethernet (10/100 Mbps) et quelques ports Gigabit Ethernet (10/100/1000 Mbps).
+
+=== ...
+
+Pas de routage de niveau 3 (c'est un switch de niveau 2 uniquement).
+
+=== Utilisation :
+
+Idéal pour les réseaux locaux (LAN) simples.
+
+Pour la segmentation des réseaux avec VLANs.
+
+
+
+== Switch 2950
+
+
+=== Description : 
+
+Le Cisco Catalyst 2950 est un autre switch de couche 2, plus ancien que le 2960, mais avec des fonctionnalités similaires. Il offre une commutation Ethernet de base.
+
+=== Caractéristiques :
+
+* Supporte les VLANs, STP, et port mirroring (SPAN).
+
+* Interface Fast Ethernet (10/100 Mbps) uniquement.
+
+=== Utilisation :
+
+Convient pour des réseaux plus anciens ou des scénarios où une gestion réseau de base est suffisante.
+
+=== ...
+
+Utilisé pour des réseaux d'apprentissage avec des configurations réseau simples.
+
+== Switch Multicouche (Layer 3) – 3560
+
+=== Description : 
+
+Le Cisco Catalyst 3560 est un switch multicouche qui offre à la fois des fonctionnalités de commutation (couche 2) et de routage (couche 3). 
+
+C'est un switch plus avancé, permettant des configurations plus complexes.
+
+=== Caractéristiques :
+
+
+Supporte le routage inter-VLAN, OSPF, EIGRP, RIP, et d'autres protocoles de routage.
+
+=== ...
+
+Interfaces Gigabit Ethernet.
+
+=== ...
+
+Permet des listes de contrôle d'accès (ACLs) pour la gestion des flux de trafic.
+
+=== ...
+
+Peut configurer des interfaces SVI (Switch Virtual Interface) pour le routage.
+
+
+=== Utilisation :
+
+Utilisé dans des réseaux complexes nécessitant à la fois des capacités de commutation et de routage.
+
+=== ...
+
+Idéal pour les réseaux de distribution ou d'accès dans les environnements d'entreprise.
+
+
+== Switch 3650
+
+=== Description : 
+
+Le Cisco Catalyst 3650 est un switch de couche 3, plus moderne que le 3560. Il combine des capacités de commutation à haute performance avec des fonctionnalités de routage.
+
+=== Caractéristiques :
+
+Supporte OSPF, EIGRP, BGP, routage inter-VLAN, et d'autres protocoles de routage.
+Interfaces Gigabit Ethernet, avec support pour des modules d'extension (fibre optique).
+
+=== ...
+
+Capacité à gérer de multiples VLANs et à effectuer du routage inter-VLAN.
+Supporte PoE (Power over Ethernet) pour alimenter des appareils comme les téléphones IP et les points d'accès Wi-Fi.
+
+=== Utilisation :
+
+Utilisé dans des réseaux d'entreprise à haute performance.
+Convient aux réseaux nécessitant des capacités PoE et des capacités de routage avancées.
+
+== Switch 3850
+
+=== Description : 
+
+Le Cisco Catalyst 3850 est un switch multicouche avancé, destiné à des réseaux complexes nécessitant une haute disponibilité et des performances de niveau entreprise.
+
+=== Caractéristiques :
+
+Supporte PoE+ (Power over Ethernet Plus) pour fournir de l'énergie aux équipements réseau.
+
+=== ...
+
+Capacités de commutation à haute performance avec des interfaces Gigabit Ethernet et 10 Gigabit Ethernet.
+
+=== ...
+
+Prend en charge des fonctions de QoS (Quality of Service) pour la gestion du trafic critique.
+
+=== ...
+
+Supporte des protocoles de routage avancés et des listes de contrôle d'accès (ACLs).
+
+=== Utilisation :
+
+Utilisé dans des réseaux d'entreprise pour des configurations complexes avec des besoins de haute performance, de routage avancé, et de PoE.
+
+== Switch 9200
+
+=== Description : 
+
+Le Cisco Catalyst 9200 est un switch de couche 2/3 hautement performant, ...
+
+=== ...
+
+souvent utilisé dans des environnements modernes avec des besoins en gestion réseau centralisée et sécurité avancée.
+
+
+=== Caractéristiques :
+
+Supporte le routage statique et dynamique, avec des capacités avancées de sécurité.
+
+=== ...
+
+Prend en charge les VLANs, routage inter-VLAN, et MPLS.
+
+=== ...
+
+Interfaces Gigabit Ethernet avec des options 10 Gigabit.
+
+=== ...
+
+Fonctionnalités avancées de télémétrie et de gestion de réseau.
+
+=== Utilisation :
+
+Idéal pour les réseaux d'entreprise avec des exigences de sécurité, de gestion à distance et des performances élevées.
+
+
+== Switch sans fil – Wireless Access Point
+
+=== Description : 
+
+Cisco Packet Tracer propose également des points d'accès sans fil qui, bien qu'ils ne soient pas des switches au sens strict, ...
+
+=== ...
+
+permettent de connecter plusieurs appareils via un réseau Wi-Fi.
+
+=== Caractéristiques :
+
+Fournit une connectivité Wi-Fi pour les clients sans fil.
+
+=== ...
+
+Peut être connecté à un switch pour assurer la connectivité réseau.
+
+=== Utilisation :
+
+Utilisé pour simuler des environnements sans fil et connecter des clients Wi-Fi à un réseau local.

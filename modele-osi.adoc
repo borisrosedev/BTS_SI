@@ -43,6 +43,11 @@ Elle assure également la détection d'erreurs.
 Protocole Ethernet, 
 Wi-Fi (IEEE 802.11).
 
+=== ...
+
+link:./ethernet.adoc[En savoir plus sur Ethernet version adoc]
+link:./ethernet.html[En savoir plus sur Ethernet version html]
+
 == Couche réseau (3) :
 
 
@@ -53,6 +58,14 @@ Assure le routage des paquets à travers le réseau. Elle est responsable de l'a
 === Exemple : 
 
 Protocole IP, ICMP (Internet Control Message Protocol).
+
+=== ...
+
+Protocole IP:
+
+* link:./protocole-ip.adoc[version adoc]
+* link:./protocole-ip.html[version html]
+
 
 == Couche transport (4) :
 

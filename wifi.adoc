@@ -8,10 +8,14 @@
 
 Le protocole Wi-Fi (Wireless Fidelity) est une technologie de communication sans fil utilisée pour connecter des dispositifs à un réseau local sans utiliser de câbles. 
 
+=== ...
+
+Il permet aux appareils tels que les ordinateurs, les smartphones, les tablettes, et même les objets connectés (IoT), ...
+
 
 === ...
 
-Il permet aux appareils tels que les ordinateurs, les smartphones, les tablettes, et même les objets connectés (IoT), de se connecter à un réseau, généralement à travers un point d'accès Wi-Fi ou un routeur sans fil. 
+de se connecter à un réseau, généralement à travers un point d'accès Wi-Fi ou un routeur sans fil. 
 
 
 === ...
@@ -63,13 +67,23 @@ Le Wi-Fi utilise deux bandes de fréquence principales :
 
 === 2,4 GHz : 
 
-Offre une meilleure portée, mais des vitesses plus basses et une plus grande sensibilité aux interférences (notamment avec d'autres appareils comme les téléphones sans fil, les micro-ondes, etc.).
+Offre une meilleure portée, mais des vitesses plus basses et une plus grande sensibilité aux interférences ...
 
-=== 5 GHz : Offre des vitesses plus élevées et moins d'interférences, mais avec une portée plus courte par rapport à la bande 2,4 GHz.
+=== ...
+
+(notamment avec d'autres appareils comme les téléphones sans fil, les micro-ondes, etc.).
+
+=== 5 GHz : 
+
+Offre des vitesses plus élevées et moins d'interférences, mais avec une portée plus courte par rapport à la bande 2,4 GHz.
 
 === 6 GHz : 
 
-Introduit avec Wi-Fi 6E, cette bande est plus récente et offre des performances encore plus élevées, avec moins d'interférences et une plus grande capacité pour les réseaux denses.
+Introduit avec Wi-Fi 6E, cette bande est plus récente et offre des performances encore plus élevées, avec moins d'interférences ...
+
+=== ...
+
+et une plus grande capacité pour les réseaux denses.
 
 === Vitesse de transmission : 
 
@@ -116,7 +130,11 @@ Le standard de sécurité le plus couramment utilisé aujourd'hui, offrant un ch
 
 === WPA3 : 
 
-La nouvelle norme de sécurité introduite avec Wi-Fi 6, offrant des améliorations supplémentaires en termes de protection contre les attaques par force brute et en simplifiant la configuration pour les appareils IoT.
+La nouvelle norme de sécurité introduite avec Wi-Fi 6, offrant des améliorations supplémentaires en termes de protection contre les attaques ...
+
+=== ...
+
+par force brute et en simplifiant la configuration pour les appareils IoT.
 
 == Modes de fonctionnement : 
 
@@ -157,7 +175,11 @@ Les réseaux Wi-Fi sont généralement configurés dans une topologie en étoile
 
 === ...
 
-Avec l'émergence des réseaux Wi-Fi maillés (mesh networks), la topologie devient plus flexible, où chaque point d'accès ou noeud peut communiquer avec les autres pour fournir une couverture plus vaste et homogène.
+Avec l'émergence des réseaux Wi-Fi maillés (mesh networks), la topologie devient plus flexible, ...
+
+=== ...
+
+où chaque point d'accès ou noeud peut communiquer avec les autres pour fournir une couverture plus vaste et homogène.
 
 
 == Avantages du Wi-Fi :
@@ -176,7 +198,11 @@ Le Wi-Fi permet de connecter un grand nombre de dispositifs sans fil à un rése
 
 === Connectivité multiple : 
 
-Grâce aux technologies comme MU-MIMO (Multi-User Multiple Input Multiple Output), Wi-Fi peut gérer plusieurs flux de données simultanément, améliorant ainsi la performance dans les environnements denses.
+Grâce aux technologies comme MU-MIMO (Multi-User Multiple Input Multiple Output), Wi-Fi peut gérer plusieurs flux de données simultanément, ...
+
+=== ...
+
+améliorant ainsi la performance dans les environnements denses.
 
 == Inconvénients du Wi-Fi :
 
@@ -190,7 +216,11 @@ Le Wi-Fi peut être sensible aux interférences provenant d'autres appareils (mi
 
 === Sécurité : 
 
-Bien que les protocoles de sécurité aient été améliorés, les réseaux Wi-Fi mal configurés ou mal sécurisés peuvent être vulnérables aux attaques, comme le piratage de réseau ou l'interception de données.
+Bien que les protocoles de sécurité aient été améliorés, les réseaux Wi-Fi mal configurés ou ...
+
+=== ...
+
+mal sécurisés peuvent être vulnérables aux attaques, comme le piratage de réseau ou l'interception de données.
 
 
 === Portée limitée : 

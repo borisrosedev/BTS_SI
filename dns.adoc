@@ -1,0 +1,196 @@
+= Le DNS (Domain Name System) 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
+
+Le DNS (Domain Name System) est un système essentiel sur Internet qui permet de traduire les noms de domaine (comme www.example.com) en adresses IP (comme 192.168.1.1) que les ordinateurs utilisent pour communiquer entre eux sur un réseau.
+
+=== ...
+
+Sans DNS, il serait nécessaire de se souvenir et d'utiliser des adresses IP pour accéder aux sites web, ce qui serait très peu pratique.
+
+== Fonctionnement du DNS
+
+=== Demande de résolution de nom :
+
+Lorsque vous tapez un nom de domaine dans votre navigateur, comme www.example.com, votre ordinateur envoie une requête DNS à un serveur DNS pour demander l’adresse IP associée à ce domaine.
+
+=== Serveur DNS :
+
+Le serveur DNS est un serveur qui contient une base de données de correspondance entre les noms de domaine et les adresses IP. 
+
+=== ...
+
+Si le serveur connaît l’adresse IP du domaine demandé, il renvoie cette adresse à l’ordinateur demandeur.
+
+=== Résolution récursive :
+
+Si le serveur DNS ne connaît pas l'adresse IP du domaine, il va contacter d'autres serveurs DNS pour trouver l'information. Cela inclut :
+
+=== Serveurs racines : 
+
+Ce sont les serveurs DNS qui connaissent les serveurs DNS autoritaires pour chaque domaine de premier niveau (comme .com, .org).
+
+=== Serveurs DNS autoritaires : 
+
+Ce sont les serveurs responsables des enregistrements DNS pour un domaine spécifique. 
+
+=== ...
+
+Par exemple, un serveur DNS autoritaire pour example.com fournira l'adresse IP de www.example.com.
+
+=== Réponse et mise en cache :
+
+Une fois que le serveur DNS a trouvé l’adresse IP correspondante, il renvoie cette information à l’ordinateur demandeur. L’ordinateur et le serveur DNS peuvent également mettre en cache cette information pour accélérer les futures demandes.
+
+=== Types d’enregistrements DNS
+
+Les enregistrements DNS sont les informations que les serveurs DNS utilisent pour répondre aux requêtes. 
+
+=== ...
+
+Il existe plusieurs types d'enregistrements DNS, chacun ayant un rôle spécifique :
+
+=== A (Address) :
+
+Associe un nom de domaine à une adresse IPv4.
+Exemple : www.example.com -> 192.168.1.1.
+
+
+=== AAAA (Quad-A) :
+
+Similaire à l'enregistrement A, mais pour les adresses IPv6.
+Exemple : www.example.com -> 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+
+=== CNAME (Canonical Name) :
+
+Utilisé pour faire un alias d'un nom de domaine vers un autre nom de domaine.
+Exemple : mail.example.com -> www.example.com.
+
+=== MX (Mail Exchange) :
+
+Spécifie les serveurs responsables de la gestion des emails pour un domaine.
+Exemple : example.com -> mailserver.example.com.
+
+=== NS (Name Server) :
+
+Indique les serveurs DNS autoritaires pour un domaine.
+Exemple : example.com -> ns1.example.com, ns2.example.com.
+
+
+=== TXT (Text) :
+
+Contient des informations textuelles que peuvent utiliser des services externes.
+
+=== ...
+
+Il est souvent utilisé pour des enregistrements de vérification de domaine ou des configurations de sécurité comme SPF ou DKIM.
+Exemple : v=spf1 include:example.com -all.
+
+=== PTR (Pointer) :
+
+Utilisé pour la résolution inverse (obtenir un nom de domaine à partir d’une adresse IP).
+Exemple : 192.168.1.1 -> www.example.com.
+
+== Hiérarchie du DNS
+
+Le DNS est structuré de manière hiérarchique, avec différents niveaux de domaines :
+
+Domaine racine (.) :
+
+C'est le sommet de la hiérarchie DNS. Les serveurs racines connaissent les serveurs autoritaires pour les domaines de premier niveau (.com, .org, .net, etc.).
+
+=== Domaine de premier niveau (TLD) :
+
+Ce sont les domaines comme .com, .org, .net, .fr, .us, etc. Chaque domaine de premier niveau a des serveurs DNS qui gèrent les sous-domaines.
+
+=== Domaine de second niveau :
+
+Ce sont les noms de domaine enregistrés sous un TLD, comme example.com. Ils sont gérés par des serveurs DNS spécifiques.
+
+=== Sous-domaine :
+
+Ce sont des subdivisions d’un domaine de second niveau. 
+
+=== Exemple
+
+www.example.com ou mail.example.com sont des sous-domaines du domaine example.com.
+
+
+== Processus de résolution DNS
+
+Voici un exemple de ce qui se passe lorsque vous tapez une adresse comme www.example.com dans votre navigateur :
+
+L'ordinateur vérifie son cache DNS local pour voir s'il connaît déjà l'adresse IP de www.example.com.
+
+=== ...
+
+Si l'ordinateur ne connaît pas l'adresse, il envoie une requête au serveur DNS configuré (souvent un serveur DNS de votre fournisseur d'accès Internet ou un service DNS public comme Google DNS ou Cloudflare DNS).
+
+=== ...
+
+Si le serveur DNS local ne connaît pas la réponse, il envoie la requête à un des serveurs DNS racine.
+
+=== ...
+
+Le serveur DNS racine redirige la requête vers un serveur DNS du TLD (.com dans ce cas).
+
+=== ...
+
+Le serveur TLD renvoie les informations sur les serveurs DNS autoritaires pour example.com.
+
+=== ...
+
+Le serveur DNS autoritaire pour example.com renvoie l’adresse IP pour www.example.com.
+
+=== ...
+
+L'ordinateur reçoit la réponse et peut alors établir une connexion avec le site web.
+
+
+== Serveurs DNS publics
+
+Il existe plusieurs serveurs DNS publics que vous pouvez utiliser si vous ne souhaitez pas utiliser le serveur DNS de votre fournisseur d'accès. 
+
+=== Google DNS :
+
+Adresse IPv4 : 8.8.8.8 et 8.8.4.4
+Adresse IPv6 : 2001:4860:4860::8888 et 2001:4860:4860::8844
+
+=== Cloudflare DNS :
+
+Adresse IPv4 : 1.1.1.1 et 1.0.0.1
+Adresse IPv6 : 2606:4700:4700::1111 et 2606:4700:4700::1001
+
+
+=== OpenDNS :
+
+Adresse IPv4 : 208.67.222.222 et 208.67.220.220
+
+== Sécurité DNS
+
+Les attaques et les vulnérabilités du DNS peuvent être utilisées pour des activités malveillantes.
+
+=== Attaque par empoisonnement de cache DNS (DNS cache poisoning) :
+
+Un attaquant manipule les entrées dans le cache DNS d'un serveur pour rediriger les utilisateurs vers un faux site web, souvent à des fins de phishing ou de distribution de malware.
+
+=== Attaque DDoS sur les serveurs DNS :
+
+Un grand nombre de requêtes est envoyé à un serveur DNS pour le surcharger et empêcher la résolution des noms de domaine, rendant les sites inaccessibles.
+
+=== DNSSEC (DNS Security Extensions) :
+
+Pour contrer certaines attaques comme l'empoisonnement de cache, le DNSSEC est une extension qui permet de signer cryptographiquement les enregistrements DNS pour garantir leur authenticité.
+
+
+
+
+
+
+
+
+
