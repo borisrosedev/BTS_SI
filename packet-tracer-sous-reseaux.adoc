@@ -1,0 +1,48 @@
+= Packet Tracer et Sous-Réseaux
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Pourquoi utiliser des sous-réseaux distincts pour chaque VLAN ?
+
+=== Isolation logique :
+
+Les VLANs sont créés pour segmenter le réseau, et chaque VLAN doit idéalement avoir son propre sous-réseau IP pour séparer le trafic. 
+
+=== Par exemple :
+
+VLAN 20 : 192.168.20.0/24
+VLAN 30 : 192.168.30.0/24
+
+=== Routage inter-VLAN :
+
+Le routage inter-VLAN fonctionne mieux lorsque chaque VLAN a un sous-réseau distinct. 
+
+=== ...
+
+Cela permet au routeur (ou switch multicouche) de savoir quel trafic appartient à quel VLAN, et d'acheminer les paquets correctement.
+
+=== Gestion simplifiée :
+
+Si tous les appareils sont sur le même sous-réseau (192.168.1.x), cela peut entraîner des problèmes d'adressage IP et compliquer le routage entre les VLANs. 
+
+=== ...
+
+En donnant des sous-réseaux différents, tu simplifies l'organisation et la gestion des réseaux.
+
+
+=== Transition vers de nouveaux sous-réseaux
+
+
+Si tu passes à une architecture avec des VLANs, je te conseille de modifier l'adressage IP de tes dispositifs en fonction des VLANs :
+
+
+VLAN 20 (DRH et imprimante) : par exemple, 192.168.20.x
+VLAN 30 (secrétaire) : par exemple, 192.168.30.x
+
+
+=== Exemple d'adressage :
+
+Imprimante (VLAN 20) : 192.168.20.10 avec la passerelle 192.168.20.1
+Ordinateur du DRH (VLAN 20) : 192.168.20.11
+Ordinateur de la secrétaire (VLAN 30) : 192.168.30.10 avec la passerelle 192.168.30.1
