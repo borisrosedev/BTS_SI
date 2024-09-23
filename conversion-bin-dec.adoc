@@ -1,7 +1,9 @@
 = La conversion du binaire en notation décimale 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
 
-
-=== Introduction
+== Introduction
 
 La conversion du binaire en notation décimale est un concept clé pour comprendre les adresses IP et les masques de sous-réseaux. 
 

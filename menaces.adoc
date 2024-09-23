@@ -1,0 +1,215 @@
+= Menaces et attaques courantes en sécurité des réseaux. 
+
+== Introduction
+
+Ces types d'attaques sont souvent utilisés pour compromettre la sécurité réseau, en ...
+
+=== ...
+
+ciblant les trois piliers du triangle CIA (Confidentialité, Intégrité, Disponibilité).
+
+
+== Attaque par déni de service distribué (DDoS)
+
+Une attaque DDoS (Distributed Denial of Service) vise à rendre un service, un réseau ou un site web indisponible en ...
+
+=== ...
+
+le surchargeant de trafic malveillant provenant de multiples sources. 
+
+=== ...
+
+En exploitant plusieurs ordinateurs (souvent des machines compromises appelées « botnets »), ...
+
+
+=== ...
+
+l'attaquant envoie un flux massif de requêtes vers une cible, empêchant les utilisateurs légitimes d'accéder au service.
+
+=== Objectif : 
+
+Compromettre la disponibilité du service.
+
+=== Impact : 
+
+Les services en ligne, comme les sites web ou les applications critiques, deviennent inaccessibles pendant la durée de l'attaque.
+
+=== Exemple : 
+
+Une attaque DDoS sur un site de commerce en ligne pourrait rendre le site indisponible pendant les heures de pointe, causant une perte de revenus.
+
+== Attaque de l'homme du milieu (Man-in-the-Middle, MITM)
+
+Une attaque MITM consiste à intercepter et à modifier les communications entre deux parties (souvent sans que ces dernières en soient conscientes). 
+
+=== ...
+
+L'attaquant se place entre la source et la destination de la communication, en écoutant, modifiant ou redirigeant les données.
+
+=== Objectif : 
+
+Compromettre la confidentialité et l'intégrité des communications.
+
+=== Impact : 
+
+L'attaquant peut voler des informations sensibles (comme des identifiants ou des données de carte de crédit), ou manipuler les informations échangées entre les deux parties.
+
+=== Exemple : 
+
+Lorsqu'une personne se connecte à un réseau Wi-Fi public, un attaquant peut intercepter  ...
+
+=== ...
+
+ses échanges avec un site bancaire et voler des informations sensibles.
+
+
+== Usurpation d'identité (Spoofing)
+
+Le spoofing consiste à falsifier l'identité d'un appareil ou d'une personne dans une communication réseau. 
+
+=== ...
+
+Cela peut se manifester sous plusieurs formes :
+
+=== IP Spoofing : 
+
+L'attaquant envoie des paquets réseau avec une adresse IP falsifiée, faisant croire qu'ils proviennent d'une source légitime.
+
+=== Email Spoofing : 
+
+L'attaquant envoie des emails en se faisant passer pour une personne de confiance (par exemple, un supérieur hiérarchique ou une institution légitime).
+
+=== DNS Spoofing : 
+
+L'attaquant redirige le trafic d'un utilisateur vers un faux site web en modifiant les enregistrements DNS.
+
+=== Objectif : 
+
+Compromettre la confidentialité et l'intégrité.
+
+=== Impact : 
+
+L'attaquant peut voler des informations ou mener d'autres attaques (comme des attaques de phishing) en se faisant passer pour une source légitime.
+
+=== Exemple : 
+
+Lors d'une attaque DNS spoofing, l'utilisateur qui pense accéder à son site bancaire est redirigé vers un faux site web contrôlé par l'attaquant, ...
+
+=== ...
+
+qui récupère ses informations de connexion.
+
+== Phishing (hameçonnage)
+
+Le phishing est une technique utilisée pour tromper les utilisateurs en leur faisant croire qu'ils interagissent ...
+
+=== ...
+
+avec une entité légitime (par exemple, un service bancaire, un site d'achat, ou même une personne de confiance). 
+
+=== ...
+
+L'objectif est d'inciter la victime à divulguer des informations sensibles, comme des mots de passe, ...
+
+=== ...
+
+des numéros de carte bancaire ou d'autres données personnelles.
+
+=== Objectif : 
+
+Compromettre la confidentialité.
+
+=== Impact : 
+
+L'attaquant peut accéder à des comptes personnels ou financiers, voler des informations d'identification, ou introduire des logiciels malveillants.
+
+=== Exemple : 
+
+Un email prétendant provenir de votre banque vous demande de mettre à jour vos informations de connexion, ...
+
+=== ...
+
+mais en réalité, il vous dirige vers un site frauduleux.
+
+
+== Attaque par force brute (Brute Force Attack)
+
+Une attaque par force brute consiste à essayer toutes les combinaisons possibles de mots de passe ou de clés jusqu'à trouver la bonne. 
+
+
+=== ...
+
+C'est une méthode simple mais efficace pour forcer l'accès à des systèmes protégés par des mots de passe faibles.
+
+=== Objectif : 
+
+Compromettre la confidentialité.
+
+=== Impact : 
+
+Si un attaquant réussit à deviner un mot de passe, il peut accéder aux données sensibles de l'utilisateur.
+
+=== Exemple : 
+
+Un attaquant essaye différentes combinaisons de mots de passe jusqu'à trouver celui qui fonctionne pour accéder à un compte email ou à un serveur.
+
+== Attaque par injection SQL (SQL Injection)
+
+Une attaque par injection SQL cible des bases de données en exploitant des vulnérabilités dans les applications web. 
+
+=== ...
+
+L'attaquant injecte du code SQL malveillant dans une requête légitime, lui permettant d'accéder, ...
+
+=== ...
+
+de modifier ou de supprimer des données dans la base de données de l'application.
+
+=== Objectif : 
+
+Compromettre la confidentialité et l'intégrité des données.
+
+=== Impact : 
+
+L'attaquant peut accéder à des données sensibles, modifier des enregistrements ou même supprimer des bases de données entières.
+
+=== Exemple : 
+
+Si un site web vulnérable à l'injection SQL est utilisé pour gérer des informations financières, ...
+
+=== ...
+
+un attaquant pourrait obtenir les informations de carte de crédit des utilisateurs.
+
+=== Mesures de Protection
+
+=== Pare-feu et systèmes de détection d'intrusion : 
+
+Protègent contre les attaques DDoS et les intrusions.
+
+=== Chiffrement des communications (SSL/TLS) : 
+
+Protège contre les attaques Man-in-the-Middle.
+
+=== Authentification multi-facteurs (MFA) : 
+
+Ajoute une couche de sécurité supplémentaire contre les attaques de force brute et de phishing.
+
+=== Filtrage DNS sécurisé : 
+
+Aide à prévenir les attaques de DNS Spoofing.
+
+=== ...
+
+Ces types d'attaques et menaces sont fréquents, mais avec une gestion et des outils de sécurité appropriés, ...
+
+=== ...
+
+il est possible de minimiser les risques et de protéger un réseau efficacement.
+
+
+
+
+
+
+

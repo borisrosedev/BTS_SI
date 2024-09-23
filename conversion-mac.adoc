@@ -1,6 +1,10 @@
 // ------------------------------PARTIE 2---------------------------
 = Conversion d'une adresse MAC
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
 
+== Introduction
 Une adresse MAC est composée de 6 octets (48 bits) et est souvent représentée en hexadécimal.
 
 == Exemple d'adresse MAC : 00:1A:2B:3C:4D:5E

@@ -1,5 +1,5 @@
-= Packet Tracer et Sous-Réseaux
-:revealjs_theme: beige
+= Configurer des sous-réseaux
+:revealjs_theme: league
 :source-highlighter: highlight.js
 :icons: font
 

@@ -3,7 +3,11 @@
 
 == Introduction
 
-Pour calculer le réseau, le CIDR et le masque de sous-réseau à partir d'une plage d'adresses IP, il est essentiel de suivre un processus qui permet de déterminer la taille du réseau et d'identifier le masque approprié. 
+Pour calculer le réseau, le CIDR et le masque de sous-réseau à partir d'une plage d'adresses IP, ...
+
+=== ...
+
+il est essentiel de suivre un processus qui permet de déterminer la taille du réseau et d'identifier le masque approprié. 
 
 
 == Exemple
@@ -13,7 +17,11 @@ Prenons une plage d'adresses : 192.168.1.0 à 192.168.1.63.
 === Étapes :
 
 === 1. Identifier les adresses de début et de fin
+
 Adresse de début : 192.168.1.0
+
+=== ...
+
 Adresse de fin : 192.168.1.63
 
 
@@ -26,14 +34,23 @@ stem:[Nombre total d’adresses = (192.168.1.63 − 192.168.1.0) + 1 =64]
 
 === 3. Trouver le nombre d'adresses disponibles pour un réseau donné
   
-Il faut trouver une puissance de 2 qui correspond ou dépasse le nombre total d'adresses. Ici, nous avons 64 adresses, et 64 est une puissance de 2(stem:[2^6]).
+Il faut trouver une puissance de 2 qui correspond ou dépasse le nombre total d'adresses. ...
+
+=== ...
+
+
+Ici, nous avons 64 adresses, et 64 est une puissance de 2(stem:[2^6]).
 
 Cela signifie qu'il nous faut 6 bits pour représenter 64 adresses.
 
 
 === 4. Calculer le préfixe CIDR
 
-Le préfixe CIDR (aussi appelé longueur du masque de réseau) est calculé en soustrayant le nombre de bits nécessaires pour représenter les adresses hôtes (dans notre exemple, 6 bits) du nombre total de bits dans une adresse IPv4, qui est 32.
+Le préfixe CIDR (aussi appelé longueur du masque de réseau) est calculé en soustrayant le nombre de bits nécessaires pour représenter ...
+
+=== ...
+
+les adresses hôtes (dans notre exemple, 6 bits) du nombre total de bits dans une adresse IPv4, qui est 32.
 
 stem:[Préfixe CIDR = 32 - 6 = 26]
 
@@ -43,10 +60,15 @@ Ainsi, le réseau correspondant à cette plage est 192.168.1.0/26.
 
 Un préfixe /26 signifie qu'il y a 26 bits réservés pour la partie réseau. 
 
+=== ...
 
 Le masque de sous-réseau est donc :
 
+=== ...
+
 11111111.11111111.11111111.11000000
+
+=== ...
 
 Converti en notation décimale, cela donne : 255.255.255.192.
 

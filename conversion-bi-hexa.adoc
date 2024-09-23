@@ -1,4 +1,7 @@
 = Conversion d'un nombre binaire en hexadécimal 
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
 
 == Introduction
 
@@ -91,10 +94,12 @@ Autre exemple avec un octet complet : 11001101 (binaire)
 1101 en binaire = D en hexadécimal.
 
 == Étape 3 : Combiner les valeurs
+
 Le résultat final est CD.
 
-
 Donc, 11001101 (binaire) = CD (hexadécimal).
+
+=== ...
 
 Tableau de conversion binaire-hexadécimal (pour chaque groupe de 4 bits) :
 

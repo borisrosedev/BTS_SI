@@ -1,0 +1,145 @@
+= Notion de Masque de sous-réseau
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Le masque de sous-réseau (ou subnet mask) est un élément clé pour définir la partie réseau et la partie hôte d’une adresse IP. 
+
+=== ...
+
+Il s'agit d'une série de 32 bits, comme une adresse IPv4, qui détermine quels bits d'une adresse IP sont utilisés pour représenter le réseau, ...
+
+=== ...
+
+et quels bits sont utilisés pour identifier les appareils (ou hôtes) sur ce réseau.
+
+=== Exemple d’un masque de sous-réseau en classe C :
+
+Prenons une adresse IP de classe C : 192.168.1.10 avec un masque de sous-réseau standard 255.255.255.0.
+
+=== ...
+
+En binaire, cela donne :
+
+Adresse IP : 11000000 10101000 00000001 00001010
+Masque de sous-réseau : 11111111 11111111 11111111 00000000
+
+=== ...
+
+Cela signifie que les 24 premiers bits (les trois premiers octets) identifient le réseau (192.168.1.0), ...
+
+=== ...
+
+et les 8 bits suivants (le dernier octet) identifient les hôtes sur ce réseau.
+
+=== ...
+
+Ainsi, le masque 255.255.255.0 indique qu’il y a 256 adresses possibles dans ce réseau (192.168.1.0 à 192.168.1.255), ...
+
+=== ...
+
+mais seulement 254 hôtes utilisables, car l’adresse 192.168.1.0 est réservée pour l’adresse réseau, et 192.168.1.255 pour l’adresse de diffusion.
+
+=== CIDR (Classless Inter-Domain Routing)
+
+Le CIDR est une méthode introduite pour pallier les limitations des classes d’adresses (A, B, C) traditionnelles. 
+
+=== ...
+
+Elle permet de définir des sous-réseaux plus flexibles et efficaces en abandonnant la notion de classes d'adresses fixes.
+
+=== Notation CIDR
+
+La notation CIDR est exprimée sous forme d'une adresse IP suivie d'un slash et d'un nombre qui indique combien de bits sont utilisés pour la partie réseau.
+
+=== Exemple : 192.168.1.10/24
+
+Le /24 signifie que les 24 premiers bits sont utilisés pour le réseau, et les 8 bits restants pour les hôtes, ...
+
+=== ...
+
+ce qui correspond à un masque de sous-réseau de 255.255.255.0.
+
+=== ...
+
+Grâce à CIDR, on peut avoir des réseaux avec un nombre de bits réseau variable. 
+
+=== Par exemple :
+
+192.168.1.0/25 : Un sous-réseau avec 25 bits pour le réseau et 7 bits pour les hôtes. 
+
+=== ...
+
+Le masque de sous-réseau serait 255.255.255.128. 
+
+=== ...
+
+Il permettrait de créer 128 adresses IP (2^7), dont 126 sont utilisables pour les hôtes.
+
+=== ...
+
+192.168.1.0/26 : Avec 26 bits pour le réseau et 6 bits pour les hôtes, on obtient 64 adresses (2^6), dont 62 sont utilisables pour les hôtes. 
+
+=== ...
+
+Le masque de sous-réseau serait 255.255.255.192.
+
+
+== Avantages du CIDR
+
+=== Plus grande flexibilité : 
+
+On peut créer des sous-réseaux plus petits ou plus grands en fonction des besoins, contrairement aux classes fixes A, B, et C.
+
+=== Réduction du gaspillage d’adresses IP : 
+
+CIDR permet d’attribuer précisément le nombre d’adresses nécessaires à un réseau, sans gaspillage. 
+
+=== ...
+
+Par exemple, un petit réseau peut utiliser un sous-réseau de /28 (16 adresses), alors qu’un grand réseau peut utiliser un /22 (1024 adresses).
+
+=== Scalabilité : CIDR permet de hiérarchiser efficacement les réseaux et de réduire la taille des tables de routage.
+
+
+=== Calcul de plages d'adresses avec CIDR
+
+192.168.1.0/26 : Masque de sous-réseau 255.255.255.192
+
+=== ...
+
+Plage d'adresses : 192.168.1.0 à 192.168.1.63
+
+=== ...
+
+
+Adresses utilisables : 192.168.1.1 à 192.168.1.62
+
+=== ...
+
+192.168.1.64/26 : Masque de sous-réseau 255.255.255.192
+
+=== ...
+
+
+Plage d'adresses : 192.168.1.64 à 192.168.1.127
+
+=== ...
+
+Adresses utilisables : 192.168.1.65 à 192.168.1.126
+
+=== ...
+
+Chaque sous-réseau a sa propre adresse réseau et adresse de diffusion.
+
+
+
+
+
+
+
+
+
+

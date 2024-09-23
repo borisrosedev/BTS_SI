@@ -5,11 +5,16 @@
 
 
 == Introduction
+
 Les câbles à paires torsadées sont l'un des types de câbles les plus couramment utilisés dans les réseaux locaux (LAN), tels que les réseaux Ethernet. 
 
 == ..
 
-Ils se composent de paires de fils en cuivre torsadés les uns avec les autres, ce qui permet de réduire les interférences électromagnétiques et de transmettre des données à des vitesses élevées sur des distances relativement courtes.
+Ils se composent de paires de fils en cuivre torsadés les uns avec les autres, ce qui permet de réduire les interférences électromagnétiques et ...
+
+=== ...
+
+de transmettre des données à des vitesses élevées sur des distances relativement courtes.
 
 == Structure des câbles à paires torsadées
 
@@ -21,7 +26,11 @@ Les fils conducteurs, généralement en cuivre, sont regroupés par paires.
 
 === ...
 
-Chaque fil transporte un signal électrique, et les deux fils d'une paire transportent des signaux opposés (un pour le signal et l'autre pour la mise à la terre), réduisant ainsi les interférences électromagnétiques.
+Chaque fil transporte un signal électrique, et les deux fils d'une paire transportent des signaux opposés ...
+
+=== ...
+
+(un pour le signal et l'autre pour la mise à la terre), réduisant ainsi les interférences électromagnétiques.
 
 
 === Paires torsadées :
@@ -38,7 +47,12 @@ L'ensemble des paires torsadées est enveloppé dans une gaine en plastique qui 
 
 == Types de câbles à paires torsadées
 
-Il existe deux principales catégories de câbles à paires torsadées, qui se distinguent par leur niveau de blindage contre les interférences électromagnétiques :
+Il existe deux principales catégories de câbles à paires torsadées, qui se distinguent ...
+
+=== ...
+
+
+par leur niveau de blindage contre les interférences électromagnétiques :
 
 == Câble UTP (Unshielded Twisted Pair) :
 
@@ -84,11 +98,21 @@ Utile dans des environnements industriels ou à haute densité d'équipements é
 
 === Utilisation : 
 
-Utilisé dans les environnements où les interférences électromagnétiques sont un problème majeur, ou pour les applications nécessitant une transmission à haute vitesse et à haute sécurité.
+Utilisé dans les environnements où les interférences électromagnétiques sont un problème majeur, ...
+
+=== ...
+
+ou pour les applications nécessitant une transmission à haute vitesse et à haute sécurité.
 
 == Catégories de câbles à paires torsadées
 
-Les câbles à paires torsadées sont classés en différentes catégories (Cat) en fonction de leurs performances et de leur capacité à transporter des données à certaines vitesses et sur des distances spécifiques. 
+Les câbles à paires torsadées sont classés en différentes catégories (Cat) en fonction ...
+
+
+=== ...
+
+
+de leurs performances et de leur capacité à transporter des données à certaines vitesses et sur des distances spécifiques. 
 
 
 Voici les catégories les plus courantes :
@@ -234,14 +258,26 @@ Il comporte 8 broches, correspondant aux 8 fils de cuivre (4 paires torsadées) 
 
 Ce sont deux standards de câblage pour la disposition des fils à l'intérieur du connecteur RJ-45. 
 
-Les deux standards définissent des séquences de fils différentes, mais ils fonctionnent de manière identique tant que la même norme est utilisée aux deux extrémités d'un câble.
+=== ...
+
+Les deux standards définissent des séquences de fils différentes, ...
+
+=== ...
+
+mais ils fonctionnent de manière identique tant que la même norme est utilisée aux deux extrémités d'un câble.
 
 
 == Avantages des câbles à paires torsadées
 
 === Coût :
 
-Les câbles à paires torsadées, en particulier les câbles UTP, sont peu coûteux à produire et à installer, ce qui en fait le choix le plus économique pour les réseaux locaux.
+Les câbles à paires torsadées, en particulier les câbles UTP, sont peu coûteux à produire et à installer, ...
+
+
+=== ...
+
+
+ce qui en fait le choix le plus économique pour les réseaux locaux.
 
 === Flexibilité :
 
@@ -253,7 +289,15 @@ Leur souplesse permet de les tirer facilement dans les conduits ou le long des m
 
 === Compatibilité :
 
-Les câbles à paires torsadées sont le standard pour les réseaux Ethernet, et sont largement pris en charge par la majorité des équipements réseau modernes, tels que 
+Les câbles à paires torsadées sont le standard pour les réseaux Ethernet, 
+
+=== ...
+
+et sont largement pris en charge par la majorité des équipements réseau modernes, tels que: 
+
+=== ...
+
+
 [%step]
 * les routeurs, 
 * les commutateurs,
@@ -261,7 +305,11 @@ Les câbles à paires torsadées sont le standard pour les réseaux Ethernet, et
 
 === Réduction des interférences :
 
-Grâce à la torsion des fils, les câbles à paires torsadées réduisent efficacement les interférences électromagnétiques, en particulier dans les réseaux UTP où les paires torsadées suffisent pour les environnements à faible interférence.
+Grâce à la torsion des fils, les câbles à paires torsadées réduisent efficacement les interférences électromagnétiques, ...
+
+=== ...
+
+en particulier dans les réseaux UTP où les paires torsadées suffisent pour les environnements à faible interférence.
 
 
 

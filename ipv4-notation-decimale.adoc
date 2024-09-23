@@ -1,0 +1,118 @@
+= Structure des adresses IPv4
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
+
+Une adresse IPv4 est un identifiant unique de 32 bits utilisé pour identifier des appareils sur un réseau. 
+
+=== ...
+
+Elle est structurée en quatre octets (32 bits = 4 octets, chaque octet représentant 8 bits). 
+
+=== ...
+
+Chaque adresse IPv4 est composée de deux parties :
+
+=== Partie réseau (Network ID) : 
+
+Elle identifie le réseau auquel un appareil appartient.
+
+=== Partie hôte (Host ID) : 
+
+Elle identifie un appareil spécifique sur ce réseau.
+
+
+== Notation décimale pointée
+
+Les 32 bits d'une adresse IPv4 sont généralement représentés sous forme de quatre octets en notation décimale pointée, séparés par des points. 
+
+=== ...
+
+Chaque octet est converti en une valeur décimale comprise entre 0 et 255. 
+
+=== ...
+
+Par exemple, l'adresse IP en binaire : 11000000 10101000 00000001 00000001
+se convertit en notation décimale pointée : 192.168.1.1
+
+
+== Exemple de décomposition d'une adresse IPv4
+
+
+=== Adresse IPv4 : 192.168.1.1
+
+192 est le premier octet (1er groupe de 8 bits) : représente 11000000 en binaire
+
+=== ...
+
+168 est le deuxième octet : représente 10101000 en binaire
+
+=== ...
+
+1 est le troisième octet : représente 00000001 en binaire
+
+=== ...
+
+1 est le quatrième octet : représente également 00000001 en binaire
+
+=== ...
+
+=== Classes d'adresses IPv4
+
+Les adresses IPv4 sont divisées en différentes classes pour distinguer les réseaux de différentes tailles :
+
+=== Classe A : 
+
+0.0.0.0 à 127.255.255.255 (grandes entreprises, 8 bits pour le réseau, 24 bits pour les hôtes)
+
+=== Classe B : 
+
+128.0.0.0 à 191.255.255.255 (entreprises moyennes, 16 bits pour le réseau, 16 bits pour les hôtes)
+
+
+=== Classe C : 
+
+192.0.0.0 à 223.255.255.255 (petites entreprises, 24 bits pour le réseau, 8 bits pour les hôtes)
+
+
+=== Classe D : 
+
+224.0.0.0 à 239.255.255.255 (réservé pour le multicast)
+
+
+=== Classe E :
+
+240.0.0.0 à 255.255.255.255 (réservé à des fins expérimentales)
+
+
+== Adresse réseau et adresse de diffusion
+
+=== Adresse réseau : 
+
+Représente le réseau dans son ensemble. 
+
+=== ...
+
+Tous les bits de la partie hôte sont à 0 (par exemple, 192.168.1.0 pour le réseau 192.168.1.0/24).
+
+=== Adresse de diffusion (broadcast) : 
+
+Permet d'envoyer des données à tous les appareils du réseau. 
+
+=== ...
+
+Tous les bits de la partie hôte sont à 1 (par exemple, 192.168.1.255 pour le réseau 192.168.1.0/24).
+
+=== Masque de sous-réseau (Subnet Mask)
+
+Le masque de sous-réseau est utilisé pour distinguer la partie réseau et la partie hôte d'une adresse IP. 
+
+=== ...
+
+Il est aussi représenté en notation décimale pointée. 
+
+=== ...
+
+Par exemple, pour un réseau de classe C, le masque de sous-réseau standard est 255.255.255.0.
